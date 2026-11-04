@@ -1,0 +1,22 @@
+{#- Theme override: status strip on every page, hero on the home page. Text comes from mkdocs.yml (extra.*). -#}
+{% extends "base.html" %}
+
+{% block announce %}
+  <span class="status-led"></span>{{ config.extra.status }}
+{% endblock %}
+
+{% block content %}
+  {% if page.is_homepage %}
+  <div class="hero">
+    <img class="hero-logo" src="{{ '_web/logo.svg' | url }}" alt="Any%, on a seven-segment display">
+    <p class="hero-tag">{{ config.extra.tagline }}</p>
+    <p>
+      <a class="md-button md-button--primary" href="{{ 'blog/' | url }}">Blog</a>
+      <a class="md-button" href="{{ 'docs/roadmap/' | url }}">Roadmap</a>
+      <a class="md-button" href="{{ 'docs/timeline/' | url }}">Timeline</a>
+      <a class="md-button" href="{{ 'docs/hardware/overview/' | url }}">Hardware</a>
+    </p>
+  </div>
+  {% endif %}
+  {{ super() }}
+{% endblock %}

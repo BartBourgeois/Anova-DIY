@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Flash dumps and firmware blobs: never commit by accident (may be device-unique / copyrighted)
+dumps/
+*.bin
+*.sli
+*.ucf
+
+# Scratch / OS
+scratch/
+Thumbs.db
+.DS_Store
+
+# MkDocs site build (generated)
+site-src/
+site/
+
+# Local-only configuration, never tracked
+*.local.txt
+/.capture/
+
+# Microscope tile sets and full-resolution mosaics: too big for git, kept local + off-machine copy (J-066)
+/micro/

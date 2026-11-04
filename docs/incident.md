@@ -1,0 +1,34 @@
+# Incident: Precision Cooker Pro dead after an interrupted OTA update
+
+## Unit
+| | |
+|---|---|
+| Model | Anova Precision Cooker Pro, type AN600-20 (EU, 220-240 V) |
+| Serial number | AN600-EU10-… (withheld in the public repo) |
+| Warranty | expired |
+| History | Worked normally until the update. Never dropped, opened or damaged. |
+| Update path | Anova app 3.6.7 on a Pixel 10 Pro XL |
+
+## Timeline (2026)
+| Date | Event |
+|---|---|
+| ~28/29 Oct | Firmware update started from the Anova app. Progress **stalled at 75%**. Left plugged in overnight, it never finished. |
+| 29 Oct (morning) | Unplugged, rested 2 h, plugged back in: **no beep, no display, no LEDs**. |
+| 29 Oct | Support ticket #… (number withheld) opened. Anova suggested leaving it plugged in overnight. |
+| 30 Oct | Overnight power-on made no difference. Still completely dead. |
+| 1 Nov | Anova: out of warranty. Offered 10% off a new unit. |
+| 1 Nov | Asked Anova for (1) a signed firmware image + recovery instructions, (2) a replacement main board at the owner's cost, (3) a mail-in reflash, or (4) a refurbished unit. Started this project in parallel. |
+| 1 Nov | Head opened (glass cut free, 4 screws). Main board photographed; chip markings read. See [photos.md](photos.md). |
+
+The exchange with Anova support, word for word with names and identifiers removed: [correspondence.md](correspondence.md).
+
+## Observations to keep in mind
+- "Completely dead" means not even the power-on beep. That points to one of these:
+  - the MCU that drives the UI/buzzer never starts its application
+  - a logic supply rail is missing
+  - the UI MCU is waiting in a ROM bootloader state
+- The CC3220 OTA mechanism should roll back an uncommitted image after a reset. This unit did not recover, so either:
+  - the update touched something without rollback (service pack, a second MCU, the filesystem metadata), or
+  - the failure is not in the CC3220 image at all.
+
+  See [firmware/recovery-strategy.md](firmware/recovery-strategy.md).

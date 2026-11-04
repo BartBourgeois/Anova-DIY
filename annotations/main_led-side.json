@@ -1,0 +1,227 @@
+{
+  "image": "main_led-side.png",
+  "title": "Main board ANOVA_PRO_MAIN_V2.0 - LED / touch-key side",
+  "source": "FCC ID 2APBOAN600, internal-photos exhibit 3999178 (2018 sample), page 3, top photo (720x537)",
+  "scale": 2,
+  "callouts": [
+    {
+      "id": 1,
+      "ref": "D5",
+      "label": "Touch key + LED: target temperature (thermometer icon)",
+      "part": "metal spring/pad electrode with centre LED",
+      "bbox": [
+        158,
+        12,
+        262,
+        112
+      ],
+      "category": "ui",
+      "confidence": "likely",
+      "note": "Key-to-icon mapping derived by overlaying this board on the bezel photo (front_bezel). Verify on the device."
+    },
+    {
+      "id": 2,
+      "ref": "D6",
+      "label": "Touch key + LED: circle icon",
+      "part": "metal pad electrode with centre LED",
+      "bbox": [
+        303,
+        12,
+        402,
+        112
+      ],
+      "category": "ui",
+      "confidence": "likely",
+      "note": "Circle icon on the bezel, function unconfirmed. The manual lists Current temp, Target temp, Timer, Start/Stop, +, -."
+    },
+    {
+      "id": 3,
+      "ref": "D33",
+      "label": "Touch key + LED: timer (clock icon)",
+      "part": "metal pad electrode with centre LED",
+      "bbox": [
+        440,
+        12,
+        548,
+        112
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 4,
+      "ref": "D4",
+      "label": "Touch key + LED: '+'",
+      "part": "metal pad electrode with centre LED",
+      "bbox": [
+        578,
+        90,
+        688,
+        200
+      ],
+      "category": "ui",
+      "confidence": "likely",
+      "note": "+ and - are symmetric icons, so which end is which comes from the mirror geometry only."
+    },
+    {
+      "id": 5,
+      "ref": "D3/D32",
+      "label": "Touch key + 2 LEDs: start/stop (triangle icon)",
+      "part": "metal pad electrode with two LEDs",
+      "bbox": [
+        578,
+        208,
+        688,
+        312
+      ],
+      "category": "ui",
+      "confidence": "likely",
+      "note": "The bezel back shows a left-pointing triangle, which is a right-pointing 'play' triangle from the front."
+    },
+    {
+      "id": 6,
+      "ref": "D1",
+      "label": "Touch key + LED: '-'",
+      "part": "metal pad electrode with centre LED",
+      "bbox": [
+        578,
+        328,
+        688,
+        435
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 7,
+      "ref": "D38-D70 (approx.)",
+      "label": "7-segment row 1 (4 digits, discrete LEDs)",
+      "part": "SMD LEDs forming 4 digits; aligned with the thermometer key",
+      "bbox": [
+        165,
+        125,
+        268,
+        470
+      ],
+      "category": "ui",
+      "confidence": "likely",
+      "note": "Each segment is lit by discrete SMD LEDs behind the bezel light guide. Row order follows the bezel overlay. Refdes ranges are approximate."
+    },
+    {
+      "id": 8,
+      "ref": "D71-D103 (approx.)",
+      "label": "7-segment row 2 (4 digits)",
+      "part": "SMD LEDs; aligned with the circle key",
+      "bbox": [
+        300,
+        115,
+        437,
+        410
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 9,
+      "ref": "D104-D135 (approx.)",
+      "label": "7-segment row 3 (4 digits)",
+      "part": "SMD LEDs; aligned with the timer key",
+      "bbox": [
+        445,
+        125,
+        585,
+        432
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 10,
+      "ref": "D8",
+      "label": "Wi-Fi status LED",
+      "part": "SMD LED behind the bezel's Wi-Fi icon window",
+      "bbox": [
+        55,
+        88,
+        82,
+        108
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 11,
+      "ref": "U18",
+      "label": "Optical sensor (IR emitter + detector?)",
+      "part": "dual-element through-window sensor",
+      "bbox": [
+        46,
+        400,
+        128,
+        447
+      ],
+      "category": "sensor",
+      "confidence": "guess",
+      "note": "Sits behind the rectangular bezel window. Likely proximity (wake on approach) or ambient-light sensing."
+    },
+    {
+      "id": 12,
+      "ref": "J38",
+      "label": "Tag-Connect style 6-pad debug footprint",
+      "part": "TC2030-style: 2x3 pads + 3 alignment holes, R575 next to it",
+      "bbox": [
+        258,
+        458,
+        333,
+        502
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Back-to-back with J37 on the component side. Two footprints suggest one per MCU (CC3220S / CC2640R2F). Verify by continuity."
+    },
+    {
+      "id": 13,
+      "ref": "",
+      "label": "Antenna zone + 2 gold contact pins",
+      "part": "copper-free zone without solder mask; 2 domed through-hole pins",
+      "bbox": [
+        85,
+        65,
+        162,
+        312
+      ],
+      "category": "rf",
+      "confidence": "guess",
+      "note": "The gold pins probably contact the black strip with a gold pad on the bezel (antenna element feed/ground?)."
+    },
+    {
+      "id": 14,
+      "ref": "J36",
+      "label": "Antenna zone + 2 gold contact pins (J36)",
+      "part": "copper-free zone; 2 domed pins; production label '1811601588'",
+      "bbox": [
+        330,
+        428,
+        592,
+        505
+      ],
+      "category": "rf",
+      "confidence": "guess",
+      "note": "Same pattern as #13, mates with the second black strip on the bezel. The label likely encodes the 2018 week-11 build date (unverified)."
+    },
+    {
+      "id": 15,
+      "ref": "",
+      "label": "Silkscreen 'ANOVA_PRO_MAIN_V2.0'",
+      "part": "board name + revision",
+      "bbox": [
+        270,
+        85,
+        300,
+        372
+      ],
+      "category": "info",
+      "confidence": "confirmed"
+    }
+  ]
+}
