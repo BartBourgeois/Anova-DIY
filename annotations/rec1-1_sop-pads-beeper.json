@@ -1,0 +1,178 @@
+{
+  "image": "micro_step_U1-SOP-corner.jpg",
+  "format": "jpg",
+  "title": "Recovery 1.1 - which strap pad is SOP2 (beeper)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 28,
+  "line_px": 5,
+  "box_px": 4,
+  "caption": "Beeper. Red lead on one strap pad, black lead on U1 pins 21, 34, 35 and 32 in turn; then the next pad. Expected: each pad beeps on exactly one SOP pin and never on pin 32.",
+  "callouts": [
+    {
+      "id": "X4",
+      "ref": "X4",
+      "label": "strap pad X4, SOP0",
+      "part": "",
+      "bbox": [
+        373,
+        1791,
+        485,
+        1903
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The top round pad. Measured: beeps to U1 pin 35 (SOP0), raptox's beeper, unpowered, 2026-11-05. Red lead here."
+    },
+    {
+      "id": "X5",
+      "ref": "X5",
+      "label": "strap pad X5, SOP1",
+      "part": "",
+      "bbox": [
+        371,
+        1990,
+        483,
+        2102
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The middle round pad. Measured: beeps to U1 pin 34 (SOP1), raptox's beeper, unpowered, 2026-11-05. Red lead here."
+    },
+    {
+      "id": "X6",
+      "ref": "X6",
+      "label": "strap pad X6, SOP2",
+      "part": "",
+      "bbox": [
+        369,
+        2190,
+        481,
+        2302
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The bottom round pad. Measured: beeps to U1 pin 21 (SOP2), raptox's beeper, unpowered, 2026-11-05. Red lead here."
+    },
+    {
+      "id": "21",
+      "ref": "U1.21",
+      "label": "U1 pin 21, SOP2",
+      "part": "",
+      "bbox": [
+        610,
+        842,
+        658,
+        906
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Boot-mode strap SOP2 (SWAS035C table 7-1). Fifth toe from the left on the bottom edge. Black lead here, one after the other.",
+      "tag_side": "below"
+    },
+    {
+      "id": "34",
+      "ref": "U1.34",
+      "label": "U1 pin 34, SOP1",
+      "part": "",
+      "bbox": [
+        1454,
+        682,
+        1516,
+        714
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Boot-mode strap SOP1 (SWAS035C). Second toe up on the right edge. Black lead here, one after the other.",
+      "tag_side": "left"
+    },
+    {
+      "id": "35",
+      "ref": "U1.35",
+      "label": "U1 pin 35, SOP0",
+      "part": "",
+      "bbox": [
+        1454,
+        617,
+        1516,
+        649
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Boot-mode strap SOP0 (SWAS035C). Third toe up on the right edge. Black lead here, one after the other.",
+      "tag_side": "left"
+    },
+    {
+      "id": "32",
+      "ref": "U1.32",
+      "label": "U1 pin 32, nRESET",
+      "part": "",
+      "bbox": [
+        1340,
+        842,
+        1388,
+        906
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Reset, active low (SWAS035C). Rightmost toe of the bottom edge. Black lead here, one after the other.",
+      "tag_side": "below"
+    }
+  ],
+  "terminals": [
+    {
+      "id": "red",
+      "label": "Meter red lead: X4, then X5, then X6",
+      "group": "lead_red"
+    },
+    {
+      "id": "black",
+      "label": "Meter black lead: U1 pin 21, 34, 35, 32 in turn",
+      "group": "lead_black",
+      "y": 820
+    }
+  ],
+  "links": [
+    {
+      "from": "X4",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "X5",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "X6",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "21",
+      "to": "black",
+      "style": "solid",
+      "via": [
+        [
+          634,
+          820
+        ]
+      ]
+    },
+    {
+      "from": "34",
+      "to": "black",
+      "style": "solid"
+    },
+    {
+      "from": "35",
+      "to": "black",
+      "style": "solid"
+    },
+    {
+      "from": "32",
+      "to": "black",
+      "style": "solid"
+    }
+  ]
+}

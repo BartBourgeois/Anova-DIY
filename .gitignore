@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Flash dumps and firmware blobs: never commit by accident (may be device-unique / copyrighted)
+dumps/
+*.bin
+*.sli
+*.ucf
+
+# Scratch / OS
+scratch/
+Thumbs.db
+.DS_Store
+
+# MkDocs site build (generated)
+site-src/
+site/
+
+# Local-only configuration, never tracked
+*.local.txt
+/.capture/
+
+# Android app packages under analysis, and everything extracted from them: third-party code, untrusted input
+/apk/
+
+# Vendor installers for the bench software (Uniflash, SDKs, ...): big, third-party, re-downloadable; hashes in the journal
+/installers/
+
+# Microscope tile sets and full-resolution mosaics: too big for git, kept local + off-machine copy (J-066)
+/micro/
+
+# PlatformIO build output and local Wi-Fi credentials (tools/j8probe)
+tools/j8probe/.pio/
+tools/espserprog/.pio/
+tools/j8probe/include/secrets.h

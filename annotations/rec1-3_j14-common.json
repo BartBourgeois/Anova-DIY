@@ -1,0 +1,139 @@
+{
+  "image": "micro_step_J14-to-JP5.jpg",
+  "format": "jpg",
+  "title": "Recovery 1.3 - what J14's common side is wired to (ohms)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 28,
+  "line_px": 6,
+  "box_px": 4,
+  "caption": "The red lead stays on J14 pin 1. The black lead goes to U15 pin 8 (3.3 V), then JP5 pin 1 (5 V), then U15 pin 4 (GND). Each reading again with the leads swapped.",
+  "callouts": [
+    {
+      "id": "J14.1",
+      "ref": "J14.1",
+      "label": "J14 pin 1, common side",
+      "part": "",
+      "bbox": [
+        182,
+        808,
+        254,
+        851
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Top pad of J14's left row, by the printed dot and '1'. Pins 1-3 and R577 are one net (beeper, J-098). Red lead here for all three readings."
+    },
+    {
+      "id": "R577",
+      "ref": "R577",
+      "label": "R577",
+      "part": "",
+      "bbox": [
+        159,
+        728,
+        236,
+        764
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The resistor just above J14 pin 1; its right end is on the common net (J-098). Where its other end goes, and so what the common side is pulled to, is what this step answers."
+    },
+    {
+      "id": "U15.8",
+      "ref": "U15.8",
+      "label": "U15 pin 8, 3.3 V",
+      "part": "",
+      "bbox": [
+        88,
+        95,
+        119,
+        195
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "VCC (XMC datasheet rev. J); rings to U17 OUT (J-110). Top-left lead, across from pin 1."
+    },
+    {
+      "id": "U15.4",
+      "ref": "U15.4",
+      "label": "U15 pin 4, GND",
+      "part": "",
+      "bbox": [
+        283,
+        468,
+        315,
+        576
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "VSS; rings to JP5 pin 2 (J-080). Bottom-right lead; pin 1 is at the dimple end of the same row."
+    },
+    {
+      "id": "JP5.1",
+      "ref": "JP5.1",
+      "label": "JP5 pin 1 (square), 5 V in",
+      "part": "",
+      "bbox": [
+        2645,
+        815,
+        2726,
+        896
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "J8 supply, pins 1-6 (J-077); 5.01 V measured on a working J8 (J-089). Square pad, '1' printed left of it."
+    },
+    {
+      "id": "JP5.2",
+      "ref": "JP5.2",
+      "label": "JP5 pin 2, GND",
+      "part": "",
+      "bbox": [
+        2646,
+        679,
+        2726,
+        760
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Rings to U15 pin 4 (J-080). Round pad above pin 1. Not used in this step; shown so pin 1 is not mistaken."
+    }
+  ],
+  "terminals": [
+    {
+      "id": "red",
+      "label": "Meter red lead: J14 pin 1 (stays)",
+      "group": "lead_red",
+      "y": 560
+    },
+    {
+      "id": "black",
+      "label": "Meter black lead: U15 pin 8, then JP5 pin 1, then U15 pin 4",
+      "group": "lead_black",
+      "y": 440
+    }
+  ],
+  "links": [
+    {
+      "from": "J14.1",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "U15.8",
+      "to": "black",
+      "style": "solid"
+    },
+    {
+      "from": "JP5.1",
+      "to": "black",
+      "style": "solid"
+    },
+    {
+      "from": "U15.4",
+      "to": "black",
+      "style": "solid"
+    }
+  ]
+}

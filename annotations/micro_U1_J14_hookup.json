@@ -1,0 +1,308 @@
+{
+  "image": "micro_U1_U15_Y3_J14.jpg",
+  "title": "Main board - U1, U15, J14: strap pads and meter points (raptox's unit, mosaic 2026-11-03)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "J14.1",
+      "label": "J14 pin 1, common row",
+      "part": "",
+      "bbox": [
+        455,
+        1505,
+        572,
+        1578
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Common row, one net with R577 (J-098); 3V3 via R577: to measure (chapter 1). Top of the left column, by the printed dot and the '1'."
+    },
+    {
+      "id": "2",
+      "ref": "J14.2",
+      "label": "J14 pin 2, common row",
+      "part": "",
+      "bbox": [
+        455,
+        1622,
+        572,
+        1695
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Common row, one net with R577 (J-098); 3V3 via R577: to measure (chapter 1)."
+    },
+    {
+      "id": "3",
+      "ref": "J14.3",
+      "label": "J14 pin 3, common row",
+      "part": "",
+      "bbox": [
+        455,
+        1742,
+        572,
+        1815
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Common row, one net with R577 (J-098); 3V3 via R577: to measure (chapter 1)."
+    },
+    {
+      "id": "4",
+      "ref": "J14.4",
+      "label": "J14 pin 4",
+      "part": "",
+      "bbox": [
+        455,
+        1862,
+        572,
+        1935
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Not connected (J-098). Bottom of the left column, '4' printed below."
+    },
+    {
+      "id": "5",
+      "ref": "J14.5",
+      "label": "J14 pin 5",
+      "part": "",
+      "bbox": [
+        1045,
+        1862,
+        1170,
+        1935
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Not connected (J-098). Bottom of the right column, '5' printed below."
+    },
+    {
+      "id": "6",
+      "ref": "J14.6",
+      "label": "J14 pin 6, to X6",
+      "part": "",
+      "bbox": [
+        1045,
+        1742,
+        1170,
+        1815
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "To X6 by the mosaic trace (J-098)."
+    },
+    {
+      "id": "7",
+      "ref": "J14.7",
+      "label": "J14 pin 7, to X5",
+      "part": "",
+      "bbox": [
+        1045,
+        1622,
+        1170,
+        1695
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "To X5 by the mosaic trace (J-098)."
+    },
+    {
+      "id": "8",
+      "ref": "J14.8",
+      "label": "J14 pin 8, to X4",
+      "part": "",
+      "bbox": [
+        1045,
+        1505,
+        1170,
+        1578
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "To X4 by the mosaic trace (J-098). Top of the right column, '8' printed above."
+    },
+    {
+      "id": "9",
+      "ref": "X4",
+      "label": "Strap pad X4 = SOP0 (U1 pin 35; J14 pin 8), cap to GND",
+      "part": "",
+      "bbox": [
+        1305,
+        1862,
+        1380,
+        1937
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "SOP0: beeper to U1 pin 35, raptox 2026-11-05 (J-137). J14 pin 8 by the mosaic order (J-098, likely). Never pulled high together with the other of X4/X5 before the backup (SOP 011 = factory restore)."
+    },
+    {
+      "id": "10",
+      "ref": "X5",
+      "label": "Strap pad X5 = SOP1 (U1 pin 34; J14 pin 7), cap to GND",
+      "part": "",
+      "bbox": [
+        1305,
+        1998,
+        1380,
+        2073
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "SOP1: beeper to U1 pin 34, raptox 2026-11-05 (J-137). J14 pin 7 by the mosaic order (J-098, likely). Never pulled high together with the other of X4/X5 before the backup (SOP 011 = factory restore)."
+    },
+    {
+      "id": "11",
+      "ref": "X6",
+      "label": "Strap pad X6 = SOP2 (U1 pin 21; J14 pin 6), cap to GND",
+      "part": "",
+      "bbox": [
+        1305,
+        2133,
+        1380,
+        2208
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "SOP2: beeper to U1 pin 21, raptox 2026-11-05 (J-137). J14 pin 6 by the mosaic order (J-098, likely). The UARTLOAD strap goes here: 3V3 via 470 Ohm from U15 pin 8."
+    },
+    {
+      "id": "12",
+      "ref": "U1.21",
+      "label": "U1 pin 21, SOP2",
+      "part": "",
+      "bbox": [
+        1471,
+        1168,
+        1501,
+        1206
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Beeper touch point: toe at the package edge, 5th pin from the left on the bottom edge. Counted from the pin-1 dot (callout 20); function per SWAS035C pin mux."
+    },
+    {
+      "id": "13",
+      "ref": "U1.32",
+      "label": "U1 pin 32, nRESET",
+      "part": "",
+      "bbox": [
+        2012,
+        1168,
+        2042,
+        1206
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "nRESET, last pin on the bottom edge (right). Toe at the package edge."
+    },
+    {
+      "id": "14",
+      "ref": "U1.34",
+      "label": "U1 pin 34, SOP1",
+      "part": "",
+      "bbox": [
+        2094,
+        1041,
+        2132,
+        1065
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "SOP1, 2nd from the bottom on the right edge. Toe at the package edge."
+    },
+    {
+      "id": "15",
+      "ref": "U1.35",
+      "label": "U1 pin 35, SOP0",
+      "part": "",
+      "bbox": [
+        2094,
+        989,
+        2132,
+        1011
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "SOP0, 3rd from the bottom on the right edge. Toe at the package edge."
+    },
+    {
+      "id": "16",
+      "ref": "U15.1",
+      "label": "U15 pin 1, CS#",
+      "part": "",
+      "bbox": [
+        266,
+        878,
+        328,
+        1068
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "Flash chip select (J-108): 4.7 kOhm to ESP32 GPIO4 in the recorder setup. The leg at the moulded dimple, beside the two white silkscreen dots (bottom-left in this view); pins 1-4 run along this row, 5-8 back along the other."
+    },
+    {
+      "id": "17",
+      "ref": "U15.4",
+      "label": "U15 pin 4, GND",
+      "part": "",
+      "bbox": [
+        630,
+        878,
+        692,
+        1068
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "GND (J-080, J-108): the GND meter point nearest U1. Last leg of pin 1's row (bottom-right in this view)."
+    },
+    {
+      "id": "18",
+      "ref": "U15.8",
+      "label": "U15 pin 8, VCC = 3V3 (J-110)",
+      "part": "",
+      "bbox": [
+        268,
+        182,
+        332,
+        372
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "10k/10k divider to ESP32 GPIO36; the 470 Ohm strap's source in the UARTLOAD session; the 3.3 V meter point. The leg across from pin 1 (top-left in this view)."
+    },
+    {
+      "id": "19",
+      "ref": "R577",
+      "label": "R577, common-row pull",
+      "part": "",
+      "bbox": [
+        402,
+        1350,
+        548,
+        1420
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "0603 just above J14's pin-1 end, right of its label. Its right end is on the common row (J-098); the other end to measure (3V3 expected, guess)."
+    },
+    {
+      "id": "20",
+      "ref": "U1 pin 1 dot",
+      "label": "U1 pin-1 mark",
+      "part": "",
+      "bbox": [
+        1308,
+        388,
+        1372,
+        448
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Moulded dot at the top-left corner of U1. Pins count counter-clockwise from here: 1-16 down the left edge, 17-32 left to right along the bottom, 33-48 up the right edge, 49-64 right to left along the top (SWAS035C figure 7-1)."
+    }
+  ]
+}

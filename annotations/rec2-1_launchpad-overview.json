@@ -1,0 +1,117 @@
+{
+  "image": "launchpad_top_own.jpg",
+  "title": "Recovery 2.1-2.2 - the LaunchPad: USB, reset, the SOP jumpers",
+  "source": "Own photo, raptox's LaunchPad, 2026-11-05",
+  "caption": "USB into the XDS110 (1). J13 (4) all open for a normal boot. The logger on the user UART, then RESET (2). The jumper column (3) stays as shipped.",
+  "scale": 1,
+  "tag_px": 30,
+  "line_px": 5,
+  "box_px": 4,
+  "format": "jpg",
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "XDS110 USB",
+      "label": "Micro-USB: cable to the PC",
+      "part": "",
+      "bbox": [
+        2247,
+        153,
+        2397,
+        327
+      ],
+      "category": "connector",
+      "confidence": "likely",
+      "note": "The board's only USB port, at the right edge beside L2/U2 and the XDS110's TM4C129 (U1 of the LaunchPad). Its reference designator is not legible in the photo. The XDS110 shows up as two COM ports; the logger goes on the one named User UART (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "2",
+      "ref": "SW1",
+      "label": "RESET button",
+      "part": "",
+      "bbox": [
+        2190,
+        471,
+        2379,
+        657
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "'RESET' and 'SW1' are printed beside it; side-actuated tactile switch at the right board edge. Press it once the logger is listening."
+    },
+    {
+      "id": "3",
+      "ref": "J18",
+      "label": "Jumper column: stays as shipped",
+      "part": "",
+      "bbox": [
+        1398,
+        160,
+        1562,
+        885
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'J18' printed under it; rows GND, 5V, VBAT, BRD, RX, TX, RST, TMS, TCK, TDI, TDO, BRD and 'SENSE' printed beside it. It links the XDS110 half (right) to the CC3220 half (left): by the silkscreen, TI's guide SWRU463 not checked (unverified). Row by row: rec2-2."
+    },
+    {
+      "id": "4",
+      "ref": "J13",
+      "label": "SOP jumpers: all open for a normal boot",
+      "part": "",
+      "bbox": [
+        1152,
+        939,
+        1317,
+        1113
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "'J13', 'SOP' and the row numbers 2/1/0 are printed beside the 2x3 header. A jumper on a row pulls that strap high (likely, from the silkscreen; SWRU463 not checked: unverified). The photo shows the header is not empty but not which row a jumper bridges: check on the board. Close-up: rec2-4."
+    },
+    {
+      "id": "5",
+      "ref": "U7",
+      "label": "CC3220S (the LaunchPad's own)",
+      "part": "",
+      "bbox": [
+        663,
+        561,
+        849,
+        771
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Marking legible: 'CC3220S / M2 / TI 65I / A809 G4'. Same part family as U1 on the cooker's main board."
+    },
+    {
+      "id": "6",
+      "ref": "U8",
+      "label": "Serial flash (MX25R3235F)",
+      "part": "",
+      "bbox": [
+        651,
+        339,
+        792,
+        462
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "SOIC-8 above U7, 'U8' printed beside it. The marking reads 'MXIC 25R3235F' only partly, so the part is by the LaunchPad's design, not the marking. Clip read: rec2-3."
+    }
+  ],
+  "terminals": [
+    {
+      "id": "pc",
+      "label": "PC USB (XDS110: two COM ports, use the User UART)",
+      "group": "other"
+    }
+  ],
+  "links": [
+    {
+      "from": "1",
+      "to": "pc",
+      "style": "solid"
+    }
+  ]
+}

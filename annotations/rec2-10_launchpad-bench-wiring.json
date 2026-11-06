@@ -1,0 +1,221 @@
+{
+  "image": "launchpad_top_stitched_own.jpg",
+  "title": "Recovery 2.10 - the LaunchPad wired like the cooker: no USB, bench supply on J22",
+  "source": "Own photos, raptox's LaunchPad, stitched from photos 04-08 of 2026-11-05 (jumpers as delivered in the photo)",
+  "caption": "USB out. 3.3 V from the bench supply on J22 (never 5 V there), the CH340's ground on J22's other GND pin, J9 on, J13 on SOP2 only. The jumper column and the CH340's two signal wires: see the drawing rec2-10_launchpad-jumper-column.",
+  "scale": 1,
+  "tag_px": 30,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "terminals": [
+    {
+      "id": "sup_n",
+      "label": "Bench supply −",
+      "group": "supply",
+      "y": 45
+    },
+    {
+      "id": "sup_p",
+      "label": "Bench supply + (3.30 V, limit 100 mA)",
+      "group": "supply",
+      "y": 255
+    },
+    {
+      "id": "adp_gnd",
+      "label": "CH340 GND",
+      "color": "#00e5ff",
+      "y": 560
+    }
+  ],
+  "links": [
+    {
+      "from": "3V3",
+      "to": "sup_p",
+      "style": "solid",
+      "via": [
+        [
+          2900,
+          255
+        ]
+      ]
+    },
+    {
+      "from": "G1",
+      "to": "sup_n",
+      "style": "solid",
+      "via": [
+        [
+          2640,
+          45
+        ]
+      ]
+    },
+    {
+      "from": "G2",
+      "to": "adp_gnd",
+      "style": "solid",
+      "via": [
+        [
+          2712,
+          15
+        ],
+        [
+          3185,
+          15
+        ],
+        [
+          3185,
+          560
+        ]
+      ]
+    }
+  ],
+  "callouts": [
+    {
+      "id": "USB",
+      "ref": "J1 (USB)",
+      "label": "unplugged",
+      "part": "micro-USB",
+      "bbox": [
+        195,
+        1500,
+        380,
+        1750
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "The XDS110's USB. Out for the whole step: the cooker has no debug probe, so the LaunchPad runs without its USB half (TI SWRU463C 2.6.2 step 1).",
+      "tag_side": "right"
+    },
+    {
+      "id": "3V3",
+      "ref": "J22",
+      "label": "3V3 pin: bench supply +, 3.30 V, limit 100 mA",
+      "part": "",
+      "bbox": [
+        2755,
+        190,
+        2822,
+        320
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Printed '3V3' and '+'. TI's 3.3 V (battery) input: a reverse-polarity diode (about 150 mV drop), then the CC3220's supply. No regulator: never 5 V here. On the cooker the bench supply goes to JP5 at 5.0 V instead, into the regulator U17.",
+      "tag_side": "right"
+    },
+    {
+      "id": "G1",
+      "ref": "J22",
+      "label": "GND pin (outer): bench supply −",
+      "part": "",
+      "bbox": [
+        2608,
+        190,
+        2672,
+        320
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Printed 'GND' and '−', the pin farthest from 3V3.",
+      "tag_side": "left"
+    },
+    {
+      "id": "G2",
+      "ref": "J22",
+      "label": "GND pin (middle): CH340 GND",
+      "part": "",
+      "bbox": [
+        2680,
+        190,
+        2746,
+        320
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Printed 'GND'. One ground for the supply and the adapter.",
+      "tag_side": "below",
+      "tag_dy": 160
+    },
+    {
+      "id": "J9",
+      "ref": "J9",
+      "label": "RST PU: jumper ON",
+      "part": "",
+      "bbox": [
+        2590,
+        345,
+        2775,
+        475
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Printed 'J9' and 'RST PU'. The pull-up on the CC3220's nRESET, which TI requires when the board runs from J22 (SWRU463C 2.5.5, 2.6.2 step 3).",
+      "tag_side": "left"
+    },
+    {
+      "id": "J13",
+      "ref": "J13",
+      "label": "one jumper on SOP2 only (as now)",
+      "part": "",
+      "bbox": [
+        1405,
+        420,
+        1645,
+        705
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The boot-loader strap, the cooker's X6 pad. SOP1 and SOP0 open; never SOP1 and SOP0 together (factory restore, a write). Close-up: rec2-4_launchpad-j13-sop2.",
+      "tag_side": "right"
+    },
+    {
+      "id": "COL",
+      "ref": "J3 etc.",
+      "label": "the jumper column: see the drawing",
+      "part": "",
+      "bbox": [
+        1160,
+        770,
+        1400,
+        1690
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "GND, 5V, VBAT, BRD, RX, TX, RST, TMS, TCK, TDI, TDO, BRD-SENSE. Which caps come off, which one goes across, and the two CH340 wires: rec2-10_launchpad-jumper-column.",
+      "tag_side": "left"
+    },
+    {
+      "id": "SW4",
+      "ref": "SW4",
+      "label": "FRST: never pressed",
+      "part": "",
+      "bbox": [
+        1210,
+        100,
+        1390,
+        350
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Printed 'SW4' and 'FRST': factory restore at reset, which rewrites the flash (SWRU463C table 8).",
+      "tag_side": "left"
+    },
+    {
+      "id": "J23",
+      "ref": "J23",
+      "label": "5 V input: not used",
+      "part": "",
+      "bbox": [
+        2635,
+        1525,
+        2865,
+        1625
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Printed 'GND GND 5V'. TI's 5 V input; whether it also powers the XDS110 half isn't known without the schematic, so it stays empty.",
+      "tag_side": "left"
+    }
+  ]
+}

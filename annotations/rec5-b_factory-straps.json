@@ -1,0 +1,189 @@
+{
+  "image": "micro_U1_U15_Y3_J14.jpg",
+  "title": "Recovery 5B - factory restore: SOP0 and SOP1 straps (only after the backup)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 28,
+  "line_px": 5,
+  "box_px": 4,
+  "format": "jpg",
+  "caption": "Two straps from U15 pin 8, each through 470 Ω, onto X4 (SOP0) and X5 (SOP1). X6 (SOP2) stays free. Never before two equal backups exist.",
+  "callouts": [
+    {
+      "id": "U15.8",
+      "ref": "U15.8",
+      "label": "U15 pin 8, 3.3 V: strap source",
+      "part": "",
+      "bbox": [
+        268,
+        182,
+        332,
+        372
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "tag_side": "below",
+      "note": "VCC = the 3.3 V rail (J-110). The leg across from pin 1 (top-left of U15 in this view). One probe here feeds both straps, each through its own 470 Ω."
+    },
+    {
+      "id": "X4",
+      "ref": "X4",
+      "label": "X4, SOP0",
+      "part": "",
+      "bbox": [
+        1305,
+        1862,
+        1380,
+        1937
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Top pad of the column right of J14 (J-098). X4 = SOP0, X5 = SOP1, X6 = SOP2 (measured with the beeper, 2026-11-05). Strap through 470 Ω."
+    },
+    {
+      "id": "X5",
+      "ref": "X5",
+      "label": "X5, SOP1",
+      "part": "",
+      "bbox": [
+        1305,
+        1998,
+        1380,
+        2073
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Middle pad of the column (J-098). X4 = SOP0, X5 = SOP1, X6 = SOP2 (measured with the beeper, 2026-11-05). Strap through 470 Ω."
+    },
+    {
+      "id": "X6",
+      "ref": "X6",
+      "label": "X6, SOP2: stays free",
+      "part": "",
+      "bbox": [
+        1305,
+        2133,
+        1380,
+        2208
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Bottom pad of the column (J-098). X4 = SOP0, X5 = SOP1, X6 = SOP2 (measured with the beeper, 2026-11-05). Nothing on it in the factory restore."
+    },
+    {
+      "id": "U15.1",
+      "ref": "U15.1",
+      "label": "U15 pin 1 (dimple end)",
+      "part": "",
+      "bbox": [
+        266,
+        878,
+        328,
+        1068
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Orientation mark: the leg at the moulded dimple, beside the two white silkscreen dots. Nothing connects here in this step; pins 1-4 run along this row, 5-8 back along the other, so pin 8 is across from it."
+    }
+  ],
+  "links": [
+    {
+      "from": "U15.8",
+      "to": "X4",
+      "label": "470 Ω",
+      "style": "solid",
+      "color": "#ff4040",
+      "via": [
+        [
+          290,
+          50
+        ],
+        [
+          520,
+          50
+        ],
+        [
+          560,
+          90
+        ],
+        [
+          795,
+          90
+        ],
+        [
+          795,
+          1105
+        ],
+        [
+          940,
+          1118
+        ],
+        [
+          1040,
+          1123
+        ],
+        [
+          1236,
+          1300
+        ],
+        [
+          1236,
+          1900
+        ]
+      ],
+      "label_at": [
+        1270,
+        1900
+      ]
+    },
+    {
+      "from": "U15.8",
+      "to": "X5",
+      "label": "470 Ω",
+      "style": "solid",
+      "color": "#ff4040",
+      "via": [
+        [
+          290,
+          50
+        ],
+        [
+          520,
+          50
+        ],
+        [
+          560,
+          90
+        ],
+        [
+          795,
+          90
+        ],
+        [
+          795,
+          1105
+        ],
+        [
+          940,
+          1118
+        ],
+        [
+          1040,
+          1123
+        ],
+        [
+          1236,
+          1300
+        ],
+        [
+          1236,
+          2035
+        ]
+      ],
+      "label_at": [
+        1270,
+        2035
+      ]
+    }
+  ]
+}

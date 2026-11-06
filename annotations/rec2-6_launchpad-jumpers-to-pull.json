@@ -1,0 +1,72 @@
+{
+  "image": "launchpad_top_own.jpg",
+  "title": "Recovery 2.6 - jumpers that may come off before the 3.3.35 boot",
+  "source": "Own photo, raptox's LaunchPad, 2026-11-05",
+  "caption": "Candidates only: the jumpers that connect the LaunchPad's LEDs and sensors to the CC3220's pins. Which ones come off follows from the pin map of the firmware image (to be done); until then, all stay.",
+  "scale": 1,
+  "tag_px": 30,
+  "box_px": 4,
+  "format": "jpg",
+  "callouts": [
+    {
+      "id": "J24",
+      "ref": "LED EN",
+      "label": "LEDs D8-D10 to the CC3220",
+      "part": "",
+      "bbox": [
+        158,
+        845,
+        382,
+        940
+      ],
+      "category": "ui",
+      "confidence": "likely",
+      "note": "'LED EN' and 'J24' printed by the header, and beside it 'D10 → P64', 'D9 → P01', 'D8 → ...' (D8's pin is hidden under the cap in the photo). Identity from the silkscreen. Whether it comes off: guess, it follows from the pin map (do the 3.3.35 image's pins P64/P01/P02 drive something else?)."
+    },
+    {
+      "id": "J15-J16",
+      "ref": "(SCL) / (SDA)",
+      "label": "Sensor I2C jumpers",
+      "part": "",
+      "bbox": [
+        86,
+        288,
+        322,
+        458
+      ],
+      "category": "sensor",
+      "confidence": "likely",
+      "note": "'J15' and 'J16' printed right of the header, '(SCL)' above it and '(SDA)' below, 'SENSORS' further up; one box for both, the photo is too soft here to split the two caps reliably. They link the on-board sensors (U10 'TEMP', U11) to the CC3220's I2C pins (TI's guide SWRU463 not checked: unverified). Whether they come off: guess, per the pin map."
+    },
+    {
+      "id": "J14",
+      "ref": "OPAMP EN",
+      "label": "Op-amp U9 enable",
+      "part": "",
+      "bbox": [
+        1316,
+        0,
+        1444,
+        118
+      ],
+      "category": "sensor",
+      "confidence": "likely",
+      "note": "'OPAMP EN' printed under it and 'J14' beside it; U9 'BB OPA 4342EA' sits just below. What it connects to which CC3220 pins: SWRU463 not checked (unverified). Whether it comes off: guess, per the pin map."
+    },
+    {
+      "id": "J9",
+      "ref": "RST PU",
+      "label": "Reset pull-up",
+      "part": "",
+      "bbox": [
+        222,
+        1072,
+        382,
+        1162
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'RST PU' printed above it and 'J9' beside it: by its name a pull-up on the reset line, not a peripheral (unverified). Listed for completeness; likely stays on (guess)."
+    }
+  ]
+}

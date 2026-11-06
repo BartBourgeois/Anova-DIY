@@ -1,0 +1,702 @@
+{
+  "image": "main_component-side_micro.jpg",
+  "title": "Main board - component side - raptox's unit, stitched microscope mosaic (2026-11-03)",
+  "source": "Own photos, raptox's unit: 335 microscope tiles stitched on 2026-11-03 (~229 px/mm), downscaled to ~21.6 px/mm; markings read at full resolution",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": 1,
+      "ref": "U1",
+      "label": "TI CC3220S Wi-Fi MCU",
+      "part": "CC3220SM2ARGK, VQFN-64 9 x 9 mm; no internal flash, boots from U15/U16",
+      "marking": "CC3220S / M2A / TI 92J / P5KH G4",
+      "bbox": [
+        297,
+        805,
+        508,
+        1014
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Body measures 9.02 mm on the mosaic; its 0.5 mm pad pitch is one of the scale references."
+    },
+    {
+      "id": 2,
+      "ref": "U15/U16",
+      "label": "XMC XM25QH64A SPI NOR flash, 64 Mbit (8 MiB)",
+      "part": "XM25QH64AHIG: SOP-8 208 mil",
+      "marking": "XMC / QH64AHIG / P1L09000 20 / 1830C",
+      "bbox": [
+        75,
+        785,
+        196,
+        987
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "Both refdes printed at one footprint (alternate parts). PRIMARY DUMP TARGET. Pin 4 = GND, pin 8 = VCC: the continuity references."
+    },
+    {
+      "id": 3,
+      "ref": "U7",
+      "label": "TI CC2640R2F Bluetooth LE MCU",
+      "part": "CC2640R2F, VQFN-48 7 x 7 mm (RGZ)",
+      "marking": "CC2640 / R2F / TI 931 / A0J3 G4",
+      "bbox": [
+        1091,
+        160,
+        1259,
+        328
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Pin-1 dot bottom right in this orientation."
+    },
+    {
+      "id": 4,
+      "ref": "U14",
+      "label": "QFN-40 IC 'T3018' - unidentified",
+      "part": "QFN-40, 5 x 5 mm",
+      "marking": "T3018 / 3737",
+      "bbox": [
+        733,
+        618,
+        855,
+        732
+      ],
+      "category": "unknown",
+      "confidence": "confirmed",
+      "note": "Marking confirmed; function unknown (LED/touch driver candidate)."
+    },
+    {
+      "id": 5,
+      "ref": "U13",
+      "label": "QFN-20 IC '4637' next to the speaker connector",
+      "part": "QFN-20, about 3 x 3 mm, 0.4 mm pitch",
+      "marking": "4637 / 838A (or B38A)",
+      "bbox": [
+        579,
+        217,
+        669,
+        308
+      ],
+      "category": "unknown",
+      "confidence": "likely",
+      "note": "Second line now legible: 838A or B38A, not 638A. Next to J9 and TP21-TP27: audio driver candidate (guess)."
+    },
+    {
+      "id": 6,
+      "ref": "U17",
+      "label": "onsemi NCP59800 LDO: the 3.3 V regulator",
+      "part": "NCP59800 (adjustable, 'ADJB'), 1 A low-noise LDO, DFN8 3 x 3 mm",
+      "marking": "59800 / ADJB / GAJL (read 'S9800 / A0J8' before)",
+      "bbox": [
+        132,
+        406,
+        204,
+        480
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Marking matches the datasheet's marking diagram (onsemi NCP59800/D rev. 2). Pins 7-8 IN with C577 and vias, 1-2 OUT with C579, 6 NR with C604, 3 FB with divider R589/R590. Input 2.2-6.0 V (abs. max 6.5 V), so J8 brings about 5 V. See docs/hardware/nets.md#supply."
+    },
+    {
+      "id": 7,
+      "ref": "U2",
+      "label": "SOT-23 (3 leads) 'CG4'",
+      "part": "SOT-23, 3 leads",
+      "marking": "CG4 (a faint character may precede it)",
+      "bbox": [
+        530,
+        66,
+        612,
+        132
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Was read as SOT-23-5: the mosaic shows 3 leads. With C586 and C4: LDO or supervisor (guess)."
+    },
+    {
+      "id": 8,
+      "ref": "J29",
+      "label": "3-hole header footprint - UNPOPULATED",
+      "part": "",
+      "bbox": [
+        349,
+        486,
+        420,
+        668
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Pitch 2.54 mm (measured 2.53-2.54). '3' printed at the top hole, a dot beside the bottom hole (pin 1)."
+    },
+    {
+      "id": 9,
+      "ref": "J14",
+      "label": "4-way DIP switch footprint - UNPOPULATED",
+      "part": "",
+      "bbox": [
+        125,
+        1078,
+        293,
+        1184
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Silkscreen 'DIP', pins 1 and 4 on the left column, 5 and 8 on the right, an 'ON' marking printed upside down."
+    },
+    {
+      "id": 10,
+      "ref": "J37",
+      "label": "Tag-Connect footprint (6 pads + 3 holes)",
+      "part": "",
+      "bbox": [
+        1075,
+        1330,
+        1217,
+        1429
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Pin numbers 1, 2, 5, 6 printed at the corners. TP16 and TP18 nearby."
+    },
+    {
+      "id": 11,
+      "ref": "TP15, TP34-TP37",
+      "label": "Boxed test-point group (R17-R21, R585, C101)",
+      "part": "",
+      "bbox": [
+        797,
+        886,
+        963,
+        1153
+      ],
+      "category": "debug",
+      "confidence": "guess"
+    },
+    {
+      "id": 12,
+      "ref": "TP13/14/42/43/44",
+      "label": "Test points beside the CC2640R2F",
+      "part": "",
+      "bbox": [
+        [
+          981,
+          146,
+          1036,
+          199
+        ],
+        [
+          1046,
+          190,
+          1068,
+          211
+        ],
+        [
+          1174,
+          103,
+          1195,
+          125
+        ]
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "cJTAG / reset candidates for U7."
+    },
+    {
+      "id": 13,
+      "ref": "TP21-TP27",
+      "label": "Test points around U13",
+      "part": "",
+      "bbox": [
+        [
+          472,
+          217,
+          557,
+          291
+        ],
+        [
+          672,
+          185,
+          722,
+          274
+        ]
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Refdes legible on the mosaic. Function unknown."
+    },
+    {
+      "id": 14,
+      "ref": "TP45-TP48",
+      "label": "Test points under exposed copper pad",
+      "part": "",
+      "bbox": [
+        45,
+        544,
+        215,
+        672
+      ],
+      "category": "debug",
+      "confidence": "guess"
+    },
+    {
+      "id": 15,
+      "ref": "J8",
+      "label": "30-pin FPC to the power board",
+      "part": "0.5 mm pitch FPC connector, flip actuator",
+      "bbox": [
+        1258,
+        774,
+        1408,
+        1186
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "'30' printed at the top end, a circle at the bottom end next to pin 1 (pin 1 = bottom, likely). Pin span measures 14.55 mm. Pins 1-6 share one pour with C588 and C7, C7's other pad on ground: the supply, about 5 V (likely, J-076). Pins 1-6 ring through to JP5 pin 1 (continuity, J-077). Pinout: docs/hardware/j8.md."
+    },
+    {
+      "id": 16,
+      "ref": "J9",
+      "label": "Speaker connector (2-pin)",
+      "part": "",
+      "bbox": [
+        348,
+        295,
+        532,
+        407
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Pin-1 dot at the left."
+    },
+    {
+      "id": 17,
+      "ref": "JP5",
+      "label": "2-hole footprint, 2.54 mm, UNPOPULATED",
+      "part": "",
+      "bbox": [
+        1140,
+        1023,
+        1188,
+        1125
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Pin 1 square (bottom), pin 2 round with thermal spokes. The board's power header, by continuity (J-077, J-080): pin 1 = J8 pins 1-6 = U17's input (about 5 V expected), pin 2 = GND (U15 pin 4). Not fitted."
+    },
+    {
+      "id": 18,
+      "ref": "U6",
+      "label": "5-pad SOT-23-5 footprint - UNPOPULATED",
+      "part": "",
+      "bbox": [
+        1130,
+        827,
+        1188,
+        919
+      ],
+      "category": "unknown",
+      "confidence": "confirmed",
+      "note": "No part fitted (tinned pads only). C9, C19 and R578 next to it are empty too; R588 is fitted."
+    },
+    {
+      "id": 19,
+      "ref": "TP1/2/3/8/9/49",
+      "label": "Test points around J8",
+      "part": "",
+      "bbox": [
+        [
+          1116,
+          954,
+          1140,
+          978
+        ],
+        [
+          1149,
+          716,
+          1173,
+          741
+        ],
+        [
+          1320,
+          731,
+          1344,
+          756
+        ],
+        [
+          1214,
+          674,
+          1239,
+          699
+        ],
+        [
+          1241,
+          1241,
+          1265,
+          1265
+        ],
+        [
+          1142,
+          530,
+          1166,
+          554
+        ]
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Refdes legible: TP1 left of JP5, TP2/TP8 above U6, TP3 above J8, TP9 below J8, TP49 further up."
+    },
+    {
+      "id": 20,
+      "ref": "Y3",
+      "label": "40 MHz crystal (CC3220)",
+      "part": "2016-size can",
+      "marking": "T400 / Mc73",
+      "bbox": [
+        319,
+        1064,
+        371,
+        1110
+      ],
+      "category": "mcu",
+      "confidence": "likely"
+    },
+    {
+      "id": 21,
+      "ref": "Y4?",
+      "label": "2-pad crystal below R573 (32.768 kHz?)",
+      "part": "about 3.2 x 1.5 mm can",
+      "marking": "TA?AV",
+      "bbox": [
+        429,
+        658,
+        508,
+        697
+      ],
+      "category": "mcu",
+      "confidence": "guess",
+      "note": "Same marking style as Y1. Its refdes is not printed next to it; 'Y4' sits further right. CC3220 RTC crystal (guess)."
+    },
+    {
+      "id": 22,
+      "ref": "Y1",
+      "label": "2-pad crystal beside U7 (32.768 kHz?)",
+      "part": "about 3.2 x 1.5 mm can",
+      "marking": "TAeAV",
+      "bbox": [
+        1344,
+        177,
+        1383,
+        255
+      ],
+      "category": "mcu",
+      "confidence": "guess",
+      "note": "CC2640R2F 32 kHz crystal (guess)."
+    },
+    {
+      "id": 23,
+      "ref": "Y2",
+      "label": "4-pad crystal for the CC2640R2F (24 MHz?)",
+      "part": "",
+      "bbox": [
+        1177,
+        416,
+        1241,
+        486
+      ],
+      "category": "mcu",
+      "confidence": "guess"
+    },
+    {
+      "id": 24,
+      "ref": "FL1",
+      "label": "6-pad ceramic part beside U7 (balun/filter)",
+      "part": "",
+      "bbox": [
+        1283,
+        294,
+        1326,
+        325
+      ],
+      "category": "rf",
+      "confidence": "likely",
+      "note": "Pin-3 dot printed."
+    },
+    {
+      "id": 25,
+      "ref": "FL2",
+      "label": "RF filter / balun (CC3220 RF path)",
+      "part": "",
+      "bbox": [
+        456,
+        1068,
+        488,
+        1094
+      ],
+      "category": "rf",
+      "confidence": "guess"
+    },
+    {
+      "id": 26,
+      "ref": "L381/L401/L431",
+      "label": "CC3220 DC/DC inductors + caps",
+      "part": "",
+      "bbox": [
+        [
+          592,
+          778,
+          644,
+          835
+        ],
+        [
+          585,
+          849,
+          642,
+          910
+        ],
+        [
+          580,
+          910,
+          637,
+          972
+        ]
+      ],
+      "category": "power",
+      "confidence": "likely"
+    },
+    {
+      "id": 27,
+      "ref": "",
+      "label": "Antenna zones (yellow, copper-free)",
+      "part": "",
+      "bbox": [
+        [
+          1572,
+          165,
+          1769,
+          859
+        ],
+        [
+          301,
+          1260,
+          1038,
+          1340
+        ]
+      ],
+      "category": "rf",
+      "confidence": "likely",
+      "note": "The bottom zone runs past the mosaic's coverage."
+    },
+    {
+      "id": 28,
+      "ref": "",
+      "label": "Exposed copper pads (spring contacts on FCC sample)",
+      "part": "",
+      "bbox": [
+        [
+          45,
+          560,
+          146,
+          667
+        ],
+        [
+          1427,
+          53,
+          1508,
+          235
+        ],
+        [
+          1406,
+          1340,
+          1513,
+          1452
+        ]
+      ],
+      "category": "rf",
+      "confidence": "guess"
+    },
+    {
+      "id": 29,
+      "ref": "FID1-FID3",
+      "label": "Fiducials (1 mm copper dot in a mask-free disc)",
+      "part": "",
+      "bbox": [
+        [
+          78,
+          254,
+          158,
+          333
+        ],
+        [
+          1783,
+          211,
+          1862,
+          290
+        ],
+        [
+          1535,
+          1367,
+          1614,
+          1446
+        ]
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "No holes. FID1 is the origin of the mechanics table in main-board.md."
+    },
+    {
+      "id": 30,
+      "ref": "",
+      "label": "Heat-stake posts (board riveted to the bezel)",
+      "part": "melted white plastic, tops about 2.9 mm",
+      "bbox": [
+        [
+          498,
+          506,
+          566,
+          574
+        ],
+        [
+          1000,
+          465,
+          1068,
+          533
+        ],
+        [
+          1419,
+          505,
+          1487,
+          573
+        ],
+        [
+          609,
+          1092,
+          677,
+          1160
+        ],
+        [
+          997,
+          1035,
+          1065,
+          1103
+        ],
+        [
+          1582,
+          1171,
+          1650,
+          1239
+        ]
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Positions in the mechanics table, main-board.md."
+    },
+    {
+      "id": 31,
+      "ref": "",
+      "label": "Locating pins in plated holes",
+      "part": "white bezel pins, not melted",
+      "bbox": [
+        [
+          375,
+          71,
+          431,
+          128
+        ],
+        [
+          1415,
+          1211,
+          1472,
+          1268
+        ]
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Flat tops in gold-ringed plated holes: alignment pins (guess)."
+    },
+    {
+      "id": 32,
+      "ref": "Q3",
+      "label": "Discrete circuit (Q3, C605-C607, R591-R594, R559, TP50)",
+      "part": "",
+      "bbox": [
+        1657,
+        1046,
+        1817,
+        1270
+      ],
+      "category": "unknown",
+      "confidence": "guess"
+    },
+    {
+      "id": 33,
+      "ref": "",
+      "label": "Production label '004D2 / 90718PM' (Data Matrix greyed out)",
+      "part": "",
+      "bbox": [
+        1581,
+        887,
+        1736,
+        1043
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "The Data Matrix is decodable at full resolution and is greyed out in every published image until its content is known."
+    },
+    {
+      "id": 34,
+      "ref": "P1-P9",
+      "label": "Bare round test pads, no refdes printed (P1-P9 are our names, top to bottom)",
+      "part": "",
+      "bbox": [
+        [
+          206,
+          775,
+          261,
+          863
+        ],
+        [
+          168,
+          903,
+          236,
+          1038
+        ]
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Two groups: P1-P4 above, P5-P9 below. Mask-free round pads, about 0.9 mm. P5-P8 sit on the flash side of the four series resistors on the CC3220 flash bus (CLK, DOUT, DIN, CS); P1-P4 and P9 are not followed yet. See docs/hardware/nets.md."
+    },
+    {
+      "id": 35,
+      "ref": "",
+      "label": "Flash bus series resistors (4x 0402, no refdes printed nearby)",
+      "part": "",
+      "bbox": [
+        236,
+        942,
+        270,
+        1016
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "Top to bottom in series with CC3220 pins 11-14 (FLASH_SPI_CLK, DOUT, DIN, CS; SWAS035C table 7-1), traced on the top layer. Values unknown (unmarked)."
+    },
+    {
+      "id": 36,
+      "ref": "C588, C7",
+      "label": "J8 supply decoupling (pins 1-6 pour)",
+      "part": "MLCCs, 1210 (C588) and 0805 (C7)",
+      "bbox": [
+        1127,
+        1137,
+        1245,
+        1236
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Their J8-side pads sit on the pour of J8 pins 1-6, with JP5 pin 1. C7's other pad is on the via-stitched ground pour around J8; C588's other pad is not resolved on the photo. See docs/hardware/nets.md#supply."
+    }
+  ]
+}

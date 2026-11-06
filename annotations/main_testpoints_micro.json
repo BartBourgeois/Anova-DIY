@@ -1,0 +1,773 @@
+{
+  "image": "main_component-side_micro.jpg",
+  "title": "Main board - component side - test points (raptox's unit, microscope mosaic 2026-11-03)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm), test-point sweep of 2026-11-04 at 1/4 and 1/2 resolution",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "TP1",
+      "label": "Test point, VIN",
+      "part": "",
+      "bbox": [
+        1117,
+        953,
+        1139,
+        975
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Beside: left of JP5, below C19. Net: VIN_J8 (beeper to JP5 pin 1, J-097)."
+    },
+    {
+      "id": "2",
+      "ref": "TP2",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [
+        1150,
+        717,
+        1172,
+        739
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Beside: below its label, between U6 and R578. Net: GND (beeper to JP5 pin 2, J-097)."
+    },
+    {
+      "id": "3",
+      "ref": "TP3",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [
+        1321,
+        731,
+        1343,
+        753
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Beside: above J8's pin-30 end. Net: GND (beeper to JP5 pin 2, J-097)."
+    },
+    {
+      "id": "4",
+      "ref": "TP4",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [
+        226,
+        295,
+        248,
+        317
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Beside: beside C604, above U17. Net: GND (beeper to JP5 pin 2, J-097)."
+    },
+    {
+      "id": "5",
+      "ref": "TP5",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        784,
+        424,
+        806,
+        446
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: above C587/R6."
+    },
+    {
+      "id": "6",
+      "ref": "TP6",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        751,
+        425,
+        773,
+        447
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: above C587/R6, left of TP5."
+    },
+    {
+      "id": "7",
+      "ref": "TP7",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [
+        981,
+        1154,
+        1003,
+        1176
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Beside: left of C588, below heat stake 5. Net: GND (beeper to JP5 pin 2, J-097)."
+    },
+    {
+      "id": "8",
+      "ref": "TP8",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [
+        1214,
+        675,
+        1236,
+        697
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Beside: left of its label, above U6. Net: GND (beeper to JP5 pin 2, J-097)."
+    },
+    {
+      "id": "9",
+      "ref": "TP9",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [
+        1242,
+        1242,
+        1264,
+        1264
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Beside: below J8's pin-1 end (label upside down). Net: GND (beeper to JP5 pin 2, J-101)."
+    },
+    {
+      "id": "10/11",
+      "ref": "TP10/TP11",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        [
+          1326,
+          71,
+          1348,
+          93
+        ],
+        [
+          1358,
+          71,
+          1380,
+          93
+        ],
+        [
+          1377,
+          95,
+          1399,
+          117
+        ]
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: top edge, right of R20/R23/R24. Two labels, three pads: which is which is open. The third pad may be TP12 or another unlabelled TP (guess)."
+    },
+    {
+      "id": "13",
+      "ref": "TP13",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        980,
+        146,
+        1002,
+        168
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: left of U7, under its label. Rings to no J8 pin (J-099)."
+    },
+    {
+      "id": "14",
+      "ref": "TP14",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1012,
+        146,
+        1034,
+        168
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: left of U7, under its label."
+    },
+    {
+      "id": "16",
+      "ref": "TP16",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1061,
+        1288,
+        1083,
+        1310
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: above J37, left of R574."
+    },
+    {
+      "id": "17",
+      "ref": "TP17",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        649,
+        1181,
+        671,
+        1203
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: beside its label; the TP30-TP32 legend sits just below."
+    },
+    {
+      "id": "18",
+      "ref": "TP18",
+      "label": "Test point, J37 pin 2",
+      "part": "",
+      "bbox": [
+        1295,
+        1409,
+        1317,
+        1431
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: right of J37. Net: J37 pin 2 (beeper, J-100)."
+    },
+    {
+      "id": "19",
+      "ref": "TP19",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1117,
+        385,
+        1139,
+        407
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: upper of two pads left of Y2. Labels TP19 and TP20 are stacked below both pads, in the same order (likely)."
+    },
+    {
+      "id": "20",
+      "ref": "TP20",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1117,
+        418,
+        1139,
+        440
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: lower of two pads left of Y2."
+    },
+    {
+      "id": "21",
+      "ref": "TP21",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        533,
+        268,
+        555,
+        290
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: left of U13."
+    },
+    {
+      "id": "22",
+      "ref": "TP22",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        497,
+        248,
+        519,
+        270
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: left of U13."
+    },
+    {
+      "id": "23",
+      "ref": "TP23",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        700,
+        187,
+        722,
+        209
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: right of U13."
+    },
+    {
+      "id": "24",
+      "ref": "TP24",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        700,
+        220,
+        722,
+        242
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: right of U13."
+    },
+    {
+      "id": "25",
+      "ref": "TP25",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        672,
+        220,
+        694,
+        242
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: right of U13; its label points at it with a stroke."
+    },
+    {
+      "id": "26",
+      "ref": "TP26",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        687,
+        252,
+        709,
+        274
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: right of U13."
+    },
+    {
+      "id": "27",
+      "ref": "TP27",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        471,
+        218,
+        493,
+        240
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: left of U13, by C582."
+    },
+    {
+      "id": "28",
+      "ref": "TP28",
+      "label": "Test point, J29 pin 2",
+      "part": "",
+      "bbox": [
+        472,
+        519,
+        494,
+        541
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: right of J29, by R57x. Net: J29 pin 2 (beeper, J-112)."
+    },
+    {
+      "id": "29",
+      "ref": "TP29",
+      "label": "Test point, J29 pin 1",
+      "part": "",
+      "bbox": [
+        476,
+        570,
+        498,
+        592
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: right of J29. Net: J29 pin 1 (beeper, J-112)."
+    },
+    {
+      "id": "33",
+      "ref": "TP33",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        527,
+        1126,
+        549,
+        1148
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: by FL2 / R321."
+    },
+    {
+      "id": "41",
+      "ref": "TP41",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        746,
+        563,
+        768,
+        585
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: left of R4/R3, above U14."
+    },
+    {
+      "id": "42",
+      "ref": "TP42",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1044,
+        188,
+        1066,
+        210
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: left of U7, above its label."
+    },
+    {
+      "id": "43",
+      "ref": "TP43",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1012,
+        178,
+        1034,
+        200
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: left of U7, right of its label."
+    },
+    {
+      "id": "44",
+      "ref": "TP44",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1174,
+        104,
+        1196,
+        126
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: above U7."
+    },
+    {
+      "id": "49",
+      "ref": "TP49",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1142,
+        530,
+        1164,
+        552
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: above U6, left of Y2's corner."
+    },
+    {
+      "id": "50",
+      "ref": "TP50",
+      "label": "Test point",
+      "part": "",
+      "bbox": [
+        1634,
+        1062,
+        1656,
+        1084
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: by Q3 / C605."
+    },
+    {
+      "id": "P1",
+      "ref": "P1",
+      "label": "Bare pad (our name), U1 pin 6, GPIO15",
+      "part": "",
+      "bbox": [
+        208,
+        777,
+        230,
+        799
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 6, GPIO15 (beeper, J-106)."
+    },
+    {
+      "id": "P2",
+      "ref": "P2",
+      "label": "Bare pad (our name), U1 pin 5, GPIO14",
+      "part": "",
+      "bbox": [
+        237,
+        808,
+        259,
+        830
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 5, GPIO14 (beeper, J-106)."
+    },
+    {
+      "id": "P3",
+      "ref": "P3",
+      "label": "Bare pad (our name), U1 pin 8, GPIO17",
+      "part": "",
+      "bbox": [
+        208,
+        824,
+        230,
+        846
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 8, GPIO17 (beeper, J-106)."
+    },
+    {
+      "id": "P4",
+      "ref": "P4",
+      "label": "Bare pad (our name), U1 pin 7, GPIO16",
+      "part": "",
+      "bbox": [
+        236,
+        839,
+        258,
+        861
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 7, GPIO16 (beeper, J-106)."
+    },
+    {
+      "id": "P5",
+      "ref": "P5",
+      "label": "Bare pad (our name), U1 pin 11, FLASH_SPI_CLK",
+      "part": "",
+      "bbox": [
+        212,
+        905,
+        234,
+        927
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 11, FLASH_SPI_CLK (beeper, J-106)."
+    },
+    {
+      "id": "P6",
+      "ref": "P6",
+      "label": "Bare pad (our name), U1 pin 12, FLASH_SPI_DOUT",
+      "part": "",
+      "bbox": [
+        211,
+        938,
+        233,
+        960
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 12, FLASH_SPI_DOUT (beeper, J-106)."
+    },
+    {
+      "id": "P7",
+      "ref": "P7",
+      "label": "Bare pad (our name), U1 pin 13, FLASH_SPI_DIN",
+      "part": "",
+      "bbox": [
+        210,
+        970,
+        232,
+        992
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 13, FLASH_SPI_DIN (beeper, J-106)."
+    },
+    {
+      "id": "P8",
+      "ref": "P8",
+      "label": "Bare pad (our name), U1 pin 14, FLASH_SPI_CS",
+      "part": "",
+      "bbox": [
+        199,
+        997,
+        221,
+        1019
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 14, FLASH_SPI_CS (beeper, J-106)."
+    },
+    {
+      "id": "P9",
+      "ref": "P9",
+      "label": "Bare pad (our name), U1 pin 16, TDI",
+      "part": "",
+      "bbox": [
+        170,
+        1014,
+        192,
+        1036
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Position from nets.md. P5-P8: the CC3220 flash bus (likely, J-071). Net: U1 pin 16, TDI (beeper, J-103/J-105)."
+    },
+    {
+      "id": "X1",
+      "ref": "X1",
+      "label": "Unlabelled pad (our name)",
+      "part": "",
+      "bbox": [
+        778,
+        563,
+        800,
+        585
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: beside TP41. Unlabelled; TP40 is the obvious guess."
+    },
+    {
+      "id": "X2/X3",
+      "ref": "X2/X3",
+      "label": "Unlabelled pad (our name)",
+      "part": "",
+      "bbox": [
+        [
+          332,
+          721,
+          354,
+          743
+        ],
+        [
+          334,
+          757,
+          356,
+          779
+        ]
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: by R576 / C561, left of U1. Unlabelled pair."
+    },
+    {
+      "id": "X4",
+      "ref": "X4",
+      "label": "Strap pad = SOP0, J14 pin 8 (our name)",
+      "part": "",
+      "bbox": [
+        317,
+        1158,
+        339,
+        1180
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: the top of the column right of J14, by Y3. Rings to a J14 pin and has a cap to GND (raptox); pin 8 by the mosaic trace (J-098). SOP0: rings to U1 pin 35 (raptox, 2026-11-05, J-137)."
+    },
+    {
+      "id": "X5",
+      "ref": "X5",
+      "label": "Strap pad = SOP1, J14 pin 7 (our name)",
+      "part": "",
+      "bbox": [
+        317,
+        1190,
+        339,
+        1212
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: the middle of the column right of J14, by Y3. Rings to a J14 pin and has a cap to GND (raptox); pin 7 by the mosaic trace (J-098). SOP1: rings to U1 pin 34 (raptox, 2026-11-05, J-137)."
+    },
+    {
+      "id": "X6",
+      "ref": "X6",
+      "label": "Strap pad = SOP2, J14 pin 6 (our name)",
+      "part": "",
+      "bbox": [
+        317,
+        1222,
+        339,
+        1244
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beside: the bottom of the column right of J14, by Y3. Rings to a J14 pin and has a cap to GND (raptox); pin 6 by the mosaic trace (J-098). SOP2: rings to U1 pin 21 (raptox, 2026-11-05, J-137)."
+    },
+    {
+      "id": "X7",
+      "ref": "X7",
+      "label": "Unlabelled pad (our name)",
+      "part": "",
+      "bbox": [
+        457,
+        1262,
+        479,
+        1284
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Beside: on the exposed copper strip at the bottom edge. Small ring pad, gold, not tinned."
+    },
+    {
+      "id": "X8",
+      "ref": "X8",
+      "label": "Unlabelled pad (our name)",
+      "part": "",
+      "bbox": [
+        [
+          1574,
+          287,
+          1596,
+          309
+        ],
+        [
+          1594,
+          287,
+          1616,
+          309
+        ]
+      ],
+      "category": "rf",
+      "confidence": "guess",
+      "note": "Beside: two linked gold pads right of R571, at the antenna area. Looks like a solder jumper or RF test pads (guess)."
+    }
+  ]
+}

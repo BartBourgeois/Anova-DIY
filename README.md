@@ -1,0 +1,213 @@
+# Anova Precision Cooker Pro: reverse engineering & firmware recovery
+
+> **Public export.** This repository is a periodic export of a private working repo. Issues and pull
+> requests are welcome, but changes are made upstream and arrive with the next sync. The unit's serial
+> number and the support ticket number are withheld; see "Legal and safety" below.
+> Last sync: 2026-11-07.
+
+Reverse-engineering notes, tools and recovery work for the **Anova Precision Cooker Pro (AN600)**.
+The first goal was to **get a unit that died after an interrupted OTA firmware update cooking again**, by fixing
+its original main board if that could reasonably be done, otherwise by building our own. **Done on 6 November 2026,
+on the original board.** The rest goes on: the hardware mapped further, the schematics, diagnostics software.
+
+**Any%.** My update stopped at 75 %; yours may have frozen on another number, so this project goes by Any%.
+Speedrunners know the category: finish, by whatever route works. We got there: nine days from the stalled update to
+the first cook.
+
+## It cooks again (6 November 2026)
+
+Dead on 29 October, the morning after an update stalled at 75 %. Cooking again on 6 November, on its original main
+board: the buttons and the display, Wi-Fi and the app, and a 54 °C test cook held on point for ten minutes.
+
+- **What was wrong:** the Wi-Fi chip had locked itself. Its security-alert counter stood at the limit, where the
+  chip refuses to run until it is reprogrammed. The update's leftovers on the flash were harmless (the chip's own
+  safeguard undoes them), the update never reached the Bluetooth chip, and the power board was fine all along.
+  What raised the alerts is still open.
+- **How it was fixed:** both chips' flash backed up first, each read twice with the same checksum. Then the Wi-Fi
+  chip was reprogrammed through its own boot loader with the chip maker's tool: the current firmware, and the unit's
+  own files carried over from the backup. Only the chip maker's documented procedures; no firmware is published here.
+- **The story:** [Day six: it cooks again](blog/posts/2026-11-06-it-cooks-again.md). The record:
+  [timeline](docs/timeline.md). The procedures: the [flash backup handbook](docs/flashbackup/index.md) and the
+  [recovery handbook](docs/recovery/index.md).
+
+> Not affiliated with or endorsed by Anova Applied Electronics, Inc. (Anova Culinary). Everything here is at your own risk.
+> The power board carries **mains voltage**. Never open or probe a unit that is plugged in.
+
+## Why
+
+*Written on 2 to 4 November, while the cooker was dead, and left as it was written. Its questions are answered in
+[It cooks again](#it-cooks-again-6-november-2026).*
+
+I paid what a premium product from a premium brand costs, about $450, and expected exactly that. The cooker died
+right after a firmware update was interrupted. Not dropped, not flooded, not abused: the update stalled at 75 %, and
+after a power cycle the unit was dead. No beep, no display, nothing. I have no doubt the update killed it: it was the only event, the timing matches, nothing else happened.
+By this repo's own standard that stays "likely" until a measurement rules out a coincidental power-supply failure.
+The first one, on 4 November, points that way: the power board still puts 5.01 V on the connector with the main board
+unplugged. Whether it holds up under load is the next check.
+
+In my view that should not be possible in 2026. A $10 smart plug routinely survives a botched update: it keeps the
+old firmware until the new one has proven itself. The Wi-Fi chip in this cooker even has that mechanism built in
+(TI documents an OTA rollback for it). Yet here we are.
+
+I'll own my part. The cooker worked perfectly, and I updated it anyway. I work in IT, where update discipline is
+drilled into you, and I also know the older rule: if it isn't broken, don't fix it. So yes, I pressed the button.
+But in my book, a vendor that offers updates is responsible for what an interrupted one does. The hardware that
+lets a device survive a botched update is a second copy of the firmware in flash, a dollar's worth of memory at
+most. This cooker has 8 MiB of flash, and its chip's maker documents a rollback mechanism for exactly this case
+([recovery-strategy.md](docs/firmware/recovery-strategy.md)). It didn't save my cooker. Finding out why is part of
+this project.
+
+And that is the most interesting question in this whole story. The mechanism exists on this very board, so there are
+only three ways to end up here: the firmware doesn't use it; or the update touched something it doesn't cover (the
+BLE chip, the file system itself); or the failure isn't in the Wi-Fi chip at all. The flash dump will tell. Whichever
+answer it is, it goes here, with the evidence.
+
+Anova's answers so far (ticket opened 2026-10-29): leave it plugged in overnight; then that the unit is out of
+warranty; then 10 % off a new one. For perspective: 10 % is the usual newsletter sign-up discount on Anova's own
+site, and the Pro itself has sold at about half price in seasonal promotions (Amazon US, Black Friday 2020;
+[sources](docs/references.md#anova)). On 2026-11-01 I asked for one of four things: a firmware image with recovery
+instructions, a replacement main board at my cost, a mail-in reflash, or a refurbished unit. None of the four came:
+the reply (2026-11-02) was a reset procedure on the touch panel, which had been dark since the update. The whole exchange is on record, word for word: [correspondence](docs/correspondence.md). To me, a discount on
+a replacement isn't support, it's a sales offer.
+
+It's sad, and I feel tricked: a premium price should buy an update process that can't kill the device. I'd rather
+spend thousands of euros on debugging hardware, beta boards and DIY electronics than buy a new Anova. Spent on
+tools so far: about €545, two days in ([list](docs/hardware/bench-setup.md#spent-so-far-2026-11-02)).
+
+So I'll keep at this until this dead Pro cooks again, whatever it takes. If Anova helps: good, cheaper for me, and I'll
+say so here. If not, make no mistake, the cooker will cook. Everything I learn on the way is in this repo, so the next
+person with a dead one doesn't start from zero.
+
+This repository stays online, whatever the outcome. I will not delete it. It documents the progress and the process as
+they happen: every change upstream is published within seconds. The public repository is a snapshot by design, the
+current state and nothing else; the dated record is the [timeline](docs/timeline.md), and when a statement of
+substance about the cooker turns out wrong, the correction goes there with its date. It is what it is.
+
+raptox
+
+## What this project wants
+
+1. **This cooker cooking again.** **Done, 6 November 2026**, on its original main board
+   ([how](#it-cooks-again-6-november-2026)). Nothing waited on anyone.
+2. **A documented recovery path for every Precision Cooker Pro that fails the same way.** Everything learned here is
+   public under an open licence ([LICENSE.md](LICENSE.md)), so the next owner starts from this page, not from zero.
+3. **From Anova, any of the four things asked on 2026-11-01:** a firmware image with recovery instructions, a
+   replacement main board at my cost, a mail-in reflash, or a refurbished unit. Or, better for every owner: an
+   official, documented recovery procedure for units out of warranty. Help gets credited here, in full.
+
+How the work is done: read-only first, a verified backup before any write, every claim with a confidence label and
+a source, every step in the [timeline](docs/timeline.md). This project documents a repair. It distributes no firmware
+and publishes no way around any protection (see [Legal and safety](#legal-and-safety)).
+
+## The patient
+
+| | |
+|---|---|
+| Model | Anova Precision Cooker Pro, type **AN600-20** (EU, 220-240 V) |
+| FCC ID | [`2APBOAN600`](https://fccid.io/2APBOAN600) (granted 2018-09-16, tested as AN600-10 / 120 V) |
+| Symptom | OTA update via the Anova app stalled at 75%. After a power cycle the unit is completely dead: no beep, no display, no LEDs, and nothing on Bluetooth or Wi-Fi. |
+| Status | **Cooking again since 2026-11-06**: the Wi-Fi chip had locked itself; reprogrammed ([how](#it-cooks-again-6-november-2026)). |
+| Reference | A second, **working** Precision Cooker Pro is available for read-only comparison. |
+
+Full story: [docs/incident.md](docs/incident.md). Everything since then, dated: [docs/timeline.md](docs/timeline.md).
+The narrative, in instalments: [blog](blog/index.md).
+
+**Website:** <https://cooked.raptox.be/>, rebuilt from this repo on every push.
+
+## What's inside
+
+From raptox's unit (main board, 2026-11-01) and the FCC photos (everything else).
+
+| Board | Key parts |
+|---|---|
+| **Main board** `ANOVA_PRO_MAIN_V2.0` | **U1 TI CC3220S** Wi-Fi MCU, boots from **U15/U16 XMC XM25QH64A** (8 MiB SPI NOR, SOP-8 208 mil) · **U7 TI CC2640R2F** BLE MCU (internal flash) · unidentified U14 `T3018` (QFN-40), U13 `4637` (QFN-20, next to the speaker) · debug: J29 (1x3, empty, on the Wi-Fi chip's boot-loader serial pins), J14 (4-way DIP footprint, empty, the Wi-Fi chip's three boot straps), Tag-Connect J37/J38, TP groups · 30-pin FPC J8 to the power board · J9 speaker · 6 touch keys, about 135 discrete LEDs forming 3 x 4 seven-segment digits |
+| **Power board** `ANOVA_PRO_POWER_REV01` | AC/DC flyback daughterboard (F1 T2A/250V) · heater relay · main fuse · DC/DC buck (6.8 uH) · several unidentified ICs · 30-pin FPC J8 · wire terminals for heater/pump/sensors · PCB "finger" that probably carries the water-temperature sensor |
+
+Details: [docs/hardware/overview.md](docs/hardware/overview.md) ·
+[main board](docs/hardware/main-board.md) · [power board](docs/hardware/power-board.md) ·
+[component list](docs/hardware/components.md) · [opening the head](docs/hardware/disassembly.md) ·
+[bench setup & debugging](docs/hardware/bench-setup.md) · [photo log](docs/photos.md)
+
+## Annotated photos
+
+**raptox's unit**, main board component side, stitched from 335 microscope frames (2026-11-03):
+
+[![main board, component side, raptox's unit, stitched microscope mosaic](images/annotated/main_component-side_micro.png)](docs/hardware/callouts/main_component-side_micro.md)
+
+At 100 % (229 px/mm): the zoomable [mosaic viewer](docs/mosaics.md) or the
+[lossless PNG](https://github.com/BartBourgeois/Anova-DIY/releases/download/mosaics/2026-11-03_main_component-side_mosaic.png).
+
+The first phone photo of the same side (2026-11-01): [annotated](images/annotated/main_component-side_own.png).
+
+**All photos in this project are our own unless marked otherwise.** The images below marked "FCC" come from the
+public FCC filing for this product (FCC ID 2APBOAN600, internal-photos exhibit 3999178, 2018 sample) and carry that
+source in their legend.
+
+FCC sample (2018), source: FCC ID 2APBOAN600, exhibit 3999178:
+
+| | |
+|---|---|
+| [![main board, component side](images/annotated/main_component-side.png)](docs/hardware/callouts/main_component-side.md) | [![main board, LED side](images/annotated/main_led-side.png)](docs/hardware/callouts/main_led-side.md) |
+| Main board, component side | Main board, LED / touch side |
+| [![power board, top](images/annotated/power_top.png)](docs/hardware/callouts/power_top.md) | [![power board, bottom](images/annotated/power_bottom.png)](docs/hardware/callouts/power_bottom.md) |
+| Power board, top | Power board, bottom |
+| [![assembly](images/annotated/assembly_open.png)](docs/hardware/callouts/assembly_open.md) | [![bezel](images/annotated/front_bezel.png)](docs/hardware/callouts/front_bezel.md) |
+| Head opened (assembly) | Front bezel (from the back) |
+
+Box colour = category, outline = confidence (solid confirmed, dashed likely, dotted guess).
+Click an image for its callout table.
+
+## Roadmap
+
+Two cases, both planned, in [docs/roadmap.md](docs/roadmap.md): Anova helps (unlikely; documented in full if it
+happens, and the repair part ends there), or we do it ourselves, all the way, with every step the tools allow. Either
+way the project doesn't stop at the point of no return, which has passed.
+
+The headline steps of the do-it-ourselves case: **4K microscope imaging of every board**, tile by tile, into
+measurable mosaics; transillumination for the inner copper layers; **reverse-engineering the schematics**, net by net,
+since Anova's are confidential in the FCC filing; logic analyser and UART on the boot sequence; a verified dump of the
+flash; rehearsals of every write on a known-good chip; and, if the board can't be fixed, a board of our own. The
+phase view below is the short version.
+
+| Phase | Goal | Status |
+|---|---|---|
+| 0 | Document hardware from the public FCC filing | **done (first pass)** |
+| 1 | Open the dead unit: own high-res photos, read chip markings, measure supply rails; compare (read-only) with the working unit | **in progress**: opened, main board photographed, markings read; main board's component side stitched from microscope frames at about 229 px/mm ([photo log](docs/photos.md#2026-11-03-microscope-mosaic-main-board-component-side)); next: the other sides and backlight; the power board's 5 V measured (4 Nov), the rails under power todo |
+| 2 | Find and map debug interfaces: J29, J37/J38 (Tag-Connect), DIP J14, test points; CC3220 SOP straps, UART, JTAG/SWD; CC2640R2F cJTAG. Identify power-board U2 (MCU?) and map the J8 pinout unpowered. Draw the schematics from the images and the continuity map. | **in progress**: J8's supply and ground (4 Nov); the flash bus, the three boot straps with their pull-downs, the serial header J29 and nine bare pads measured to the chips (5 Nov, [test points](docs/hardware/testpoints.md)); J37 and J8's signal lines next |
+| 3 | **Back up first**: full read-only dump of the CC3220 serial flash (and of the CC2640R2F flash if readable), read twice and hash-verified | **done**, 6 Nov: the serial flash by clip with the Wi-Fi chip held in reset, the CC2640R2F over its cJTAG port; each read twice, identical, copied off the machine ([flash backup handbook](docs/flashbackup/index.md)) |
+| 4 | Analyse the dumps: SimpleLink filesystem layout, OTA state, which chip the failed update targeted | **done**, 6 Nov: the file system intact, the interrupted update in a state the chip rolls back; the CC2640R2F untouched by it; the CC3220 **locked** (its security-alert counter at the limit) ([timeline](docs/timeline.md)) |
+| 5 | Recovery, depending on Phase 4. The broken file alone, replaced through the UARTLOAD boot loader, keeps the unit's network address and cloud identity, but a production-mode boot loader refuses file writes (rehearsed 6 Nov); then a full image with the unit's own readable files carried over from the backup, or RET_FACTORY_IMAGE (both erase the protected ones); a CC2640R2F reflash if that chip is the victim | **done**, 6 Nov: a full image through the UARTLOAD boot loader, the current firmware with the unit's own files from the backup; the lock cleared, **the cooker cooks** ([the story](blog/posts/2026-11-06-it-cooks-again.md)) |
+| 6 | Diagnostics software (UART console, flash-dump parser, BLE/Wi-Fi local API client, ...) | later |
+| B | If the board can't reasonably be fixed: our own main board (ESP32-S3, headless first), or our own firmware on the original CC3220 | **committed fallback** ([plan B](docs/plan-b-custom-mainboard.md)) |
+
+The recovery reasoning lives in [docs/firmware/recovery-strategy.md](docs/firmware/recovery-strategy.md).
+
+Phases 1-2 are run as an **open exploration**: no gates, every tool used to learn as much as it can, route chosen
+only when the findings make it obvious.
+
+
+## Legal and safety
+
+- **Not affiliated.** Anova and Precision Cooker are trademarks of Anova Applied Electronics, Inc., used here only
+  to identify the product. This project is not affiliated with, endorsed by or sponsored by Anova.
+- **Own device, for repair.** Everything here comes from examining a device raptox owns, from public FCC filings and
+  from public chip-maker documentation (TI). The aim is to repair it. The procedures described are the ones TI
+  documents for its own chips; in the author's reading (not legal advice), nothing here circumvents a technical
+  protection.
+- **Never distributed:** Anova firmware, flash dumps or fragments of them; keys, certificates or credentials; anything
+  that gives access to Anova's servers; Anova's user manual; the FCC exhibit PDFs themselves (public at
+  [fccid.io/2APBOAN600](https://fccid.io/2APBOAN600), SHA-256 in [docs/references.md](docs/references.md)).
+- **Statements about Anova** are dated facts from the support correspondence, quoted word for word on the
+  [correspondence page](docs/correspondence.md) or paraphrased, or opinions labelled as such. Anova staff are never named.
+- **Safety, no warranty.** The power board carries mains voltage, which can kill. Opening the unit voids its warranty
+  and its CE/FCC certification, radio included; a modified unit is not a certified appliance. Never leave a modified
+  heater unattended. Everything here is at your own risk, without warranty or liability of any kind
+  ([LICENSE.md](LICENSE.md), at the root of the public repo).
+- The author is an engineer, not a lawyer. This is engineering documentation, not legal advice.
+- The full statement of the bounds this project works within, for the United States, for Belgium and the EU, and for
+  everywhere else: [docs/legal.md](docs/legal.md).
+
+## Sources
+
+Hardware information comes from raptox's own unit and the public FCC filing for `2APBOAN600` (the schematics and block
+diagram are confidential and not available). See [docs/references.md](docs/references.md).

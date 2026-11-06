@@ -1,0 +1,315 @@
+{
+  "image": "micro_step_bench.jpg",
+  "format": "jpg",
+  "title": "Recovery 1.6 - the seven probes, each checked with the beeper",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 34,
+  "line_px": 6,
+  "box_px": 5,
+  "caption": "Place the seven probes P1-P7 as the boot-loader session uses them, then beep each one from its lead's end to the pad Cn on the same net. A probe that doesn't beep is re-seated.",
+  "callouts": [
+    {
+      "id": "P1",
+      "ref": "JP5.1",
+      "label": "probe 1: JP5 pin 1 (VIN)",
+      "part": "",
+      "bbox": [
+        2380,
+        2186,
+        2455,
+        2258
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The square pad. VIN, J8 pins 1-6 (J-077, J-080).",
+      "tag_side": "right"
+    },
+    {
+      "id": "P2",
+      "ref": "JP5.2",
+      "label": "probe 2: JP5 pin 2 (GND)",
+      "part": "",
+      "bbox": [
+        2383,
+        2067,
+        2455,
+        2141
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The round pad above pin 1. GND (J-080).",
+      "tag_side": "right"
+    },
+    {
+      "id": "P3",
+      "ref": "J29.1",
+      "label": "probe 3: J29 hole 1",
+      "part": "",
+      "bbox": [
+        724,
+        1188,
+        798,
+        1262
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The bottom hole, by the printed dot. TP29's net (J-112).",
+      "tag_side": "left"
+    },
+    {
+      "id": "P4",
+      "ref": "J29.2",
+      "label": "probe 4: J29 hole 2",
+      "part": "",
+      "bbox": [
+        725,
+        1071,
+        796,
+        1142
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The middle hole. TP28's net (J-112).",
+      "tag_side": "left"
+    },
+    {
+      "id": "P5",
+      "ref": "J29.3",
+      "label": "probe 5: J29 hole 3 (GND)",
+      "part": "",
+      "bbox": [
+        726,
+        955,
+        797,
+        1026
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The top hole. GND (J-112).",
+      "tag_side": "left"
+    },
+    {
+      "id": "P6",
+      "ref": "X6",
+      "label": "probe 6: X6, the SOP2 pad",
+      "part": "",
+      "bbox": [
+        626,
+        2482,
+        664,
+        2520
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The bottom of the three strap pads. Measured: beeps to U1 pin 21 (SOP2), raptox's beeper, unpowered, 2026-11-05.",
+      "tag_side": "right"
+    },
+    {
+      "id": "P7",
+      "ref": "U15.8",
+      "label": "probe 7: U15 pin 8 (3.3 V)",
+      "part": "",
+      "bbox": [
+        136,
+        1550,
+        166,
+        1644
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "U15's top-left lead, across from pin 1. The 3.3 V rail (J-110)."
+    },
+    {
+      "id": "C1",
+      "ref": "TP1",
+      "label": "check: TP1 (VIN)",
+      "part": "",
+      "bbox": [
+        2325,
+        1918,
+        2358,
+        1951
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Rings to JP5 pin 1 (beeper, J-097).",
+      "tag_side": "left",
+      "tag_dy": -10
+    },
+    {
+      "id": "C2",
+      "ref": "TP2",
+      "label": "check: TP2 (GND)",
+      "part": "",
+      "bbox": [
+        2394,
+        1413,
+        2428,
+        1447
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Rings to JP5 pin 2 (beeper, J-097).",
+      "tag_side": "left"
+    },
+    {
+      "id": "C3",
+      "ref": "TP29",
+      "label": "check: TP29",
+      "part": "",
+      "bbox": [
+        964,
+        1099,
+        1001,
+        1136
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Rings to J29 hole 1 (beeper, J-112).",
+      "tag_side": "right"
+    },
+    {
+      "id": "C4",
+      "ref": "TP28",
+      "label": "check: TP28",
+      "part": "",
+      "bbox": [
+        958,
+        994,
+        995,
+        1031
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Rings to J29 hole 2 (beeper, J-112).",
+      "tag_side": "right"
+    },
+    {
+      "id": "C5",
+      "ref": "TP4",
+      "label": "check: TP4 (GND)",
+      "part": "",
+      "bbox": [
+        431,
+        515,
+        470,
+        554
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Beside C604, above U17. GND: rings to JP5 pin 2 (beeper, J-097)."
+    },
+    {
+      "id": "C6",
+      "ref": "J14.6",
+      "label": "check: J14 pin 6",
+      "part": "",
+      "bbox": [
+        502,
+        2296,
+        564,
+        2335
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Third pad of J14's right row, counted from pin 8 at the top. To X6 by the mosaic trace order (J-098): likely.",
+      "tag_side": "left"
+    },
+    {
+      "id": "C7",
+      "ref": "U17 OUT",
+      "label": "check: U17 output (3.3 V)",
+      "part": "",
+      "bbox": [
+        240,
+        882,
+        296,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "U17 pins 1-2, the two left toes of its bottom row (NCP59800 pinout, pin-1 dot bottom-left; docs/hardware/nets.md). U15 pin 8 rings to U17 OUT (J-110)."
+    }
+  ],
+  "links": [
+    {
+      "from": "P1",
+      "to": "C1",
+      "label": "beep",
+      "style": "solid",
+      "via": [
+        [
+          2417,
+          2275
+        ],
+        [
+          2290,
+          2275
+        ],
+        [
+          2290,
+          2030
+        ],
+        [
+          2341,
+          2030
+        ]
+      ]
+    },
+    {
+      "from": "P2",
+      "to": "C2",
+      "label": "beep",
+      "style": "solid",
+      "via": [
+        [
+          2419,
+          2040
+        ],
+        [
+          2505,
+          2040
+        ],
+        [
+          2505,
+          1370
+        ],
+        [
+          2411,
+          1370
+        ]
+      ]
+    },
+    {
+      "from": "P3",
+      "to": "C3",
+      "label": "beep",
+      "style": "solid"
+    },
+    {
+      "from": "P4",
+      "to": "C4",
+      "label": "beep",
+      "style": "solid"
+    },
+    {
+      "from": "P5",
+      "to": "C5",
+      "label": "beep",
+      "style": "solid"
+    },
+    {
+      "from": "P6",
+      "to": "C6",
+      "label": "beep",
+      "style": "solid"
+    },
+    {
+      "from": "P7",
+      "to": "C7",
+      "label": "beep",
+      "style": "solid"
+    }
+  ]
+}

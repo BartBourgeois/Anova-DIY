@@ -1,0 +1,234 @@
+{
+  "image": "micro_step_bench.jpg",
+  "title": "Flash backup 10.2 - the cooker's main board wired for U7's cJTAG read",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~46 px/mm in this crop)",
+  "caption": "Supply through break-out A on J8. The reset hold from TP33 to GND at JP5 pin 2, on before power. Probe A on TP13 (TMSC) and probe B on TP14 (TCKC), wired to the LaunchPad's XDS110 (picture 10.3); the LaunchPad's GND on break-out A's header pin 30. No clip on U15, nothing else on the board. The U7 close-up is picture 10.1.",
+  "scale": 1,
+  "tag_px": 34,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "terminals": [
+    {
+      "id": "xds_tms",
+      "label": "LaunchPad: the XDS110's TMS pin (picture 10.3)",
+      "group": "other",
+      "y": 90
+    },
+    {
+      "id": "xds_tck",
+      "label": "LaunchPad: the XDS110's TCK pin (picture 10.3)",
+      "group": "other",
+      "y": 190
+    },
+    {
+      "id": "sup_p",
+      "label": "Bench supply + (5.0 V, OVP 6 V, limit 100 mA): break-out A header pins 1-6",
+      "group": "supply",
+      "y": 1700
+    },
+    {
+      "id": "sup_n",
+      "label": "Bench supply -: break-out A header pin 30",
+      "group": "supply",
+      "y": 1900
+    },
+    {
+      "id": "lp_gnd",
+      "label": "LaunchPad GND (its TP2): a hook clip on break-out A header pin 30, beside the supply's -",
+      "group": "other",
+      "y": 2100
+    }
+  ],
+  "links": [
+    {
+      "from": "TP13",
+      "to": "xds_tms",
+      "label": "probe A",
+      "style": "solid",
+      "via": [
+        [
+          2053,
+          90
+        ]
+      ]
+    },
+    {
+      "from": "TP14",
+      "to": "xds_tck",
+      "label": "probe B",
+      "style": "solid",
+      "via": [
+        [
+          2120,
+          190
+        ]
+      ]
+    },
+    {
+      "from": "J8",
+      "to": "sup_p",
+      "style": "solid"
+    },
+    {
+      "from": "J8",
+      "to": "sup_n",
+      "style": "solid"
+    },
+    {
+      "from": "J8",
+      "to": "lp_gnd",
+      "style": "solid"
+    },
+    {
+      "from": "TP33",
+      "to": "JP5.2",
+      "label": "hold lead",
+      "style": "solid",
+      "color": "#ff5cc8",
+      "via": [
+        [
+          1090,
+          2450
+        ],
+        [
+          2420,
+          2450
+        ]
+      ],
+      "label_at": [
+        1750,
+        2450
+      ]
+    }
+  ],
+  "callouts": [
+    {
+      "id": "TP13",
+      "ref": "TP13",
+      "label": "= U7's TMSC: probe A",
+      "part": "",
+      "bbox": [
+        2034,
+        198,
+        2072,
+        236
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beeps to U7 pin 24, not to GND, not to TP14 (raptox, J-230). Pins: picture 10.1.",
+      "tag_side": "left"
+    },
+    {
+      "id": "TP14",
+      "ref": "TP14",
+      "label": "= U7's TCKC: probe B",
+      "part": "",
+      "bbox": [
+        2101,
+        198,
+        2139,
+        236
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Beeps to U7 pin 25, not to GND (raptox, J-230).",
+      "tag_side": "below"
+    },
+    {
+      "id": "U7",
+      "ref": "U7",
+      "label": "CC2640R2F: nothing else on it",
+      "part": "CC2640R2F",
+      "bbox": [
+        2270,
+        229,
+        2604,
+        556
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Only TP13 and TP14 are used; TP42, TP43, TP44 and its reset stay free.",
+      "tag_side": "right"
+    },
+    {
+      "id": "U15",
+      "ref": "U15",
+      "label": "no clip this time",
+      "part": "XM25QH64A",
+      "bbox": [
+        112,
+        1556,
+        359,
+        1970
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "Its backup exists (J-218); nothing reads it in this session.",
+      "tag_side": "left"
+    },
+    {
+      "id": "TP33",
+      "ref": "TP33",
+      "label": "= U1's nRESET: the hold probe",
+      "part": "",
+      "bbox": [
+        1072,
+        2282,
+        1107,
+        2319
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "To GND before power and for the whole session (J-203, J-204): neither firmware starts, nothing talks to U7.",
+      "tag_side": "left"
+    },
+    {
+      "id": "R321",
+      "ref": "R321",
+      "label": "its right pad is 3.3 V, never the probe",
+      "part": "",
+      "bbox": [
+        1032,
+        2218,
+        1099,
+        2245
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Left pad = nRESET, right pad = 3V3 (J-204, J-205, J-208)."
+    },
+    {
+      "id": "JP5.2",
+      "ref": "JP5.2",
+      "label": "GND: the hold lead's ground",
+      "part": "",
+      "bbox": [
+        2384,
+        2067,
+        2455,
+        2139
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The round pad; GND (J-080). Also the meter's black lead for 10.4's checks.",
+      "tag_side": "left"
+    },
+    {
+      "id": "J8",
+      "ref": "J8",
+      "label": "break-out A: the supply and the LaunchPad's GND",
+      "part": "30-pin 0.5 mm FPC",
+      "bbox": [
+        2786,
+        1540,
+        2942,
+        2406
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Header pins 1-6 = VIN, 30 = GND (J-077, J-201); the LaunchPad's GND clip goes on pin 30 beside the supply's - lead; every other header pin open.",
+      "tag_side": "left"
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "image": "power_top.png",
+  "title": "Power board ANOVA_PRO_POWER_REV01 - top side",
+  "source": "FCC ID 2APBOAN600, internal-photos exhibit 3999178 (2018 sample), page 3, middle photo (994x363)",
+  "scale": 2,
+  "callouts": [
+    {
+      "id": 1,
+      "ref": "",
+      "label": "AC/DC flyback converter (daughterboard)",
+      "part": "sub-PCB: transformer, bulk e-caps, CM choke, X2 cap, Y caps, CN2",
+      "bbox": [
+        276,
+        40,
+        520,
+        262
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Isolated low-voltage supply for the electronics. Output voltage(s) unknown (measure). MAINS POTENTIAL on the primary side."
+    },
+    {
+      "id": 2,
+      "ref": "F1",
+      "label": "Fuse T2A/250V (SMPS input)",
+      "part": "silkscreen 'F1 T2A/250V'",
+      "bbox": [
+        520,
+        128,
+        550,
+        182
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Protects the AC/DC module. If the module has no output, check this first, with the device unplugged."
+    },
+    {
+      "id": 3,
+      "ref": "",
+      "label": "Main fuse (cartridge in clips)",
+      "part": "ceramic/glass cartridge fuse",
+      "bbox": [
+        798,
+        15,
+        948,
+        55
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Rating not legible. Probably sized for the 1200 W heater path."
+    },
+    {
+      "id": 4,
+      "ref": "",
+      "label": "Heater relay (black, sealed)",
+      "part": "PCB power relay",
+      "bbox": [
+        770,
+        110,
+        850,
+        220
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Switches the heater. Marking scratched. Could also be a safety cut-off relay paired with #5."
+    },
+    {
+      "id": 5,
+      "ref": "",
+      "label": "Grey box component (2nd relay or film capacitor)",
+      "part": "",
+      "bbox": [
+        845,
+        55,
+        905,
+        168
+      ],
+      "category": "power",
+      "confidence": "guess"
+    },
+    {
+      "id": 6,
+      "ref": "",
+      "label": "Yellow dipped component (MOV or Y-cap)",
+      "part": "",
+      "bbox": [
+        800,
+        48,
+        840,
+        108
+      ],
+      "category": "power",
+      "confidence": "guess"
+    },
+    {
+      "id": 7,
+      "ref": "",
+      "label": "Mains input terminals (L/N)",
+      "part": "2 PCB spade/tab terminals",
+      "bbox": [
+        898,
+        75,
+        948,
+        168
+      ],
+      "category": "connector",
+      "confidence": "likely"
+    },
+    {
+      "id": 8,
+      "ref": "C25",
+      "label": "Film capacitor (grey box)",
+      "part": "box film capacitor (X2?)",
+      "bbox": [
+        543,
+        70,
+        586,
+        152
+      ],
+      "category": "power",
+      "confidence": "likely"
+    },
+    {
+      "id": 9,
+      "ref": "J23 J24 J25 J28 J30",
+      "label": "5 wire terminals (2-pad each)",
+      "part": "slot/tab terminals",
+      "bbox": [
+        594,
+        64,
+        760,
+        150
+      ],
+      "category": "connector",
+      "confidence": "likely",
+      "note": "Heater element, pump motor, thermal cut-off and/or earth wiring. Assignment TBD."
+    },
+    {
+      "id": 10,
+      "ref": "J19",
+      "label": "2-pin wire connector",
+      "part": "JST-style",
+      "bbox": [
+        558,
+        243,
+        612,
+        282
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Function TBD (temperature sensor? pump?)."
+    },
+    {
+      "id": 11,
+      "ref": "J12",
+      "label": "2/3-pin wire connector",
+      "part": "JST-style",
+      "bbox": [
+        690,
+        250,
+        750,
+        285
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Function TBD."
+    },
+    {
+      "id": 12,
+      "ref": "J15",
+      "label": "~8-pin wire-to-board connector (white)",
+      "part": "",
+      "bbox": [
+        857,
+        232,
+        886,
+        295
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Function TBD. Multi-pin, so probably sensors or motor."
+    },
+    {
+      "id": 13,
+      "ref": "U10",
+      "label": "TSSOP IC, unidentified",
+      "part": "TSSOP-16 class",
+      "bbox": [
+        893,
+        188,
+        940,
+        225
+      ],
+      "category": "unknown",
+      "confidence": "guess",
+      "note": "Next to the relay with a resistor array. Candidates: relay/zero-cross logic, power metering, or op-amp sensing."
+    },
+    {
+      "id": 14,
+      "ref": "U5",
+      "label": "small 6-lead IC",
+      "part": "SOT-23-6 class",
+      "bbox": [
+        896,
+        234,
+        935,
+        258
+      ],
+      "category": "unknown",
+      "confidence": "guess"
+    },
+    {
+      "id": 15,
+      "ref": "Q5 Q8 R26-R55",
+      "label": "Small-signal transistor/resistor cluster",
+      "part": "",
+      "bbox": [
+        578,
+        180,
+        640,
+        245
+      ],
+      "category": "unknown",
+      "confidence": "guess",
+      "note": "Possibly relay/pump drivers or sensor conditioning."
+    },
+    {
+      "id": 16,
+      "ref": "",
+      "label": "PCB finger (sensor tail)",
+      "part": "long narrow PCB extension with pads at the tip",
+      "bbox": [
+        5,
+        272,
+        400,
+        308
+      ],
+      "category": "sensor",
+      "confidence": "guess",
+      "note": "Reaches down into the stainless tube. Probably carries the water-temperature sensor at the tip (see R57 on the bottom side)."
+    },
+    {
+      "id": 17,
+      "ref": "",
+      "label": "Silkscreen 'ANOVA_PRO_POWER_REV01'",
+      "part": "board name + revision",
+      "bbox": [
+        705,
+        288,
+        872,
+        312
+      ],
+      "category": "info",
+      "confidence": "confirmed"
+    }
+  ]
+}

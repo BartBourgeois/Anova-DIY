@@ -1,0 +1,276 @@
+{
+  "image": "micro_step_bench.jpg",
+  "title": "Recovery 3.1 - boot-loader session: the seven probes",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 34,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "caption": "Supply on JP5, the USB-serial adapter on J29 (its TXD through 1 kΩ), the strap from U15 pin 8 through 470 Ω onto X6, the SOP2 pad. The cable stays out of J8. Swap the two J29 signal probes if chapter 1 found hole 2 to be TX.",
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "JP5.1",
+      "label": "JP5 pin 1 (square), 5 V in",
+      "part": "",
+      "bbox": [
+        2381,
+        2184,
+        2453,
+        2256
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The square pad, '1' printed left of it; VIN = J8 pins 1-6 = U17's input (J-077, J-080). Bench supply + at 5.0 V, OVP 6 V, current limit 100 mA. Never above 6 V.",
+      "tag_side": "below"
+    },
+    {
+      "id": "2",
+      "ref": "JP5.2",
+      "label": "JP5 pin 2, GND",
+      "part": "",
+      "bbox": [
+        2384,
+        2067,
+        2455,
+        2139
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The round pad above pin 1, '2' printed left of it; GND, the same net as U15 pin 4 (J-080)."
+    },
+    {
+      "id": "3",
+      "ref": "J29.1",
+      "label": "J29 hole 1: assumed chip TX",
+      "part": "",
+      "bbox": [
+        724,
+        1186,
+        796,
+        1257
+      ],
+      "category": "debug",
+      "confidence": "guess",
+      "note": "The bottom hole, by the printed dot (J-112). Assumed the CC3220's TX here; chapter 1 decides. If chapter 1 found hole 2 to be TX, swap the two signal probes. To the adapter's RXD.",
+      "tag_side": "left"
+    },
+    {
+      "id": "4",
+      "ref": "J29.2",
+      "label": "J29 hole 2: assumed chip RX",
+      "part": "",
+      "bbox": [
+        724,
+        1070,
+        796,
+        1143
+      ],
+      "category": "debug",
+      "confidence": "guess",
+      "note": "The middle hole (J-112). Assumed the CC3220's RX here; chapter 1 decides. If chapter 1 found this hole to be TX, swap the two signal probes. The adapter's TXD through 1 kΩ.",
+      "tag_side": "left"
+    },
+    {
+      "id": "5",
+      "ref": "J29.3",
+      "label": "J29 hole 3, GND",
+      "part": "",
+      "bbox": [
+        725,
+        953,
+        797,
+        1026
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The top hole, '3' printed above it: GND (J-112). To the adapter's GND.",
+      "tag_side": "left"
+    },
+    {
+      "id": "6",
+      "ref": "X6",
+      "label": "X6, the SOP2 pad",
+      "part": "",
+      "bbox": [
+        626,
+        2481,
+        664,
+        2519
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The bottom pad of the three right of J14 (J-098). X4 = SOP0, X5 = SOP1, X6 = SOP2 (measured with the beeper, 2026-11-05). The strap goes onto X6 only; X4 and X5 stay free.",
+      "tag_side": "below"
+    },
+    {
+      "id": "7",
+      "ref": "U15.8",
+      "label": "U15 pin 8, 3.3 V (strap source)",
+      "part": "",
+      "bbox": [
+        135,
+        1552,
+        165,
+        1642
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "VCC = the 3.3 V rail, on U17's output (J-110). The leg across from pin 1 (top-left of U15 in this view). The strap's source, through 470 Ω.",
+      "tag_side": "below"
+    },
+    {
+      "id": "8",
+      "ref": "J8",
+      "label": "J8: cable OUT",
+      "part": "",
+      "bbox": [
+        2786,
+        1540,
+        2942,
+        2406
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "The FFC stays out of J8 in every bench session: the board gets its power on JP5 only (J-077)."
+    }
+  ],
+  "terminals": [
+    {
+      "id": "sup_p",
+      "label": "Bench supply + (5.0 V, OVP 6 V, limit 100 mA)",
+      "group": "supply",
+      "y": 2530
+    },
+    {
+      "id": "sup_n",
+      "label": "Bench supply −",
+      "group": "supply",
+      "y": 2600
+    },
+    {
+      "id": "rxd",
+      "label": "Adapter RXD",
+      "group": "ftdi",
+      "y": 1221
+    },
+    {
+      "id": "txd",
+      "label": "Adapter TXD",
+      "group": "ftdi",
+      "y": 1106
+    },
+    {
+      "id": "gnd",
+      "label": "Adapter GND",
+      "group": "ftdi",
+      "y": 990
+    }
+  ],
+  "links": [
+    {
+      "from": "1",
+      "to": "sup_p",
+      "style": "solid",
+      "via": [
+        [
+          2336,
+          2228
+        ],
+        [
+          2336,
+          2578
+        ],
+        [
+          2990,
+          2578
+        ]
+      ]
+    },
+    {
+      "from": "2",
+      "to": "sup_n",
+      "style": "solid",
+      "via": [
+        [
+          2306,
+          2103
+        ],
+        [
+          2306,
+          2612
+        ],
+        [
+          2990,
+          2612
+        ]
+      ]
+    },
+    {
+      "from": "3",
+      "to": "rxd",
+      "style": "dashed"
+    },
+    {
+      "from": "4",
+      "to": "txd",
+      "label": "1 kΩ",
+      "style": "dashed"
+    },
+    {
+      "from": "5",
+      "to": "gnd",
+      "style": "solid"
+    },
+    {
+      "from": "7",
+      "to": "6",
+      "label": "470 Ω strap",
+      "style": "solid",
+      "color": "#ffe600",
+      "via": [
+        [
+          146,
+          1489
+        ],
+        [
+          254,
+          1489
+        ],
+        [
+          273,
+          1508
+        ],
+        [
+          378,
+          1508
+        ],
+        [
+          378,
+          1992
+        ],
+        [
+          454,
+          1996
+        ],
+        [
+          502,
+          2000
+        ],
+        [
+          595,
+          2084
+        ],
+        [
+          595,
+          2500
+        ]
+      ],
+      "label_at": [
+        378,
+        1760
+      ]
+    }
+  ]
+}

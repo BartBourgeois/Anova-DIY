@@ -1,0 +1,68 @@
+{
+  "image": "micro_J29_TP28-29.jpg",
+  "title": "Main board - J29 UART header: bench hookup (raptox's unit, mosaic 2026-11-03)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "J29.1",
+      "label": "J29 hole 1 (dot end), TP29 net",
+      "part": "",
+      "bbox": [224, 818, 364, 958],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "UART0 line A: the CC3220's TX or RX (meter decides, chapter 1). Listen: 4.7 kOhm to the FTDI RXD or ESP32 GPIO16. UARTLOAD: FTDI TXD via 1 kOhm if this is RX. The bottom hole; the pin-1 dot is printed left of it."
+    },
+    {
+      "id": "2",
+      "ref": "J29.2",
+      "label": "J29 hole 2, TP28 net",
+      "part": "",
+      "bbox": [226, 596, 366, 736],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "UART0 line B: the CC3220's TX or RX (meter decides, chapter 1). Listen: 4.7 kOhm to the FTDI RXD or ESP32 GPIO17. UARTLOAD: FTDI TXD via 1 kOhm if this is RX. The middle hole."
+    },
+    {
+      "id": "3",
+      "ref": "J29.3",
+      "label": "J29 hole 3, GND",
+      "part": "",
+      "bbox": [228, 369, 368, 509],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "FTDI GND / ESP32 GND (J-112). The top hole, '3' printed above it."
+    },
+    {
+      "id": "4",
+      "ref": "TP29",
+      "label": "Test point, J29 hole 1 net",
+      "part": "",
+      "bbox": [692, 651, 762, 721],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Rings to J29 pin 1 (beeper, J-112). Labelled; right of J29, below TP28."
+    },
+    {
+      "id": "5",
+      "ref": "TP28",
+      "label": "Test point, J29 hole 2 net",
+      "part": "",
+      "bbox": [687, 443, 757, 513],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Rings to J29 pin 2 (beeper, J-112). Its label sits above-left, partly in a stitching gap."
+    },
+    {
+      "id": "6",
+      "ref": "R579/R580",
+      "label": "Series resistors toward U1 pins 55/57",
+      "part": "",
+      "bbox": [[510, 447, 647, 519], [510, 589, 647, 661]],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Two 0603 between J29 and TP28/TP29; the labels R57x and R58x above them are partly in a stitching gap, so which is which is open. Toward U1 pins 55/57 (UART0 TX/RX in the SWAS035C pin mux): still to trace."
+    }
+  ]
+}

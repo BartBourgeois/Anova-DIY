@@ -1,0 +1,224 @@
+{
+  "image": "micro_U7_TP13-14-42-44_Y1.jpg",
+  "title": "Flash backup 10.1 - U7's two cJTAG test points, and the pins they ring to",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~104 px/mm in this crop)",
+  "caption": "TP13 carries U7's TMSC (pin 24), TP14 its TCKC (pin 25): the XDS110's TMS and TCK go there and nowhere else on U7; its GND goes to JP5 pin 2 (picture 7.1). The beeper checks each pair first (dotted). U7 sits turned 180 degrees: its pin-1 dot is bottom right, so pins 24 and 25 meet at the top-left corner.",
+  "scale": 1,
+  "tag_px": 30,
+  "line_px": 5,
+  "box_px": 4,
+  "format": "jpg",
+  "terminals": [
+    {
+      "id": "xds_tms",
+      "label": "XDS110 TMS",
+      "group": "other",
+      "y": 40
+    },
+    {
+      "id": "xds_tck",
+      "label": "XDS110 TCK",
+      "group": "other",
+      "y": 120
+    }
+  ],
+  "links": [
+    {
+      "from": "1",
+      "to": "xds_tms",
+      "style": "solid",
+      "via": [
+        [
+          234,
+          40
+        ]
+      ]
+    },
+    {
+      "from": "2",
+      "to": "xds_tck",
+      "style": "solid",
+      "via": [
+        [
+          386,
+          120
+        ]
+      ]
+    },
+    {
+      "from": "1",
+      "to": "3",
+      "label": "beep",
+      "style": "dotted",
+      "via": [
+        [
+          234,
+          470
+        ],
+        [
+          829,
+          470
+        ]
+      ],
+      "label_at": [
+        560,
+        440
+      ]
+    },
+    {
+      "from": "2",
+      "to": "4",
+      "label": "beep",
+      "style": "dotted",
+      "label_at": [
+        560,
+        610
+      ]
+    }
+  ],
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "TP13",
+      "label": "= TMSC (U7 pin 24): the XDS110's TMS",
+      "part": "",
+      "bbox": [
+        192,
+        532,
+        276,
+        616
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Traced on the mosaic: up and along the top edge to U7's top-row corner pin (J-228). Beeper, unpowered: TP13 to pin 24 beeps; TP13 to TP14 and to GND nothing (raptox, 2026-11-06, J-230).",
+      "tag_side": "left"
+    },
+    {
+      "id": "2",
+      "ref": "TP14",
+      "label": "= TCKC (U7 pin 25): the XDS110's TCK",
+      "part": "",
+      "bbox": [
+        344,
+        532,
+        428,
+        616
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Traced on the mosaic: right and down to the top pin of U7's left row (J-228). Beeper, unpowered: TP14 to pin 25 beeps; to GND nothing (raptox, 2026-11-06, J-230)."
+    },
+    {
+      "id": "3",
+      "ref": "U7.24",
+      "label": "TMSC: the beeper's other end for TP13",
+      "part": "CC2640R2F",
+      "bbox": [
+        812,
+        575,
+        846,
+        632
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "JTAG_TMSC is pin 24 (SWRS204C p. 8, confirmed); its place, the leftmost pin of the top row, follows from the pin-1 dot (8) and the counter-clockwise numbering. Beeper, unpowered: pin 24 to TP13 beeps, to GND nothing (raptox, J-230).",
+      "tag_dy": -10
+    },
+    {
+      "id": "4",
+      "ref": "U7.25",
+      "label": "TCKC: the beeper's other end for TP14",
+      "part": "CC2640R2F",
+      "bbox": [
+        696,
+        690,
+        752,
+        716
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "JTAG_TCKC is pin 25 (SWRS204C p. 8, confirmed); the top pin of the left row. Beeper, unpowered: pin 25 to TP14 beeps, to GND nothing (raptox, J-230).",
+      "tag_side": "right"
+    },
+    {
+      "id": "5",
+      "ref": "TP43",
+      "label": "= TDO (U7 pin 26): no lead",
+      "part": "",
+      "bbox": [
+        344,
+        678,
+        428,
+        762
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Traced to the second pin of the left row (DIO_16/JTAG_TDO). Four-wire JTAG only; 2-pin cJTAG doesn't use it.",
+      "tag_side": "left"
+    },
+    {
+      "id": "6",
+      "ref": "TP42",
+      "label": "= TDI (U7 pin 27): no lead",
+      "part": "",
+      "bbox": [
+        504,
+        738,
+        588,
+        822
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Traced to the third pin of the left row (DIO_17/JTAG_TDI). Not used by 2-pin cJTAG.",
+      "tag_side": "below"
+    },
+    {
+      "id": "7",
+      "ref": "U7.35",
+      "label": "RESET_N: no lead (fallback only, 10.7)",
+      "part": "",
+      "bbox": [
+        696,
+        1206,
+        752,
+        1232
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "No internal pull-up (SWRS204C p. 9); its trace runs down to an R/C pair under U7, no test point found. Needed only if the connect fails.",
+      "tag_side": "left"
+    },
+    {
+      "id": "8",
+      "ref": "U7 dot",
+      "label": "pin 1: the chip sits turned 180 degrees",
+      "part": "",
+      "bbox": [
+        1378,
+        1252,
+        1418,
+        1292
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "The marking reads upside down in this view and the dot sits bottom right: pin 1 is there, pins 1-12 run up the right row, 13-24 right to left along the top, 25-36 down the left row. The RF pins (1, 2) face FL1 and the 32 kHz pins Y1, as they should.",
+      "tag_side": "below"
+    },
+    {
+      "id": "9",
+      "ref": "TP44",
+      "label": "no lead (a DIO, not traced)",
+      "part": "",
+      "bbox": [
+        1116,
+        324,
+        1200,
+        408
+      ],
+      "category": "debug",
+      "confidence": "guess",
+      "note": "Runs to one of the top row's middle pins (a DIO); not traced exactly. Not part of the debug port.",
+      "tag_side": "right"
+    }
+  ]
+}
