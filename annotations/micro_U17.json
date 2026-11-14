@@ -1,0 +1,150 @@
+{
+  "image": "micro_U17.jpg",
+  "title": "Main board - U17 = onsemi NCP59800 LDO and its pins (raptox's unit, mosaic 2026-11-03)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03; pin connections from the NCP59800 datasheet",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "U17",
+      "ref": "U17",
+      "label": "onsemi NCP59800 adjustable 1 A low-noise LDO: makes the logic rail",
+      "part": "NCP59800, adjustable version (ADJB), DFN8 3 x 3 mm, 0.65 mm pitch, exposed pad to GND",
+      "marking": "59800 / ADJB / GAJL (with the Pb-free microdot)",
+      "bbox": [
+        596,
+        669,
+        1037,
+        1109
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The marking matches onsemi's marking diagram line by line (NCP59800/D Rev. 3 p1: 59800 / ADJB / ALYW plus the microdot; GAJL is the assembly, lot, year and week code), on the DFN8 3 x 3 mm at 0.65 mm (measured 0.653 mm). A quarter turn counter-clockwise from the datasheet's top view: pin 1 bottom left (the dot), OUT 1-2, FB 3, GND 4 along the bottom, EN 5, NR 6, IN 7-8 right to left along the top. Output about 3.3 V (likely; the divider is not measured). J-271."
+    },
+    {
+      "id": "dot",
+      "ref": "U17 pin 1",
+      "label": "Pin-1 mark (laser dot)",
+      "bbox": [
+        630,
+        1003,
+        675,
+        1048
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "onsemi's pin-1 circle (p1). The second dot, after GAJL, is the Pb-free microdot."
+    },
+    {
+      "id": "1",
+      "ref": "U17.1",
+      "label": "U17 pin 1, OUT",
+      "bbox": [
+        634,
+        1092,
+        679,
+        1150
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Regulator output: the logic rail. Never above VIN + 0.3 V: never feed the rail with the input unpowered (p2, J-110). Position from the pin-1 mark and the datasheet's pin connections (p1, p2)."
+    },
+    {
+      "id": "2",
+      "ref": "U17.2",
+      "label": "U17 pin 2, OUT",
+      "bbox": [
+        732,
+        1092,
+        777,
+        1150
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Regulator output, with pin 1. Position from the pin-1 mark and the datasheet's pin connections (p1, p2)."
+    },
+    {
+      "id": "3",
+      "ref": "U17.3",
+      "label": "U17 pin 3, FB",
+      "bbox": [
+        837,
+        1092,
+        882,
+        1150
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Feedback: the divider R589/R590 sets VOUT = 0.8 V x (1 + R1/R2) (p9). Position from the pin-1 mark and the datasheet's pin connections (p1, p2)."
+    },
+    {
+      "id": "4",
+      "ref": "U17.4",
+      "label": "U17 pin 4, GND",
+      "bbox": [
+        930,
+        1092,
+        975,
+        1150
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Ground, with the exposed pad. Position from the pin-1 mark and the datasheet's pin connections (p1, p2)."
+    },
+    {
+      "id": "5",
+      "ref": "U17.5",
+      "label": "U17 pin 5, EN",
+      "bbox": [
+        949,
+        628,
+        994,
+        686
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Enable, high = on. Position from the pin-1 mark and the datasheet's pin connections (p1, p2)."
+    },
+    {
+      "id": "6",
+      "ref": "U17.6",
+      "label": "U17 pin 6, NR",
+      "bbox": [
+        855,
+        628,
+        900,
+        686
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Noise reduction: its small cap C604 (nets.md). Position from the pin-1 mark and the datasheet's pin connections (p1, p2)."
+    },
+    {
+      "id": "7",
+      "ref": "U17.7",
+      "label": "U17 pin 7, IN",
+      "bbox": [
+        752,
+        628,
+        797,
+        686
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Input, 2.2-6.0 V (absolute maximum 6.5 V, p2): J8 pins 1-6 / JP5.1 (J-080). Position from the pin-1 mark and the datasheet's pin connections (p1, p2)."
+    },
+    {
+      "id": "8",
+      "ref": "U17.8",
+      "label": "U17 pin 8, IN",
+      "bbox": [
+        662,
+        628,
+        706,
+        686
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Input, with pin 7. Position from the pin-1 mark and the datasheet's pin connections (p1, p2)."
+    }
+  ]
+}

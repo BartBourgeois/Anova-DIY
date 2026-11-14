@@ -1,0 +1,193 @@
+{
+  "image": "launchpad_jumpers_own.jpg",
+  "title": "Recovery 2.2-2.7 - the jumper column: RX, TX and RST stay on",
+  "source": "Own photo, raptox's LaunchPad, 2026-11-05",
+  "caption": "The XDS110's serial port reaches the CC3220 through the RX and TX jumpers, its reset through RST. Leave every jumper here as shipped.",
+  "scale": 2,
+  "tag_px": 20,
+  "line_px": 5,
+  "box_px": 4,
+  "format": "jpg",
+  "callouts": [
+    {
+      "id": "GND",
+      "ref": "J18",
+      "label": "GND jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        96,
+        448,
+        164
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'GND' printed left of the row; one cap across its two pins. Not touched in the recovery steps (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "5V",
+      "ref": "J18",
+      "label": "5V jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        186,
+        448,
+        259
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'5V' printed left of the row; one cap across its two pins. Not touched in the recovery steps (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "VBAT",
+      "ref": "J18",
+      "label": "VBAT jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        281,
+        448,
+        359
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'VBAT' printed left of the row; one cap across its two pins. Not touched in the recovery steps (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "BRD",
+      "ref": "J18",
+      "label": "BRD jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        381,
+        448,
+        454
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'BRD' printed left of the row; one cap across its two pins. Not touched in the recovery steps (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "RX",
+      "ref": "J18",
+      "label": "RX jumper: stays ON (UART to the CC3220)",
+      "part": "",
+      "bbox": [
+        194,
+        476,
+        552,
+        549
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'RX' printed left of the row. The XDS110's serial port reaches the CC3220 through it. This row has a third pin position on the right: the photo shows the bare pin on the left and the caps over the right-hand part; how they bridge cannot be read from it, so leave them exactly as they are (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "TX",
+      "ref": "J18",
+      "label": "TX jumper: stays ON (UART to the CC3220)",
+      "part": "",
+      "bbox": [
+        194,
+        571,
+        552,
+        649
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'TX' printed left of the row. The XDS110's serial port reaches the CC3220 through it. This row has a third pin position on the right: the photo shows the bare pin on the left and the caps over the right-hand part; how they bridge cannot be read from it, so leave them exactly as they are (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "RST",
+      "ref": "J18",
+      "label": "RST jumper: stays ON (reset to the CC3220)",
+      "part": "",
+      "bbox": [
+        194,
+        671,
+        448,
+        749
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'RST' printed left of the row; one cap across its two pins. The XDS110 resets the CC3220 through it (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "TMS",
+      "ref": "J18",
+      "label": "TMS jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        771,
+        448,
+        844
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'TMS' printed left of the row; one cap across its two pins. Not touched in the recovery steps (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "TCK",
+      "ref": "J18",
+      "label": "TCK jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        866,
+        448,
+        939
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'TCK' printed left of the row; one cap across its two pins. Not touched in the recovery steps (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "TDI",
+      "ref": "J18",
+      "label": "TDI jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        961,
+        448,
+        1039
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'TDI' printed left of the row; one cap across its two pins. Not touched in the recovery steps (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "TDO",
+      "ref": "J18",
+      "label": "TDO jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        1061,
+        448,
+        1134
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'TDO' printed left of the row; one cap across its two pins. Not touched in the recovery steps (TI's guide SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "SENSE",
+      "ref": "J18 BRD/SENSE",
+      "label": "BRD-SENSE jumper: as shipped",
+      "part": "",
+      "bbox": [
+        194,
+        1156,
+        448,
+        1239
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "'BRD' printed left of the row and 'SENSE' right of it, 'J18' below; one cap across its two pins (TI's guide SWRU463 not checked: unverified)."
+    }
+  ]
+}

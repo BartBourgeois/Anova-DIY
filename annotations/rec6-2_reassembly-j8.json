@@ -1,0 +1,72 @@
+{
+  "image": "micro_J8_area.jpg",
+  "title": "Recovery 6 - reassembly: the cooker's cable back into J8",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "caption": "All probes off. Lift J8's actuator, slide the cooker's own cable fully in and square, contacts facing the way they did before (see the 2026-11-04 bench photo), press the actuator down. Speaker back on J9.",
+  "scale": 1,
+  "tag_px": 30,
+  "box_px": 4,
+  "format": "jpg",
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "J8",
+      "label": "Actuator: lift to open, press down to lock",
+      "part": "",
+      "bbox": [
+        958,
+        888,
+        1212,
+        2342
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "The white flip actuator on the right of the 30-way FFC connector, with its end tabs. Lift it before the cable goes in, press it flat again once the cable sits square."
+    },
+    {
+      "id": "2",
+      "ref": "J8 pin 1",
+      "label": "Pin-1 end (circle)",
+      "part": "",
+      "bbox": [
+        645,
+        2150,
+        760,
+        2275
+      ],
+      "category": "connector",
+      "confidence": "likely",
+      "note": "The printed circle at the lower end of the contact tails; '30' is printed at the other end. Pins 1-6 are the VIN group (J-077)."
+    },
+    {
+      "id": "3",
+      "ref": "J8 entry",
+      "label": "Cable enters here (actuator side)",
+      "part": "",
+      "bbox": [
+        1216,
+        960,
+        1296,
+        2270
+      ],
+      "category": "connector",
+      "confidence": "likely",
+      "note": "From raptox's photos with a cable in J8 (2026-11-01 photo 04, the cooker's own FFC; 2026-11-04 photo 01, the 100 mm FFC): the cable comes in on the actuator side, opposite the contact tails, and runs off to the right. In photo 04 the cooker's FFC shows its blue stiffener on top."
+    },
+    {
+      "id": "4",
+      "ref": "JP5",
+      "label": "Probes off (both holes)",
+      "part": "",
+      "bbox": [
+        280,
+        1762,
+        416,
+        2088
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Both holes (pin 1 square at the bottom, pin 2 round above). Nothing may stay on JP5 once the cable is in: it is the same copper as J8 pins 1-6 (J-077, J-080)."
+    }
+  ]
+}

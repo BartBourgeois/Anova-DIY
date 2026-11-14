@@ -1,0 +1,13 @@
+{
+  "launchpad_top_own": {
+    "inputs": [
+      "own/2026-11-05/04_launchpad_left_xds110-half.jpg",
+      "own/2026-11-05/05_launchpad_centre_j13-sop-and-jumper-column.jpg",
+      "own/2026-11-05/06_launchpad_right_cc3220-and-u8.jpg",
+      "own/2026-11-05/07_launchpad_bottom-right_sensors-and-rf.jpg",
+      "own/2026-11-05/08_launchpad_top-right_leds-and-j24.jpg"
+    ],
+    "box": [600, 420, 6780, 4120],
+    "description": "raptox's CC3220S LaunchPad, whole top side, from five hand-held phone photos (2026-11-05, powered, the out-of-box firmware running: D8 and D9 lit). In the perspective of photo 06, not a true top view."
+  }
+}

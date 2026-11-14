@@ -1,0 +1,462 @@
+{
+  "image": "main_component-side_own.jpg",
+  "title": "Main board - component side - raptox's unit (AN600-20 EU, opened 2026-11-01)",
+  "source": "Own photo, raptox's unit, 2026-11-01: images/own/2026-11-01/05_main-board_component-side.jpg (downscaled 3072x4080 -> 1205x1600); markings read from the chips/ close-ups",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": 1,
+      "ref": "U1",
+      "label": "TI CC3220S Wi-Fi MCU",
+      "part": "CC3220SM2ARGK, VQFN-64; no internal flash, boots from U15/U16",
+      "marking": "CC3220S / M2A / TI 92J / P5KH G4",
+      "bbox": [
+        372,
+        228,
+        550,
+        410
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Refdes U1 read on the board. Date code 92J (FCC sample: different lot)."
+    },
+    {
+      "id": 2,
+      "ref": "U15/U16",
+      "label": "XMC XM25QH64A SPI NOR flash, 64 Mbit (8 MiB)",
+      "part": "XM25QH64AHIG: SOP-8 208 mil, 2.7-3.6 V, JEDEC ID 20 70 17",
+      "marking": "XMC / QH64AHIG / P1L09000 20 / 1830C",
+      "bbox": [
+        392,
+        35,
+        562,
+        155
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "CC3220 serial flash: firmware + SimpleLink filesystem. PRIMARY DUMP TARGET. Wide body (208 mil): use a SOIC-8 clip that fits 208 mil. Date code 1830 = 2018 wk 30."
+    },
+    {
+      "id": 3,
+      "ref": "U7",
+      "label": "TI CC2640R2F Bluetooth LE MCU",
+      "part": "CC2640R2F, VQFN-48 7x7, 128 KB internal flash",
+      "marking": "CC2640 / R2F / TI 931 / A0J3 G4",
+      "bbox": [
+        948,
+        878,
+        1100,
+        1030
+      ],
+      "category": "mcu",
+      "confidence": "confirmed"
+    },
+    {
+      "id": 4,
+      "ref": "U14",
+      "label": "QFN-40 IC 'T3018' - unidentified",
+      "part": "QFN-40, about 5x5 mm",
+      "marking": "T3018 / 3737",
+      "bbox": [
+        607,
+        585,
+        712,
+        695
+      ],
+      "category": "unknown",
+      "confidence": "confirmed",
+      "note": "Marking legible but part not identified yet. Central position with many traces toward the LED side: LED/touch driver or a third MCU? Not the Lumissil IS31FL3018 (that is QFN-32)."
+    },
+    {
+      "id": 5,
+      "ref": "U13",
+      "label": "QFN-20 IC '4637' next to the speaker connector",
+      "part": "QFN-20, about 3x3 mm, TP21-TP27 around it",
+      "marking": "4637 / 638A",
+      "bbox": [
+        960,
+        455,
+        1025,
+        530
+      ],
+      "category": "unknown",
+      "confidence": "guess",
+      "note": "Location next to J9 (speaker) suggests an audio/speaker driver. Unidentified."
+    },
+    {
+      "id": 6,
+      "ref": "U17",
+      "label": "onsemi NCP59800 LDO (DFN-8)",
+      "part": "DFN-8; C577/C579 bulk MLCCs, R589/R590 divider, C604",
+      "marking": "59800 / ADJB / GAJL (read 'S9800 / A0J8' before; the mosaic and the datasheet settle it)",
+      "bbox": [
+        805,
+        88,
+        875,
+        155
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "Identified on the microscope mosaic (J-076): adjustable 1 A low-noise LDO making the 3.3 V rail. C577 input, C579 output, C604 noise-reduction cap, R589/R590 feedback divider."
+    },
+    {
+      "id": 7,
+      "ref": "U2?",
+      "label": "SOT-23-5 regulator?",
+      "part": "SOT-23-5 next to C586/C10/C4",
+      "marking": "?CG4 (first char not legible)",
+      "bbox": [
+        1105,
+        415,
+        1172,
+        475
+      ],
+      "category": "power",
+      "confidence": "guess"
+    },
+    {
+      "id": 8,
+      "ref": "J29",
+      "label": "3-hole header footprint - UNPOPULATED",
+      "part": "1x3, 2.54 mm, pin 3 marked; R573/R579/R580, TP28/TP29 next to it",
+      "bbox": [
+        662,
+        278,
+        810,
+        325
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Header was fitted on the FCC sample, empty on the production unit. Prime UART candidate (TX/RX/GND). Map by continuity to the CC3220 UART pins."
+    },
+    {
+      "id": 9,
+      "ref": "J14",
+      "label": "4-way DIP switch footprint - UNPOPULATED",
+      "part": "8 pads, silkscreen 'DIP', pin 1 marked; R533/R535/R577 next to it",
+      "bbox": [
+        205,
+        85,
+        335,
+        232
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Switch fitted on the FCC sample only. Strong candidate for the CC3220 SOP boot-mode straps: map the pads to SOP0/1/2 and nRESET."
+    },
+    {
+      "id": 10,
+      "ref": "J37",
+      "label": "Tag-Connect TC2030 footprint (6 pads + 3 holes)",
+      "part": "pins 1/2/5/6 marked",
+      "bbox": [
+        15,
+        850,
+        120,
+        1015
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "JTAG/SWD (CC3220) or cJTAG (CC2640R2F). J38 is the twin on the LED side."
+    },
+    {
+      "id": 11,
+      "ref": "TP15, TP34-TP37",
+      "label": "Boxed test-point group (R17-R21, R585, C101)",
+      "part": "",
+      "bbox": [
+        256,
+        645,
+        452,
+        792
+      ],
+      "category": "debug",
+      "confidence": "guess",
+      "note": "Silkscreen box groups 5 test points with series resistors. Production-test or programming access?"
+    },
+    {
+      "id": 12,
+      "ref": "TP13/14/42/43/44",
+      "label": "Test points beside the CC2640R2F",
+      "part": "",
+      "bbox": [
+        1005,
+        785,
+        1170,
+        865
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Traces run straight into U7. Candidates: cJTAG (TMSC/TCKC), reset or UART."
+    },
+    {
+      "id": 13,
+      "ref": "TP45-TP48",
+      "label": "Test points under exposed copper pad",
+      "part": "",
+      "bbox": [
+        655,
+        112,
+        762,
+        162
+      ],
+      "category": "debug",
+      "confidence": "guess"
+    },
+    {
+      "id": 14,
+      "ref": "J8",
+      "label": "30-pin FPC to power board",
+      "part": "pin 30 marked right",
+      "bbox": [
+        215,
+        1020,
+        590,
+        1145
+      ],
+      "category": "connector",
+      "confidence": "confirmed"
+    },
+    {
+      "id": 15,
+      "ref": "J9",
+      "label": "Speaker connector (2-pin, twisted yellow/black)",
+      "part": "",
+      "bbox": [
+        875,
+        262,
+        972,
+        425
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Speaker seen in the housing (label '20 / 219')."
+    },
+    {
+      "id": 16,
+      "ref": "JP5",
+      "label": "2-hole footprint, unpopulated",
+      "part": "",
+      "bbox": [
+        288,
+        925,
+        385,
+        980
+      ],
+      "category": "connector",
+      "confidence": "confirmed"
+    },
+    {
+      "id": 17,
+      "ref": "U6",
+      "label": "SOT-23-6 IC near FPC",
+      "part": "",
+      "bbox": [
+        450,
+        900,
+        535,
+        975
+      ],
+      "category": "unknown",
+      "confidence": "guess"
+    },
+    {
+      "id": 18,
+      "ref": "Y3",
+      "label": "40 MHz crystal (CC3220)",
+      "part": "",
+      "marking": "T400 / Mc73",
+      "bbox": [
+        285,
+        240,
+        334,
+        294
+      ],
+      "category": "mcu",
+      "confidence": "likely"
+    },
+    {
+      "id": 19,
+      "ref": "Y4",
+      "label": "Crystal near J29 (32.768 kHz RTC for CC3220?)",
+      "part": "",
+      "bbox": [
+        622,
+        338,
+        678,
+        406
+      ],
+      "category": "mcu",
+      "confidence": "guess"
+    },
+    {
+      "id": 20,
+      "ref": "Y2",
+      "label": "Crystal for CC2640R2F (24 MHz?)",
+      "part": "",
+      "bbox": [
+        826,
+        960,
+        884,
+        1026
+      ],
+      "category": "mcu",
+      "confidence": "guess"
+    },
+    {
+      "id": 21,
+      "ref": "FL2",
+      "label": "RF filter / balun (CC3220 RF path)",
+      "part": "",
+      "bbox": [
+        298,
+        350,
+        334,
+        400
+      ],
+      "category": "rf",
+      "confidence": "guess"
+    },
+    {
+      "id": 22,
+      "ref": "L381/L401/L431",
+      "label": "CC3220 DC/DC inductors + caps",
+      "part": "",
+      "bbox": [
+        365,
+        430,
+        610,
+        525
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "The CC3220 has internal DC/DC converters that need external inductors."
+    },
+    {
+      "id": 23,
+      "ref": "",
+      "label": "Antenna zones (yellow, copper-free)",
+      "part": "",
+      "bbox": [
+        [
+          8,
+          240,
+          168,
+          850
+        ],
+        [
+          512,
+          1285,
+          1095,
+          1460
+        ]
+      ],
+      "category": "rf",
+      "confidence": "likely"
+    },
+    {
+      "id": 24,
+      "ref": "",
+      "label": "Exposed copper pads (spring contacts on FCC sample)",
+      "part": "",
+      "bbox": [
+        [
+          655,
+          25,
+          755,
+          110
+        ],
+        [
+          18,
+          1158,
+          112,
+          1252
+        ],
+        [
+          1028,
+          1162,
+          1192,
+          1252
+        ]
+      ],
+      "category": "rf",
+      "confidence": "guess",
+      "note": "The FCC sample had metal spring fingers here. Ground/shield contacts to the housing?"
+    },
+    {
+      "id": 25,
+      "ref": "",
+      "label": "Heat-stake posts (board riveted to the bezel)",
+      "part": "melted white plastic",
+      "bbox": [
+        [
+          252,
+          492,
+          308,
+          552
+        ],
+        [
+          298,
+          810,
+          360,
+          870
+        ],
+        [
+          752,
+          398,
+          812,
+          452
+        ],
+        [
+          778,
+          806,
+          840,
+          868
+        ],
+        [
+          752,
+          1158,
+          812,
+          1218
+        ],
+        [
+          192,
+          1308,
+          252,
+          1368
+        ]
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "No need to remove them: everything we need is on this side."
+    },
+    {
+      "id": 26,
+      "ref": "Q3",
+      "label": "Discrete circuit (Q3, C605-C607, R591-R595)",
+      "part": "",
+      "bbox": [
+        165,
+        1372,
+        360,
+        1505
+      ],
+      "category": "unknown",
+      "confidence": "guess"
+    },
+    {
+      "id": 27,
+      "ref": "",
+      "label": "Production label '90718PM' (Data Matrix)",
+      "part": "",
+      "bbox": [
+        358,
+        1300,
+        492,
+        1430
+      ],
+      "category": "info",
+      "confidence": "confirmed"
+    }
+  ]
+}

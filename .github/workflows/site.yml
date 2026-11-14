@@ -1,0 +1,49 @@
+# Builds the MkDocs site on every push to main and deploys it to Azure Static Web Apps.
+# Deployment is skipped (not failed) while the AZURE_STATIC_WEB_APPS_API_TOKEN secret is missing,
+# so the build alone still validates the site (broken links fail it).
+# This file is maintained in the private upstream repo and exported with everything else..
+name: site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install MkDocs Material
+        run: pip install --quiet mkdocs-material
+
+      - name: Build site (strict)
+        run: python tools/build_site.py --strict
+
+      - name: Check for deployment token
+        id: token
+        env:
+          TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+        run: echo "present=$([ -n "$TOKEN" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Azure Static Web Apps
+        if: steps.token.outputs.present == 'true'
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: upload
+          app_location: site
+          skip_app_build: true
+          skip_api_build: true
+
+      - name: Not deployed
+        if: steps.token.outputs.present != 'true'
+        run: echo "No AZURE_STATIC_WEB_APPS_API_TOKEN secret; build validated, deployment skipped."

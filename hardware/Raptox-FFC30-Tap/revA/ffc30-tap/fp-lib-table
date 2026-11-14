@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "ffc30-tap")(type "KiCad")(uri "${KIPRJMOD}/ffc30-tap.pretty")(options "")(descr "MITM tap footprints"))
+)

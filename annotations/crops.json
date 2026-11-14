@@ -1,0 +1,628 @@
+{
+  "sources": [
+    {
+      "pdf": "cooker_pro_fcc.pdf",
+      "dir": "fcc-internal-photos",
+      "images": {
+        "p1_1": "01_head-open_board-on-bezel",
+        "p1_2": "02_front-glass_inside",
+        "p2_1": "03_bezel-back_and_main-board-led-side",
+        "p2_2": "04_main-board_component-side",
+        "p3_1": "05_main-board_led-side",
+        "p3_2": "06_power-board_top",
+        "p3_3": "07_power-board_bottom"
+      }
+    },
+    {
+      "pdf": "fcc/2APBOAN600/External-Photo-3999177.pdf",
+      "dir": "fcc-external-photos",
+      "images": {
+        "p1_1": "01_unit_with-ruler_us-plug",
+        "p1_2": "02_front-glass_on-unit"
+      }
+    },
+    {
+      "pdf": "fcc/2APBOAN600/Label-Location-3999179.pdf",
+      "dir": "fcc-label",
+      "images": {
+        "p1_1": "01_label-drawing_dimensions",
+        "p1_2": "02_rating-label_an600-10"
+      }
+    },
+    {
+      "pdf": "fcc/2APBOAN600/Test-Setup-3999187.pdf",
+      "dir": "fcc-test-setup",
+      "images": {
+        "p1_1": "01_bench-test_pot-on-table",
+        "p1_2": "02_anechoic-chamber_radiated",
+        "p2_1": "03_anechoic-chamber_pedestal"
+      }
+    }
+  ],
+  "crops": [
+    {
+      "name": "assembly_open",
+      "source": "source/fcc-internal-photos/01_head-open_board-on-bezel.jpeg",
+      "box": null,
+      "description": "Head opened: main board (component side) on the front bezel, FFC ribbon into the housing, power board visible inside."
+    },
+    {
+      "name": "front_cover",
+      "source": "source/fcc-internal-photos/02_front-glass_inside.jpeg",
+      "box": null,
+      "description": "Front glass cover, photographed from the inside (logo appears mirrored)."
+    },
+    {
+      "name": "front_bezel",
+      "source": "source/fcc-internal-photos/03_bezel-back_and_main-board-led-side.jpeg",
+      "box": [
+        15,
+        35,
+        415,
+        540
+      ],
+      "description": "White front bezel / light guide, photographed from the back (mirror image of the user's view)."
+    },
+    {
+      "name": "main_led-side_alt",
+      "source": "source/fcc-internal-photos/03_bezel-back_and_main-board-led-side.jpeg",
+      "box": [
+        420,
+        35,
+        812,
+        548
+      ],
+      "description": "Main board LED side, second photo (rotated 90 deg relative to main_led-side)."
+    },
+    {
+      "name": "main_component-side",
+      "source": "source/fcc-internal-photos/04_main-board_component-side.jpeg",
+      "box": null,
+      "description": "Main board ANOVA_PRO_MAIN_V2.0, component side (CC3220S, CC2640R2F, debug footprints)."
+    },
+    {
+      "name": "main_led-side",
+      "source": "source/fcc-internal-photos/05_main-board_led-side.jpeg",
+      "box": null,
+      "description": "Main board ANOVA_PRO_MAIN_V2.0, LED / touch-key side (faces the bezel)."
+    },
+    {
+      "name": "power_top",
+      "source": "source/fcc-internal-photos/06_power-board_top.jpeg",
+      "box": null,
+      "description": "Power board ANOVA_PRO_POWER_REV01, top side (AC/DC module, relay, fuse, wire terminals)."
+    },
+    {
+      "name": "power_bottom",
+      "source": "source/fcc-internal-photos/07_power-board_bottom.jpeg",
+      "box": null,
+      "description": "Power board ANOVA_PRO_POWER_REV01, bottom side (FPC to main board, DC/DC, ICs)."
+    },
+    {
+      "name": "main_component-side_own",
+      "source": "own/2026-11-01/05_main-board_component-side.jpg",
+      "box": null,
+      "max_size": 1600,
+      "format": "jpg",
+      "description": "raptox's unit (AN600-20, EU): main board component side, still on the bezel. 2026-11-01. Label Data Matrix greyed out (J-068); the original stays out of the public copy (J-074).",
+      "local": true,
+      "redact": [
+        [
+          940,
+          3440,
+          1115,
+          3620
+        ]
+      ]
+    },
+    {
+      "name": "front_glass-off_own",
+      "source": "own/2026-11-01/01_head_front-glass-removed.jpg",
+      "box": [
+        484,
+        2116,
+        2447,
+        3977
+      ],
+      "max_size": 1400,
+      "format": "jpg",
+      "description": "raptox's unit: head with the front glass removed (adhesive residue on the bezel)."
+    },
+    {
+      "name": "head_open_own",
+      "source": "own/2026-11-01/03_head-open_ffc-speaker-power-board.jpg",
+      "box": null,
+      "max_size": 1400,
+      "format": "jpg",
+      "description": "raptox's unit: bezel + main board lifted out; FFC, speaker wires, speaker and power board visible."
+    },
+    {
+      "name": "bench_J8-supply_own",
+      "source": "own/2026-11-04/05_bench_J8-supply_5V01_on-breakout-B.jpg",
+      "box": [
+        420,
+        640,
+        2830,
+        3360
+      ],
+      "max_size": 1400,
+      "format": "jpg",
+      "description": "raptox's unit: the power board's J8 supply, 5.01 V DC on a Fluke 25 at break-out B, main board unplugged. 2026-11-04 (J-089)."
+    },
+    {
+      "name": "launchpad_top_own",
+      "source": "own/2026-11-05/02_launchpad_board_top.jpg",
+      "box": [
+        0,
+        330,
+        4000,
+        2720
+      ],
+      "max_size": 2400,
+      "format": "jpg",
+      "description": "raptox's CC3220S LaunchPad (CC3220S-LAUNCHXL rev A), top, 2026-11-05: J13 SOP jumpers, the CC3220S, the serial flash U8, the XDS110 debug probe."
+    },
+    {
+      "name": "chip_U1-U15_cc3220-flash",
+      "source": "own/2026-11-01/chips/01_U1-cc3220s_U15-flash_Y3_J14.jpg",
+      "box": [
+        262,
+        291,
+        3497,
+        2914
+      ],
+      "max_size": 1600,
+      "format": "jpg",
+      "description": "Close-up: U15/U16 XMC QH64AHIG serial flash, U1 CC3220S M2A, Y3 40 MHz crystal, J14 DIP footprint."
+    },
+    {
+      "name": "chip_U14_t3018",
+      "source": "own/2026-11-01/chips/02_U14-t3018.jpg",
+      "box": [
+        1632,
+        525,
+        3381,
+        2098
+      ],
+      "max_size": 1200,
+      "format": "jpg",
+      "description": "Close-up: U14 'T3018 / 3737' QFN-40."
+    },
+    {
+      "name": "chip_U7_cc2640r2f",
+      "source": "own/2026-11-01/chips/03_U7-cc2640r2f.jpg",
+      "box": [
+        699,
+        117,
+        3789,
+        2623
+      ],
+      "max_size": 1400,
+      "format": "jpg",
+      "description": "Close-up: U7 CC2640R2F, TP13/14/42/43/44, Y1."
+    },
+    {
+      "name": "chip_U17",
+      "source": "own/2026-11-01/chips/04_U17-dfn8_J9_J29-corner.jpg",
+      "box": [
+        291,
+        933,
+        2157,
+        2331
+      ],
+      "max_size": 1200,
+      "format": "jpg",
+      "description": "Close-up: U17 onsemi NCP59800 LDO '59800 / ADJB / GAJL' (rotated), C577/C579, R589/R590."
+    },
+    {
+      "name": "chip_U13_J9",
+      "source": "own/2026-11-01/chips/05_U13-4637_TP21-27_J9_U2.jpg",
+      "box": [
+        175,
+        0,
+        3789,
+        2914
+      ],
+      "max_size": 1400,
+      "format": "jpg",
+      "description": "Close-up: U13 '4637 / 638A' QFN-20, TP21-TP27, J9 speaker connector, U2."
+    },
+    {
+      "name": "chip_J29",
+      "source": "own/2026-11-01/chips/06_J29-footprint_TP28-29_Y4.jpg",
+      "box": [
+        1107,
+        816,
+        3060,
+        2448
+      ],
+      "max_size": 1200,
+      "format": "jpg",
+      "description": "Close-up: J29 3-hole footprint (unpopulated), TP28/TP29, R573/R579/R580, Y4."
+    },
+    {
+      "name": "main_component-side_micro",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        1000,
+        400,
+        22200,
+        16300
+      ],
+      "max_size": 2000,
+      "format": "jpg",
+      "description": "raptox's unit: main board component side from the 2026-11-03 stitched mosaic, at ~21.6 px/mm: the annotated reference image. Label Data Matrix greyed out.",
+      "redact": [
+        [
+          18040,
+          10320,
+          19240,
+          11350
+        ]
+      ]
+    },
+    {
+      "name": "main_component-side_micro_large",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        1000,
+        400,
+        22200,
+        16300
+      ],
+      "max_size": 4000,
+      "format": "jpg",
+      "description": "raptox's unit: main board component side, stitched microscope mosaic of 2026-11-03 (335 USB tiles, ~229 px/mm), downscaled to ~43 px/mm. The full-board reference for reading and as a KiCad underlay (4000 px over 21200 mosaic px: 43.3 px/mm at 229.4 px/mm). Label Data Matrix greyed out.",
+      "redact": [
+        [
+          18040,
+          10320,
+          19240,
+          11350
+        ]
+      ]
+    },
+    {
+      "name": "micro_J8_area",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        12300,
+        6000,
+        16600,
+        14400
+      ],
+      "max_size": 2800,
+      "format": "jpg",
+      "description": "Mosaic close-up: J8 (30-pin FPC) with TP1/TP2/TP3/TP8/TP9/TP49, JP5, U6, C7/C9/C19/C588."
+    },
+    {
+      "name": "micro_J8_pins",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        13900,
+        8700,
+        15900,
+        13000
+      ],
+      "max_size": 2800,
+      "format": "jpg",
+      "description": "Mosaic close-up: J8 contact row straight on, '30' mark at the top, pin-1 circle at the bottom."
+    },
+    {
+      "name": "micro_U17",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        1500,
+        3700,
+        3900,
+        6200
+      ],
+      "max_size": 1600,
+      "format": "jpg",
+      "description": "Mosaic close-up: U17 DFN-8 with C577/C579/C604, R589/R590."
+    },
+    {
+      "name": "micro_J9_U13_TP21-27",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        4600,
+        1500,
+        9500,
+        5000
+      ],
+      "max_size": 2400,
+      "format": "jpg",
+      "description": "Mosaic close-up: J9 speaker connector, U13 QFN-20, TP21-TP27, R569/R570/R291."
+    },
+    {
+      "name": "micro_U14",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        8200,
+        6300,
+        10600,
+        8800
+      ],
+      "max_size": 1600,
+      "format": "jpg",
+      "description": "Mosaic close-up: U14 QFN-40 'T3018 / 3737'."
+    },
+    {
+      "name": "micro_U2",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        5900,
+        300,
+        8400,
+        2600
+      ],
+      "max_size": 1400,
+      "format": "jpg",
+      "description": "Mosaic close-up: U2 (SOT-23-5?) with C4/C586/C10."
+    },
+    {
+      "name": "micro_U7_TP13-14-42-44_Y1",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        11000,
+        800,
+        16300,
+        4200
+      ],
+      "max_size": 2400,
+      "format": "jpg",
+      "description": "Mosaic close-up: U7 CC2640R2F, TP13/TP14/TP42/TP43/TP44, Y1, FL1."
+    },
+    {
+      "name": "micro_Y2",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        12800,
+        4200,
+        14800,
+        6100
+      ],
+      "max_size": 1200,
+      "format": "jpg",
+      "description": "Mosaic close-up: Y2 (CC2640R2F crystal) with TP19/TP20."
+    },
+    {
+      "name": "micro_U1_U15_Y3_J14",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        1300,
+        8300,
+        7000,
+        13600
+      ],
+      "max_size": 2400,
+      "format": "jpg",
+      "description": "Mosaic close-up: U1 CC3220S, U15/U16 flash, Y3, J14 DIP footprint with pin numbers."
+    },
+    {
+      "name": "micro_J29_TP28-29",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        4300,
+        4800,
+        8400,
+        8000
+      ],
+      "max_size": 1600,
+      "format": "jpg",
+      "description": "Mosaic close-up: J29 (pin 3 at the top, pin-1 dot at the bottom), TP28/TP29, R573, the 2-pad crystal below."
+    },
+    {
+      "name": "micro_J37_TP16-18",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        11900,
+        13300,
+        15300,
+        16200
+      ],
+      "max_size": 1600,
+      "format": "jpg",
+      "description": "Mosaic close-up: J37 Tag-Connect footprint with pins 1/2/5/6 marked, TP16, TP18, R574."
+    },
+    {
+      "name": "micro_TP15_TP34-37",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        9200,
+        9500,
+        11500,
+        12800
+      ],
+      "max_size": 1600,
+      "format": "jpg",
+      "description": "Mosaic close-up: boxed group TP15/TP34-TP37 with R17-R21, R585, C101."
+    },
+    {
+      "name": "micro_TP45-48_pad",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        1200,
+        5900,
+        3500,
+        7800
+      ],
+      "max_size": 1400,
+      "format": "jpg",
+      "description": "Mosaic close-up: exposed copper pad with TP45-TP48, FB2."
+    },
+    {
+      "name": "micro_label",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        17300,
+        9300,
+        19700,
+        11700
+      ],
+      "max_size": 1200,
+      "format": "jpg",
+      "description": "Mosaic close-up: production label '004D2 / 90718PM'; its Data Matrix is greyed out.",
+      "redact": [
+        [
+          18040,
+          10320,
+          19240,
+          11350
+        ]
+      ]
+    },
+    {
+      "name": "micro_Q3_TP50",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        17700,
+        11300,
+        20400,
+        14000
+      ],
+      "max_size": 1600,
+      "format": "jpg",
+      "description": "Mosaic close-up: Q3 with C605-C607, R559, R591-R594, TP50."
+    },
+    {
+      "name": "micro_step_U1-SOP-corner",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        3742,
+        9585,
+        6610,
+        13737
+      ],
+      "max_size": 2400,
+      "format": "jpg",
+      "description": "Mosaic close-up for the recovery handbook: U1's bottom and right edges (pins 17-36), J14's right row and the strap pads X4-X6, at ~133 px/mm."
+    },
+    {
+      "name": "micro_step_J29-U1-top",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        4316,
+        5571,
+        6495,
+        9470
+      ],
+      "max_size": 2400,
+      "format": "jpg",
+      "description": "Mosaic close-up for the recovery handbook: J29, its series resistors and test points, and U1's top edge (pins 49-64), at ~141 px/mm."
+    },
+    {
+      "name": "micro_step_J14-to-JP5",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        1563,
+        8323,
+        13836,
+        13829
+      ],
+      "max_size": 2800,
+      "format": "jpg",
+      "description": "Mosaic strip for the recovery handbook: U15, J14 and the strap pads on the left, JP5 and TP1 on the right, at ~52 px/mm."
+    },
+    {
+      "name": "micro_step_bench",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        1265,
+        983,
+        16244,
+        14173
+      ],
+      "max_size": 3000,
+      "format": "jpg",
+      "description": "Mosaic, left two thirds of the board for the recovery handbook's wiring pictures: J9, U17, J29, U15, U1, J14, JP5, J8, at ~46 px/mm. The production label is outside it."
+    },
+    {
+      "name": "launchpad_J13_own",
+      "source": "own/2026-11-05/02_launchpad_board_top.jpg",
+      "box": [
+        1700,
+        1700,
+        2600,
+        2700
+      ],
+      "max_size": 1000,
+      "format": "jpg",
+      "description": "raptox's CC3220S LaunchPad, close-up: J13 SOP jumpers with the 'SOP 2 1 0' silkscreen, the JTAG and XDS110 headers, SW4."
+    },
+    {
+      "name": "launchpad_U8_own",
+      "source": "own/2026-11-05/02_launchpad_board_top.jpg",
+      "box": [
+        850,
+        700,
+        1600,
+        1350
+      ],
+      "max_size": 1000,
+      "format": "jpg",
+      "description": "raptox's CC3220S LaunchPad, close-up: the serial flash U8 (MX25R3235F), its pin-1 mark, for the clip read."
+    },
+    {
+      "name": "launchpad_jumpers_own",
+      "source": "own/2026-11-05/02_launchpad_board_top.jpg",
+      "box": [
+        2150,
+        550,
+        2750,
+        1850
+      ],
+      "max_size": 1400,
+      "format": "jpg",
+      "description": "raptox's CC3220S LaunchPad, close-up: the jumper column between the XDS110 and the CC3220 (GND, 5V, VBAT, BRD, RX, TX, RST, TMS, TCK, TDI, TDO, SENSE)."
+    },
+    {
+      "name": "launchpad_top_stitched_own",
+      "source": "stitched/launchpad_top_own.jpg",
+      "box": [
+        0,
+        0,
+        6180,
+        3700
+      ],
+      "max_size": 3200,
+      "format": "jpg",
+      "description": "raptox's CC3220S LaunchPad, whole top side, stitched from photos 04-08 of 2026-11-05 (tools/stitch_photos.py), powered with the out-of-box firmware running. Sharper than photo 02; in photo 06's perspective, not a true top view."
+    },
+    {
+      "name": "micro_U7_reset",
+      "source": "../micro/2026-11-03_main_component-side/mosaic.png",
+      "local": true,
+      "box": [
+        12150,
+        3250,
+        12900,
+        4450
+      ],
+      "max_size": 1200,
+      "format": "jpg",
+      "description": "Mosaic close-up at full resolution: U7's left row, pins 34-36, and the two 0402 parts below them; pin 35 (RESET_N) runs to the left one (J-240)."
+    }
+  ]
+}

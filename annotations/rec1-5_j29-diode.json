@@ -1,0 +1,89 @@
+{
+  "image": "micro_J29_TP28-29.jpg",
+  "format": "jpg",
+  "title": "Recovery 1.5 - diode mode on the J29 holes",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 28,
+  "line_px": 5,
+  "box_px": 4,
+  "caption": "Diode mode: red lead on hole 1 (then hole 2), black lead on hole 3 (GND); then swapped. About 0.4-0.7 V in one direction is a chip pin's protection diode: a live line.",
+  "callouts": [
+    {
+      "id": "J29.1",
+      "ref": "J29.1",
+      "label": "J29 hole 1 (dot end)",
+      "part": "",
+      "bbox": [
+        226,
+        825,
+        370,
+        969
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The bottom hole; the pin-1 dot is printed left of it. TP29's net (beeper, J-112). Red lead here first."
+    },
+    {
+      "id": "J29.2",
+      "ref": "J29.2",
+      "label": "J29 hole 2",
+      "part": "",
+      "bbox": [
+        227,
+        597,
+        370,
+        739
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The middle hole. TP28's net (beeper, J-112). Red lead here second."
+    },
+    {
+      "id": "J29.3",
+      "ref": "J29.3",
+      "label": "J29 hole 3, GND",
+      "part": "",
+      "bbox": [
+        228,
+        370,
+        372,
+        510
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The top hole, '3' printed above it. GND (J-112). Black lead here for both readings, then swapped."
+    }
+  ],
+  "terminals": [
+    {
+      "id": "red",
+      "label": "Meter red lead (diode): hole 1, then hole 2",
+      "group": "lead_red",
+      "y": 950
+    },
+    {
+      "id": "black",
+      "label": "Meter black lead: hole 3, GND",
+      "group": "lead_black",
+      "y": 400
+    }
+  ],
+  "links": [
+    {
+      "from": "J29.1",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "J29.2",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "J29.3",
+      "to": "black",
+      "style": "solid"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "image": "front_bezel.png",
+  "title": "Front bezel / light guide - seen from the back (mirror image of the user's view)",
+  "source": "FCC ID 2APBOAN600, internal-photos exhibit 3999178 (2018 sample), page 2, top photo, left half (crop 400x505)",
+  "scale": 2,
+  "callouts": [
+    {
+      "id": 1,
+      "ref": "",
+      "label": "Wi-Fi icon window",
+      "part": "lit by main board LED D8",
+      "bbox": [
+        58,
+        18,
+        97,
+        62
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 2,
+      "ref": "",
+      "label": "Rectangular sensor window",
+      "part": "in front of main board U18",
+      "bbox": [
+        298,
+        22,
+        334,
+        78
+      ],
+      "category": "sensor",
+      "confidence": "likely"
+    },
+    {
+      "id": 3,
+      "ref": "",
+      "label": "Black strip with gold contact (top)",
+      "part": "",
+      "bbox": [
+        108,
+        48,
+        222,
+        97
+      ],
+      "category": "rf",
+      "confidence": "guess",
+      "note": "Mates with the gold pins in the main board antenna zone. Possibly an antenna element (flex/LDS) or a touch/ground electrode."
+    },
+    {
+      "id": 4,
+      "ref": "",
+      "label": "Black strip with gold contact (side)",
+      "part": "",
+      "bbox": [
+        323,
+        232,
+        362,
+        388
+      ],
+      "category": "rf",
+      "confidence": "guess"
+    },
+    {
+      "id": 5,
+      "ref": "",
+      "label": "Key: thermometer (target temperature)",
+      "part": "over touch key D5",
+      "bbox": [
+        15,
+        110,
+        85,
+        180
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 6,
+      "ref": "",
+      "label": "Key: circle",
+      "part": "over touch key D6",
+      "bbox": [
+        15,
+        210,
+        85,
+        280
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 7,
+      "ref": "",
+      "label": "Key: timer",
+      "part": "over touch key D33",
+      "bbox": [
+        15,
+        310,
+        85,
+        380
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 8,
+      "ref": "",
+      "label": "Key: '+' (appears on the right from the front)",
+      "part": "over touch key D4",
+      "bbox": [
+        70,
+        410,
+        140,
+        480
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 9,
+      "ref": "",
+      "label": "Key: triangle + bar (start/stop; 'bar-play' from the front)",
+      "part": "over touch key D3/D32",
+      "bbox": [
+        155,
+        410,
+        225,
+        480
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 10,
+      "ref": "",
+      "label": "Key: '-' (appears on the left from the front)",
+      "part": "over touch key D1",
+      "bbox": [
+        240,
+        410,
+        315,
+        480
+      ],
+      "category": "ui",
+      "confidence": "likely"
+    },
+    {
+      "id": 11,
+      "ref": "",
+      "label": "Digit row 1 (4 x 7-segment light guides)",
+      "part": "",
+      "bbox": [
+        110,
+        105,
+        355,
+        180
+      ],
+      "category": "ui",
+      "confidence": "confirmed"
+    },
+    {
+      "id": 12,
+      "ref": "",
+      "label": "Digit row 2",
+      "part": "",
+      "bbox": [
+        105,
+        215,
+        305,
+        285
+      ],
+      "category": "ui",
+      "confidence": "confirmed"
+    },
+    {
+      "id": 13,
+      "ref": "",
+      "label": "Digit row 3",
+      "part": "",
+      "bbox": [
+        105,
+        310,
+        320,
+        380
+      ],
+      "category": "ui",
+      "confidence": "confirmed"
+    }
+  ]
+}

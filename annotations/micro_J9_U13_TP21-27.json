@@ -1,0 +1,220 @@
+{
+  "image": "micro_J9_U13_TP21-27.jpg",
+  "title": "Main board - U13 = AKM AK4637 audio codec, its pins, and the speaker connector J9 (raptox's unit, mosaic 2026-11-03)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~112 px/mm in this crop); pin layout from the AK4637 datasheet",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "U13",
+      "ref": "U13",
+      "label": "AKM AK4637EN: 24-bit mono audio codec with MIC and speaker amplifiers",
+      "part": "AK4637EN, 20-pin QFN 3 x 3 mm, 0.4 mm pitch, exposed pad to GND",
+      "marking": "4637 / 838A",
+      "bbox": [
+        1308,
+        652,
+        1645,
+        990
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "The marking matches AKM's marking diagram (datasheet 015010680-E-00, p94: '4637' over a 4-digit date code, a pin-1 dot) and the package (p1, p94); next to the speaker connector J9. Turned a quarter counter-clockwise from the datasheet's top view (p6): pin 1 bottom right, pins 1-5 up the right side, 6-10 right to left along the top, 11-15 down the left, 16-20 left to right along the bottom. Control over I2C (7-bit address 0x12, p65), audio over I2S. J-269."
+    },
+    {
+      "id": "dot",
+      "ref": "U13 pin 1",
+      "label": "Pin-1 mark (laser dot)",
+      "bbox": [
+        1565,
+        919,
+        1594,
+        948
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "AKM's 'Pin #1 indication' (p94): pin 1 is the right column's bottom lead."
+    },
+    {
+      "id": "1",
+      "ref": "U13.1",
+      "label": "U13 pin 1, AIN/IN+/DMDAT",
+      "bbox": [
+        1648,
+        900,
+        1704,
+        923
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Analog (mic) input. Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "3",
+      "ref": "U13.3",
+      "label": "U13 pin 3, SCL",
+      "bbox": [
+        1648,
+        811,
+        1704,
+        833
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "I2C clock from the CC3220 (control port, slave address 0x12): which U1 pin is open (meter). Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "4",
+      "ref": "U13.4",
+      "label": "U13 pin 4, SDA",
+      "bbox": [
+        1648,
+        766,
+        1704,
+        788
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "I2C data, as pin 3. Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "5",
+      "ref": "U13.5",
+      "label": "U13 pin 5, SDTI",
+      "bbox": [
+        1648,
+        721,
+        1704,
+        744
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "I2S data into the codec (the sounds from U1). Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "6",
+      "ref": "U13.6",
+      "label": "U13 pin 6, SDTO",
+      "bbox": [
+        1554,
+        595,
+        1577,
+        652
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "I2S data out of the codec (the ADC). Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "10",
+      "ref": "U13.10",
+      "label": "U13 pin 10, TVDD",
+      "bbox": [
+        1375,
+        595,
+        1398,
+        652
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Digital I/O supply, 1.6-3.6 V (3.3 V expected). Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "11",
+      "ref": "U13.11",
+      "label": "U13 pin 11, DVDD",
+      "bbox": [
+        1248,
+        720,
+        1304,
+        743
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Digital core supply, 1.6-1.98 V: the board needs a 1.8 V rail for it (U2 nearby is a candidate, guess). Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "13",
+      "ref": "U13.13",
+      "label": "U13 pin 13, SPN",
+      "bbox": [
+        1248,
+        810,
+        1304,
+        832
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Speaker amplifier, negative output (BTL): toward J9. Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "14",
+      "ref": "U13.14",
+      "label": "U13 pin 14, SPP",
+      "bbox": [
+        1248,
+        855,
+        1304,
+        877
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Speaker amplifier, positive output (BTL): toward J9. Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "15",
+      "ref": "U13.15",
+      "label": "U13 pin 15, AVDD",
+      "bbox": [
+        1248,
+        900,
+        1304,
+        923
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Analog and speaker-amp supply, 2.8-5.5 V: 400 mW into 8 Ohm at 3.3 V, 1 W at 5 V. Which rail (3V3 or VIN): meter. Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "16",
+      "ref": "U13.16",
+      "label": "U13 pin 16, VSS1",
+      "bbox": [
+        1370,
+        992,
+        1392,
+        1048
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Ground 1. Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "20",
+      "ref": "U13.20",
+      "label": "U13 pin 20, BEEP/IN-/DMCLK",
+      "bbox": [
+        1548,
+        992,
+        1570,
+        1048
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Beep input (analog). Position from the pin-1 mark and the datasheet's pin layout (p6, p9); its net on this board is not measured yet."
+    },
+    {
+      "id": "J9",
+      "ref": "J9",
+      "label": "Speaker connector (2-pin)",
+      "bbox": [
+        120,
+        1056,
+        936,
+        1572
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Twisted yellow/black pair to the round speaker (main-board.md). U13's SPN/SPP (pins 13/14) face it; which J9 pin each reaches: meter."
+    }
+  ]
+}

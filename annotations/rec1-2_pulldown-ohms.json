@@ -1,0 +1,122 @@
+{
+  "image": "micro_U1_U15_Y3_J14.jpg",
+  "format": "jpg",
+  "title": "Recovery 1.2 - the pull-down on each strap pad (ohms)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 28,
+  "line_px": 5,
+  "box_px": 4,
+  "caption": "Resistance to GND. The black lead stays on U15 pin 4; the red lead goes on each strap pad in turn; wait until the reading settles. About 2.7 kOhm = SOP2, about 100 kOhm = SOP0 or SOP1.",
+  "callouts": [
+    {
+      "id": "X4",
+      "ref": "X4",
+      "label": "strap pad X4, SOP0",
+      "part": "",
+      "bbox": [
+        1299,
+        1844,
+        1381,
+        1926
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The top of the three round pads below C231, right of J14. Measured: beeps to U1 pin 35 (SOP0), raptox's beeper, unpowered, 2026-11-05. Red lead here; the cap to GND on the pad makes the reading creep before it settles."
+    },
+    {
+      "id": "X5",
+      "ref": "X5",
+      "label": "strap pad X5, SOP1",
+      "part": "",
+      "bbox": [
+        1298,
+        1992,
+        1380,
+        2074
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The middle of the three round pads below C231, right of J14. Measured: beeps to U1 pin 34 (SOP1), raptox's beeper, unpowered, 2026-11-05. Red lead here; the cap to GND on the pad makes the reading creep before it settles."
+    },
+    {
+      "id": "X6",
+      "ref": "X6",
+      "label": "strap pad X6, SOP2",
+      "part": "",
+      "bbox": [
+        1297,
+        2138,
+        1379,
+        2220
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The bottom of the three round pads below C231, right of J14. Measured: beeps to U1 pin 21 (SOP2), raptox's beeper, unpowered, 2026-11-05. Red lead here; the cap to GND on the pad makes the reading creep before it settles."
+    },
+    {
+      "id": "U15.4",
+      "ref": "U15.4",
+      "label": "U15 pin 4, GND",
+      "part": "",
+      "bbox": [
+        633,
+        876,
+        693,
+        1070
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "VSS (XMC datasheet rev. J); rings to JP5 pin 2 (J-080). Right end of the row nearer J14. Black lead on the foot."
+    },
+    {
+      "id": "U15.1",
+      "ref": "U15.1",
+      "label": "U15 pin 1 (the dimple end)",
+      "part": "",
+      "bbox": [
+        266,
+        876,
+        327,
+        1070
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "CS#. Left end of the same row, next to the moulded dimple; pin 4 is three leads to its right. Not touched in this step."
+    }
+  ],
+  "terminals": [
+    {
+      "id": "red",
+      "label": "Meter red lead (ohms): X4, X5, X6 in turn",
+      "group": "lead_red"
+    },
+    {
+      "id": "black",
+      "label": "Meter black lead (COM): U15 pin 4",
+      "group": "lead_black"
+    }
+  ],
+  "links": [
+    {
+      "from": "X4",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "X5",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "X6",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "U15.4",
+      "to": "black",
+      "style": "solid"
+    }
+  ]
+}

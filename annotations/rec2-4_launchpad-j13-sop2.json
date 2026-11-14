@@ -1,0 +1,80 @@
+{
+  "image": "launchpad_J13_own.jpg",
+  "title": "Recovery 2.4-2.7 - one jumper on J13's SOP2 position",
+  "source": "Own photo, raptox's LaunchPad, 2026-11-05",
+  "caption": "For the boot loader: one jumper on the row printed 2 (SOP2), rows 1 and 0 open. Off again for a normal boot. Never 1 and 0 together.",
+  "scale": 2,
+  "tag_px": 24,
+  "box_px": 4,
+  "format": "jpg",
+  "callouts": [
+    {
+      "id": "SOP2",
+      "ref": "J13",
+      "label": "row 2, SOP2: jumper ON for the boot loader",
+      "part": "",
+      "bbox": [
+        298,
+        224,
+        507,
+        312
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The row printed '2', the top row of the 2x3 header. One jumper across its two pins pulls SOP2 high: the CC3220's UART boot loader (likely, from the silkscreen; TI's guide SWRU463 not checked: unverified). Off again for a normal boot."
+    },
+    {
+      "id": "SOP1",
+      "ref": "J13",
+      "label": "row 1, SOP1: open",
+      "part": "",
+      "bbox": [
+        298,
+        336,
+        507,
+        416
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The row printed '1', the middle row. No jumper. Rows 1 and 0 together select the return-to-factory-image mode, which writes the flash: never fit them at the same time (SWRU463 not checked: unverified)."
+    },
+    {
+      "id": "SOP0",
+      "ref": "J13",
+      "label": "row 0, SOP0: open",
+      "part": "",
+      "bbox": [
+        298,
+        440,
+        507,
+        524
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The row printed '0', the bottom row. No jumper."
+    },
+    {
+      "id": "label",
+      "ref": "J13",
+      "label": "Silkscreen 'J13', 'SOP' and rows '2 1 0'",
+      "part": "",
+      "bbox": [
+        [
+          336,
+          118,
+          518,
+          200
+        ],
+        [
+          232,
+          248,
+          294,
+          470
+        ]
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "'SOP' and 'J13' above the header, the row numbers 2, 1, 0 down its left side (printed sideways). Where the jumpers sit now: the header is not empty in the photo (dark cap shapes over it), but which row a jumper bridges cannot be read; check on the board before the first boot."
+    }
+  ]
+}

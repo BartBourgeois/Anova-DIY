@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Flash dumps and firmware blobs: never commit by accident (may be device-unique / copyrighted)
+dumps/
+*.bin
+*.sli
+*.ucf
+
+# Scratch / OS
+scratch/
+Thumbs.db
+.DS_Store
+
+# MkDocs site build (generated)
+site-src/
+site/
+
+# Local-only configuration, never tracked
+*.local.txt
+/.capture/
+
+# Android app packages under analysis, and everything extracted from them: third-party code, untrusted input
+/apk/
+
+# Vendor installers for the bench software (Uniflash, SDKs, ...): big, third-party, re-downloadable; hashes in the journal
+/installers/
+
+# Microscope tile sets and full-resolution mosaics: too big for git, kept local + off-machine copy (J-066)
+/micro/
+
+# PlatformIO build output and local Wi-Fi credentials (tools/j8probe)
+tools/j8probe/.pio/
+tools/espserprog/.pio/
+tools/j8probe/include/secrets.h
+
+# OTA-fix subproject: docs/tools/firmware-source are committed PRIVATELY (otafix/ is in tools/unpublished.txt,
+# so never exported). Only local captures/traces, binaries and build output are ignored here (firmware blobs
+# *.bin/*.sli/*.ucf already covered above).
+/otafix/.capture/
+/otafix/**/build/
+/otafix/**/.pio/
+/otafix/**/Debug/
+/otafix/**/Release/
+/tools/pcbnav/runs/sandbox.json
+
+# KiCad boards under hardware/: per-user view state, lock files, backups and caches
+/hardware/**/*.kicad_prl
+/hardware/**/*.lck
+/hardware/**/*-backups/
+/hardware/**/fp-info-cache
+
+# The workbench (J-317): its npm packages, and the feedback queue (processed records go to feedback/done/, committed)
+/tools/workbench/node_modules/
+/feedback/inbox/

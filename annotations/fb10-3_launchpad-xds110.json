@@ -1,0 +1,226 @@
+{
+  "image": "launchpad_top_stitched_own.jpg",
+  "title": "Flash backup 10.3 - the LaunchPad's XDS110: TMS, TCK and GND out to the cooker",
+  "source": "Own photos, raptox's CC3220S LaunchPad: stitched from photos 04-08 of 2026-11-05 (the jumper caps were still on then)",
+  "caption": "Jumper positions counted from the J18 end (VSENSE/BRD): BRD, TDO, TDI, TCK (4th), TMS (5th), RST. Since 2026-11-06 the TMS, TCK, TDI, TDO and RST caps are off. Of each pair the XDS110's pin is the one that beeps to J4 (TMS to pin 2, TCK to pin 4): the left one in this view (likely). GND from TP2. Nothing of the LaunchPad's own 3V3/5V goes to the cooker; USB in last, out first.",
+  "scale": 1,
+  "tag_px": 30,
+  "line_px": 5,
+  "box_px": 4,
+  "format": "jpg",
+  "terminals": [
+    {
+      "id": "c_gnd",
+      "label": "Cooker GND: break-out A header pin 30 (hook clip)",
+      "group": "other",
+      "y": 290
+    },
+    {
+      "id": "c_tp14",
+      "label": "Cooker TP14 (TCKC): probe B",
+      "group": "other",
+      "y": 1780
+    },
+    {
+      "id": "c_tp13",
+      "label": "Cooker TP13 (TMSC): probe A",
+      "group": "other",
+      "y": 1870
+    }
+  ],
+  "links": [
+    {
+      "from": "TP2",
+      "to": "c_gnd",
+      "style": "solid",
+      "via": [
+        [
+          370,
+          120
+        ],
+        [
+          3150,
+          120
+        ],
+        [
+          3150,
+          290
+        ]
+      ]
+    },
+    {
+      "from": "TCK/XDS",
+      "to": "c_tp14",
+      "style": "solid",
+      "via": [
+        [
+          1185,
+          1093
+        ],
+        [
+          1185,
+          1780
+        ]
+      ]
+    },
+    {
+      "from": "TMS/XDS",
+      "to": "c_tp13",
+      "style": "solid",
+      "via": [
+        [
+          1205,
+          1181
+        ],
+        [
+          1205,
+          1870
+        ]
+      ]
+    }
+  ],
+  "callouts": [
+    {
+      "id": "J4",
+      "ref": "J4",
+      "label": "XDS110 OUT: the beeper reference",
+      "part": "2x5 1.27 mm, shrouded",
+      "bbox": [
+        979,
+        487,
+        1155,
+        683
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Arm's 10-pin Cortex debug layout (TI SWRU463C 2.5.2): pin 2 TMS/SWDIO, pin 4 TCK/SWCLK, pins 3 and 5 GND. Pin 1 is marked on the board (not legible in this photo) and is never connected: TI says it is not a voltage sense.",
+      "tag_side": "left"
+    },
+    {
+      "id": "J8",
+      "ref": "J8",
+      "label": "JTAG IN: not used",
+      "part": "",
+      "bbox": [
+        1206,
+        476,
+        1388,
+        673
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "The input for an external probe to the LaunchPad's own CC3220."
+    },
+    {
+      "id": "TCK/XDS",
+      "ref": "TCK",
+      "label": "XDS110's pin: the wire to TP14",
+      "part": "",
+      "bbox": [
+        1230,
+        1075,
+        1268,
+        1111
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The 4th position from J18. Left = the XDS110's side (J18's VSENSE label sits left, BRD right; the RX/TX extra pins sit left): beep to J4 pin 4 to confirm.",
+      "tag_side": "left"
+    },
+    {
+      "id": "TCK/CC",
+      "ref": "TCK",
+      "label": "CC3220's pin: no wire",
+      "part": "",
+      "bbox": [
+        1313,
+        1072,
+        1350,
+        1108
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "The LaunchPad's own CC3220 side.",
+      "tag_side": "right"
+    },
+    {
+      "id": "TMS/XDS",
+      "ref": "TMS",
+      "label": "XDS110's pin: the wire to TP13",
+      "part": "",
+      "bbox": [
+        1240,
+        1163,
+        1278,
+        1199
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The 5th position from J18. Beep to J4 pin 2 to confirm.",
+      "tag_side": "left"
+    },
+    {
+      "id": "TMS/CC",
+      "ref": "TMS",
+      "label": "CC3220's pin: no wire",
+      "part": "",
+      "bbox": [
+        1323,
+        1157,
+        1360,
+        1193
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "The LaunchPad's own CC3220 side.",
+      "tag_side": "right"
+    },
+    {
+      "id": "TP2",
+      "ref": "TP2",
+      "label": "GND: the hook clip for the cooker's ground",
+      "part": "wire loop",
+      "bbox": [
+        300,
+        230,
+        440,
+        350
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Labelled GND on the board. Beep it to J4 pin 3 once.",
+      "tag_side": "below"
+    },
+    {
+      "id": "USB",
+      "ref": "USB",
+      "label": "the XDS110's USB: in last, out first",
+      "part": "micro-USB",
+      "bbox": [
+        190,
+        1530,
+        360,
+        1720
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "In only after the cooker is powered; out before the cooker's supply goes off (10.1).",
+      "tag_side": "right"
+    },
+    {
+      "id": "U1",
+      "ref": "U1",
+      "label": "TM4C129: the XDS110 itself",
+      "part": "TM4C1294NCPDT",
+      "bbox": [
+        560,
+        1110,
+        1080,
+        1610
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "The probe's own microcontroller (SWRU463C 2.4)."
+    }
+  ]
+}

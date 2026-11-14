@@ -1,0 +1,31 @@
+** Drc report for ffc30-tap.kicad_pcb **
+** Created on 2026-11-12 10:59:30 **
+
+** Found 7 DRC violations **
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(122.0000 mm, 119.0000 mm): Footprint H4
+[lib_footprint_issues]: The current configuration does not include the library 'ffc30-tap'.
+    Local override; Severity: warning
+    @(100.0000 mm, 100.0000 mm): Footprint J3
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(122.0000 mm, 81.0000 mm): Footprint H2
+[lib_footprint_issues]: The current configuration does not include the library 'ffc30-tap'.
+    Local override; Severity: warning
+    @(122.0650 mm, 100.0000 mm): Footprint J2
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(78.0000 mm, 119.0000 mm): Footprint H3
+[lib_footprint_issues]: The current configuration does not include the library ''.
+    Local override; Severity: warning
+    @(78.0000 mm, 81.0000 mm): Footprint H1
+[lib_footprint_issues]: The current configuration does not include the library 'ffc30-tap'.
+    Local override; Severity: warning
+    @(77.9350 mm, 100.0000 mm): Footprint J1
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** End of Report **

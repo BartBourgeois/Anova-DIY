@@ -1,0 +1,317 @@
+{
+  "image": "micro_step_J29-U1-top.jpg",
+  "format": "jpg",
+  "title": "Recovery 1.4 - which J29 hole is the chip's TX (ohms)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 28,
+  "line_px": 5,
+  "box_px": 4,
+  "caption": "Ohms from J29 hole 1 and hole 2 to U1 pins 55 and 57 (count along the top edge from pin 49, the rightmost toe). A series resistor sits in each path, so a few hundred ohms is a hit. The hole on pin 55 is the chip's TX.",
+  "callouts": [
+    {
+      "id": "J29.1",
+      "ref": "J29.1",
+      "label": "J29 hole 1 (dot end)",
+      "part": "",
+      "bbox": [
+        348,
+        829,
+        576,
+        1055
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The bottom hole; the pin-1 dot is printed left of it. TP29's net (beeper, J-112). Red lead here first."
+    },
+    {
+      "id": "J29.2",
+      "ref": "J29.2",
+      "label": "J29 hole 2",
+      "part": "",
+      "bbox": [
+        352,
+        471,
+        568,
+        686
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The middle hole. TP28's net (beeper, J-112). Red lead here second."
+    },
+    {
+      "id": "J29.3",
+      "ref": "J29.3",
+      "label": "J29 hole 3, GND",
+      "part": "",
+      "bbox": [
+        355,
+        112,
+        571,
+        327
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The top hole. GND (J-112). Not used in this step."
+    },
+    {
+      "id": "TP29",
+      "ref": "TP29",
+      "label": "TP29, on hole 1's net",
+      "part": "",
+      "bbox": [
+        1088,
+        552,
+        1197,
+        660
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Rings to J29 hole 1 (beeper, J-112)."
+    },
+    {
+      "id": "TP28",
+      "ref": "TP28",
+      "label": "TP28, on hole 2's net",
+      "part": "",
+      "bbox": [
+        1072,
+        242,
+        1178,
+        346
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Rings to J29 hole 2 (beeper, J-112). Its top edge runs into a stitching gap."
+    },
+    {
+      "id": "R",
+      "ref": "R579/R580",
+      "label": "series resistors",
+      "part": "",
+      "bbox": [
+        [
+          798,
+          244,
+          1004,
+          327
+        ],
+        [
+          793,
+          468,
+          1004,
+          553
+        ]
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Two resistors between J29 and TP28/TP29; which label is which is partly in a stitching gap. They put a few hundred ohms (expected) into each J29-to-U1 path."
+    },
+    {
+      "id": "49",
+      "ref": "U1.49",
+      "label": "U1 pin 49",
+      "part": "",
+      "bbox": [
+        1091,
+        2073,
+        1139,
+        2133
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Top edge, counted right to left from pin 49, the rightmost toe."
+    },
+    {
+      "id": "50",
+      "ref": "U1.50",
+      "label": "U1 pin 50",
+      "part": "",
+      "bbox": [
+        1017,
+        2073,
+        1065,
+        2133
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Top edge, counted right to left from pin 49, the rightmost toe."
+    },
+    {
+      "id": "51",
+      "ref": "U1.51",
+      "label": "U1 pin 51",
+      "part": "",
+      "bbox": [
+        947,
+        2073,
+        995,
+        2133
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Top edge, counted right to left from pin 49, the rightmost toe."
+    },
+    {
+      "id": "52",
+      "ref": "U1.52",
+      "label": "U1 pin 52",
+      "part": "",
+      "bbox": [
+        877,
+        2073,
+        925,
+        2133
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Top edge, counted right to left from pin 49, the rightmost toe."
+    },
+    {
+      "id": "53",
+      "ref": "U1.53",
+      "label": "U1 pin 53",
+      "part": "",
+      "bbox": [
+        807,
+        2073,
+        855,
+        2133
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Top edge, counted right to left from pin 49, the rightmost toe."
+    },
+    {
+      "id": "54",
+      "ref": "U1.54",
+      "label": "U1 pin 54",
+      "part": "",
+      "bbox": [
+        739,
+        2073,
+        787,
+        2133
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Top edge, counted right to left from pin 49, the rightmost toe."
+    },
+    {
+      "id": "55",
+      "ref": "U1.55",
+      "label": "U1 pin 55, UART0 TX",
+      "part": "",
+      "bbox": [
+        666,
+        2073,
+        714,
+        2133
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "GPIO1, muxable as UART0_TX (SWAS035C). Seventh toe from the right (pin 49)."
+    },
+    {
+      "id": "56",
+      "ref": "U1.56",
+      "label": "U1 pin 56",
+      "part": "",
+      "bbox": [
+        596,
+        2073,
+        644,
+        2133
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Top edge, counted right to left from pin 49, the rightmost toe."
+    },
+    {
+      "id": "57",
+      "ref": "U1.57",
+      "label": "U1 pin 57, UART0 RX",
+      "part": "",
+      "bbox": [
+        525,
+        2073,
+        573,
+        2133
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "GPIO2, muxable as UART0_RX (SWAS035C). Ninth toe from the right (pin 49)."
+    },
+    {
+      "id": "58",
+      "ref": "U1.58",
+      "label": "U1 pin 58",
+      "part": "",
+      "bbox": [
+        454,
+        2073,
+        502,
+        2133
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Top edge, counted right to left from pin 49, the rightmost toe."
+    }
+  ],
+  "terminals": [
+    {
+      "id": "red",
+      "label": "Meter red lead: J29 hole 1, then hole 2",
+      "group": "lead_red",
+      "y": 820
+    },
+    {
+      "id": "black",
+      "label": "Meter black lead: U1 pin 55, then pin 57",
+      "group": "lead_black",
+      "y": 2175
+    }
+  ],
+  "links": [
+    {
+      "from": "J29.1",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "J29.2",
+      "to": "red",
+      "style": "solid"
+    },
+    {
+      "from": "55",
+      "to": "black",
+      "style": "solid",
+      "via": [
+        [
+          690,
+          2160
+        ],
+        [
+          1170,
+          2160
+        ]
+      ]
+    },
+    {
+      "from": "57",
+      "to": "black",
+      "style": "solid",
+      "via": [
+        [
+          549,
+          2190
+        ],
+        [
+          1170,
+          2190
+        ]
+      ]
+    }
+  ]
+}

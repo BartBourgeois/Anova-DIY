@@ -1,0 +1,40 @@
+{#- Theme override: status strip on every page, hero on the home page. Text comes from mkdocs.yml (extra.*). -#}
+{% extends "base.html" %}
+
+{% block announce %}
+  <span class="status-led{% if config.extra.led == 'steady' %} status-led--steady{% endif %}"></span>{{ config.extra.status }}
+{% endblock %}
+
+{% block content %}
+  {% if page.is_homepage %}
+  <div class="hero">
+    <img class="hero-logo" src="{{ '_web/logo.svg' | url }}" alt="Any%, on a seven-segment display">
+    {% if config.extra.win %}
+    {#- The finish: shown while extra.win is set. Splits as in a speedrun, oldest first, the last one highlighted. -#}
+    <div class="win">
+      <p class="win-kicker">{{ config.extra.win.kicker }}</p>
+      <p class="win-head">{{ config.extra.win.headline }}</p>
+      <p class="win-line">{{ config.extra.win.line }}</p>
+      <div class="win-splits">
+        {% for split in config.extra.win.splits %}
+        <div class="win-split"><span class="win-date">{{ split.date }}</span><span>{{ split.what }}</span></div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    <p class="hero-tag">{{ config.extra.tagline }}</p>
+    <p>
+      {% if config.extra.win %}
+      <a class="md-button md-button--primary" href="{{ config.extra.win.post | url }}">How it cooks again</a>
+      <a class="md-button" href="{{ 'blog/' | url }}">Blog</a>
+      {% else %}
+      <a class="md-button md-button--primary" href="{{ 'blog/' | url }}">Blog</a>
+      {% endif %}
+      <a class="md-button" href="{{ 'docs/roadmap/' | url }}">Roadmap</a>
+      <a class="md-button" href="{{ 'docs/timeline/' | url }}">Timeline</a>
+      <a class="md-button" href="{{ 'docs/hardware/overview/' | url }}">Hardware</a>
+    </p>
+  </div>
+  {% endif %}
+  {{ super() }}
+{% endblock %}
