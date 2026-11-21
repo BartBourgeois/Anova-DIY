@@ -1,0 +1,276 @@
+{
+  "image": "micro_U14.jpg",
+  "title": "Main board - U14 = Lumissil IS31FL3737 LED matrix driver and its key pins (raptox's unit, mosaic 2026-11-03)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03; pin configuration from the IS31FL3737 datasheet",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "U14",
+      "ref": "U14",
+      "label": "Lumissil IS31FL3737: 12x12 LED matrix driver, I2C (the display and key LEDs)",
+      "part": "IS31FL3737 (marked 3737), QFN-40 5 x 5 mm, 0.4 mm pitch, thermal pad to GND",
+      "marking": "T3018 / 3737",
+      "bbox": [
+        399,
+        435,
+        1133,
+        1169
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Marking 3737 and the QFN-40 5 x 5 mm package (datasheet Rev. G p3, p27); a 12 x 12 matrix for the panel's ~135 LEDs. The CC3220 drives the display at I2C address 0x50 (ADDR to GND, p9) with this chip family's unlock-and-page-select sequence and a 16-byte row stride (p12, p15), J-270. Pin-1 dot top left, as in the datasheet's top view: 1-10 down the left, 11-20 along the bottom, 21-30 up the right, 31-40 right to left along the top. Original or B revision: open (the marking shows no B)."
+    },
+    {
+      "id": "dot",
+      "ref": "U14 pin 1",
+      "label": "Pin-1 mark (laser dot)",
+      "bbox": [
+        518,
+        532,
+        569,
+        584
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Pin 1 is the top lead of the left side (datasheet p3)."
+    },
+    {
+      "id": "1",
+      "ref": "U14.1",
+      "label": "U14 pin 1, SW1",
+      "bbox": [
+        349,
+        518,
+        423,
+        548
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Matrix scan line SW1 (rows SW1-SW12 on pins 1-3, 5-10, 12-14). Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "4",
+      "ref": "U14.4",
+      "label": "U14 pin 4, PGND",
+      "bbox": [
+        349,
+        698,
+        423,
+        727
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Power ground. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "10",
+      "ref": "U14.10",
+      "label": "U14 pin 10, SW9",
+      "bbox": [
+        349,
+        1050,
+        423,
+        1080
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Scan line SW9. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "11",
+      "ref": "U14.11",
+      "label": "U14 pin 11, PGND",
+      "bbox": [
+        482,
+        1152,
+        512,
+        1225
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Power ground. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "19",
+      "ref": "U14.19",
+      "label": "U14 pin 19, PVCC",
+      "bbox": [
+        950,
+        1152,
+        979,
+        1225
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Supply for the current sources. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "20",
+      "ref": "U14.20",
+      "label": "U14 pin 20, CS5",
+      "bbox": [
+        1007,
+        1152,
+        1037,
+        1225
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Current source CS5 (columns CS1-CS12 on pins 15-18, 20-25, 27, 28). Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "21",
+      "ref": "U14.21",
+      "label": "U14 pin 21, CS6",
+      "bbox": [
+        1121,
+        1054,
+        1195,
+        1084
+      ],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "Current source CS6. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "26",
+      "ref": "U14.26",
+      "label": "U14 pin 26, PVCC",
+      "bbox": [
+        1121,
+        761,
+        1195,
+        791
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Supply for the current sources. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "29",
+      "ref": "U14.29",
+      "label": "U14 pin 29, AGND",
+      "bbox": [
+        1121,
+        585,
+        1195,
+        615
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Analog ground. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "30",
+      "ref": "U14.30",
+      "label": "U14 pin 30, R_EXT",
+      "bbox": [
+        1121,
+        528,
+        1195,
+        558
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "External resistor to GND: sets the LED current (IOUT = 840/R_EXT x GCC/256). Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "31",
+      "ref": "U14.31",
+      "label": "U14 pin 31, VCC",
+      "bbox": [
+        1021,
+        379,
+        1050,
+        453
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Supply for the analog and digital circuits. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "32",
+      "ref": "U14.32",
+      "label": "U14 pin 32, VIO",
+      "bbox": [
+        965,
+        379,
+        994,
+        453
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Logic reference voltage for the I2C levels. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "34",
+      "ref": "U14.34",
+      "label": "U14 pin 34, SDA",
+      "bbox": [
+        846,
+        379,
+        875,
+        453
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "I2C data (the display bus): which U1 pin, and shared with U13's SDA? Meter. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "35",
+      "ref": "U14.35",
+      "label": "U14 pin 35, SCL",
+      "bbox": [
+        786,
+        379,
+        816,
+        453
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "I2C clock, as SDA. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "36",
+      "ref": "U14.36",
+      "label": "U14 pin 36, ADDR",
+      "bbox": [
+        729,
+        379,
+        759,
+        453
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Address select: to GND gives 0x50, the address the CC3220 uses for the display (J-270). Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "38",
+      "ref": "U14.38",
+      "label": "U14 pin 38, SDB",
+      "bbox": [
+        610,
+        379,
+        639,
+        453
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "Shutdown, low active. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    },
+    {
+      "id": "40",
+      "ref": "U14.40",
+      "label": "U14 pin 40, GND",
+      "bbox": [
+        494,
+        379,
+        523,
+        453
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Ground. Position from the pin-1 mark and the datasheet's pin configuration (p3, p4); its net on this board is not measured yet."
+    }
+  ]
+}

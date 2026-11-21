@@ -1,0 +1,152 @@
+{
+ "name": "launchpad_top_own",
+ "inputs": [
+  {
+   "path": "own/2026-11-05/04_launchpad_left_xds110-half.jpg",
+   "sha256": "435fd3a56c1a14b8f8ec8ad7034046f049f1a94d91d66e28394885b37ad64270"
+  },
+  {
+   "path": "own/2026-11-05/05_launchpad_centre_j13-sop-and-jumper-column.jpg",
+   "sha256": "90ad413781fce0a1b0e9fc5b8bddb332258498ca7c1be8826055e5f0366df0f2"
+  },
+  {
+   "path": "own/2026-11-05/06_launchpad_right_cc3220-and-u8.jpg",
+   "sha256": "1bb149ab559f41307670caaa1bb62ce5ed88ca94869034930ff11edcf62b6b5a"
+  },
+  {
+   "path": "own/2026-11-05/07_launchpad_bottom-right_sensors-and-rf.jpg",
+   "sha256": "565a82dd54af3e42a6b9faf3ba8e290df54d7a46e43e563b472cab583c5b2492"
+  },
+  {
+   "path": "own/2026-11-05/08_launchpad_top-right_leds-and-j24.jpg",
+   "sha256": "9acb2691bfa245be27b0a9522f30a9b63f6c05f15fb56451e0f09ce0fb63b3bf"
+  }
+ ],
+ "reference": "own/2026-11-05/06_launchpad_right_cc3220-and-u8.jpg",
+ "links": [
+  {
+   "photo": "own/2026-11-05/08_launchpad_top-right_leds-and-j24.jpg",
+   "onto": "own/2026-11-05/06_launchpad_right_cc3220-and-u8.jpg",
+   "inliers": 354
+  },
+  {
+   "photo": "own/2026-11-05/07_launchpad_bottom-right_sensors-and-rf.jpg",
+   "onto": "own/2026-11-05/06_launchpad_right_cc3220-and-u8.jpg",
+   "inliers": 199
+  },
+  {
+   "photo": "own/2026-11-05/05_launchpad_centre_j13-sop-and-jumper-column.jpg",
+   "onto": "own/2026-11-05/06_launchpad_right_cc3220-and-u8.jpg",
+   "inliers": 141
+  },
+  {
+   "photo": "own/2026-11-05/04_launchpad_left_xds110-half.jpg",
+   "onto": "own/2026-11-05/05_launchpad_centre_j13-sop-and-jumper-column.jpg",
+   "inliers": 381
+  }
+ ],
+ "canvas": [
+  7224,
+  4831
+ ],
+ "box": [
+  600,
+  420,
+  6780,
+  4120
+ ],
+ "homography_to_canvas": {
+  "own/2026-11-05/04_launchpad_left_xds110-half.jpg": [
+   [
+    1.206835,
+    0.203337,
+    0.591509
+   ],
+   [
+    -0.008128,
+    1.273584,
+    132.105543
+   ],
+   [
+    9e-06,
+    4e-05,
+    0.988262
+   ]
+  ],
+  "own/2026-11-05/05_launchpad_centre_j13-sop-and-jumper-column.jpg": [
+   [
+    1.036742,
+    0.093666,
+    1567.853675
+   ],
+   [
+    -0.006784,
+    1.020339,
+    268.830856
+   ],
+   [
+    7e-06,
+    4e-06,
+    1.0
+   ]
+  ],
+  "own/2026-11-05/06_launchpad_right_cc3220-and-u8.jpg": [
+   [
+    1.0,
+    0.0,
+    3684.0
+   ],
+   [
+    0.0,
+    1.0,
+    446.0
+   ],
+   [
+    0.0,
+    0.0,
+    1.0
+   ]
+  ],
+  "own/2026-11-05/07_launchpad_bottom-right_sensors-and-rf.jpg": [
+   [
+    0.928848,
+    0.039889,
+    4879.917273
+   ],
+   [
+    0.096771,
+    0.831254,
+    1769.589347
+   ],
+   [
+    2.3e-05,
+    1.7e-05,
+    1.0
+   ]
+  ],
+  "own/2026-11-05/08_launchpad_top-right_leds-and-j24.jpg": [
+   [
+    1.003209,
+    0.086113,
+    4492.543626
+   ],
+   [
+    0.030796,
+    0.916495,
+    0.320954
+   ],
+   [
+    2.5e-05,
+    1.7e-05,
+    1.0
+   ]
+  ]
+ },
+ "opencv": "5.0.0",
+ "params": {
+  "work_scale": 0.35,
+  "ratio": 0.75,
+  "min_link": 40,
+  "jpeg_quality": 92
+ }
+}

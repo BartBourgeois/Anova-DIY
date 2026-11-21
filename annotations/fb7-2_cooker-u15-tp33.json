@@ -1,0 +1,27 @@
+{
+  "image": "micro_U1_U15_Y3_J14.jpg",
+  "title": "Flash backup 7.2 - U15 for the clip, TP33 for the reset hold",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~97 px/mm in this crop)",
+  "caption": "The clip goes on U15 with its pin-1 lead on pin 1 (the two dots): leads on 1, 2, 4, 5 and 6 only. The CC3220 is held in reset at TP33, never at R321's right pad, which is the 3.3 V rail.",
+  "scale": 1,
+  "tag_px": 30,
+  "line_px": 5,
+  "box_px": 4,
+  "format": "jpg",
+  "callouts": [
+    {"id": "1", "ref": "U15.1", "label": "U15 pin 1, CS#: the clip's pin-1 lead", "part": "XM25QH64A", "bbox": [266, 878, 328, 1068], "category": "memory", "confidence": "confirmed", "note": "Bottom-left leg, by the two silkscreen dots. Pin positions by continuity (J-108, J-109). Lead to the reader's CS.", "tag_side": "below"},
+    {"id": "2", "ref": "U15.2", "label": "U15 pin 2, DO: to the reader's MISO", "part": "", "bbox": [392, 878, 446, 1068], "category": "memory", "confidence": "confirmed", "note": "Data out of the flash (J-108: beeper to P7).", "tag_side": "below"},
+    {"id": "3", "ref": "U15.3", "label": "U15 pin 3, WP#: no lead", "part": "", "bbox": [511, 878, 565, 1068], "category": "memory", "confidence": "likely", "note": "Write protect, only guards the status register (XM25QH64A datasheet p. 5). The clip contacts it, but its lead stays unconnected.", "tag_side": "below"},
+    {"id": "4", "ref": "U15.4", "label": "U15 pin 4, GND: the reader's GND; the orientation check", "part": "", "bbox": [630, 878, 692, 1068], "category": "power", "confidence": "confirmed", "note": "Beeps to JP5 pin 2 (J-080, J-108). The clip lead that beeps here proves the clip is the right way round.", "tag_side": "below"},
+    {"id": "5", "ref": "U15.5", "label": "U15 pin 5, DI: to the reader's MOSI", "part": "", "bbox": [636, 182, 694, 372], "category": "memory", "confidence": "confirmed", "note": "Data into the flash (J-109: beeper to P6).", "tag_side": "right"},
+    {"id": "6", "ref": "U15.6", "label": "U15 pin 6, CLK: to the reader's CLK", "part": "", "bbox": [515, 182, 571, 372], "category": "memory", "confidence": "confirmed", "note": "SPI clock (J-109: beeper to P5)."},
+    {"id": "7", "ref": "U15.7", "label": "U15 pin 7, HOLD#: no lead; about 3.3 V when powered", "part": "", "bbox": [398, 182, 454, 372], "category": "memory", "confidence": "likely", "note": "HOLD# low would stall every read; the board pulls it up, about 10 kOhm to VCC (J-109). Measured powered at step 8.3."},
+    {"id": "8", "ref": "U15.8", "label": "U15 pin 8, VCC: no lead (the board feeds it); 3.3 V check", "part": "", "bbox": [268, 182, 332, 372], "category": "power", "confidence": "confirmed", "note": "On U17's 3.3 V output (J-110). The clip's VCC lead stays off: a reader feeding it would back-feed U17 (J-076). The meter's 3.3 V point."},
+    {"id": "D", "ref": "U15 mark", "label": "Pin-1 mark: two dots", "part": "", "bbox": [212, 925, 252, 1045], "category": "info", "confidence": "confirmed", "note": "Silkscreen dots beside pin 1.", "tag_side": "left"},
+    {"id": "N", "ref": "U1.32", "label": "U1 pin 32, nRESET", "part": "CC3220S", "bbox": [2012, 1168, 2042, 1206], "category": "mcu", "confidence": "likely", "note": "The last pin of U1's bottom edge. Its trace runs past C331, C322 and R321 to TP33 (raptox, J-203)."},
+    {"id": "C", "ref": "C322", "label": "C322: nRESET's filter cap", "part": "", "bbox": [2159, 1461, 2289, 1511], "category": "info", "confidence": "likely", "note": "Its left pad on nRESET (beeper, J-204); the other pad to GND (likely).", "tag_side": "left"},
+    {"id": "L", "ref": "R321 left", "label": "R321 left pad: nRESET (same net as TP33)", "part": "", "bbox": [2159, 1581, 2192, 1639], "category": "debug", "confidence": "confirmed", "note": "Beeps fully to TP33 (J-204). An alternative hold point, but TP33 holds a probe better.", "tag_side": "left"},
+    {"id": "X", "ref": "R321 right", "label": "R321 right pad: 3.3 V. NEVER the ground probe", "part": "", "bbox": [2256, 1581, 2289, 1639], "category": "power", "confidence": "confirmed", "note": "Beeps fully to U15 pin 8 (J-205). Grounding it would short U17's output (J-208).", "tag_side": "right"},
+    {"id": "T", "ref": "TP33", "label": "TP33: the reset hold, probe to GND", "part": "", "bbox": [2241, 1717, 2308, 1789], "category": "debug", "confidence": "confirmed", "note": "U1's nRESET (J-203). 9.7 kOhm to 3.3 V through R321, nothing drives it (J-204): held to GND it draws about 0.34 mA, and the CC3220 never starts.", "tag_side": "left"}
+  ]
+}

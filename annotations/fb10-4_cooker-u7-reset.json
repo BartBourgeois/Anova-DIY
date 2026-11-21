@@ -1,0 +1,99 @@
+{
+  "image": "micro_U7_reset.jpg",
+  "title": "Flash backup 10.11 - U7's reset (pin 35) and where to hold it",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (229 px/mm, full resolution)",
+  "caption": "Pin 35 (RESET_N) runs left and down to the top pad of the tan 0402 part (2), `likely` its reset capacitor to GND. Held to GND there, U7 stays in reset and lets go of the serial lines it shares with the Wi-Fi chip. Beep first: 1 to 2 beeps, 3 to GND beeps, 2 to 3V3 must NOT beep.",
+  "scale": 1,
+  "tag_px": 26,
+  "line_px": 4,
+  "box_px": 4,
+  "format": "jpg",
+  "links": [
+    {
+      "from": "1",
+      "to": "2",
+      "label": "beep",
+      "style": "dotted",
+      "via": [
+        [
+          330,
+          260
+        ],
+        [
+          330,
+          700
+        ]
+      ],
+      "label_at": [
+        300,
+        560
+      ]
+    }
+  ],
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "U7.35",
+      "label": "RESET_N",
+      "part": "CC2640R2F",
+      "bbox": [
+        404,
+        236,
+        460,
+        284
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Pin 35 (SWRS204C p. 9: no internal pull-up), the 11th pin of the left row from the top, 2nd from the bottom (picture 10.1). Its trace leaves the toe up-left, then runs down to 2.",
+      "tag_side": "right"
+    },
+    {
+      "id": "2",
+      "ref": "C?.1",
+      "label": "the hold point: GND probe here",
+      "part": "0402, tan (a capacitor)",
+      "bbox": [
+        204,
+        809,
+        331,
+        880
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The pad pin 35's trace ends on (mosaic). Beep to pin 35 first, and check it does NOT beep to 3V3 (U15 pin 8). Then a GND probe here, before power, as on TP33.",
+      "tag_side": "left"
+    },
+    {
+      "id": "3",
+      "ref": "C?.2",
+      "label": "the other pad: GND?",
+      "part": "",
+      "bbox": [
+        204,
+        1000,
+        331,
+        1150
+      ],
+      "category": "power",
+      "confidence": "guess",
+      "note": "If it beeps to GND, the part is the reset capacitor and 2 is safe to hold low.",
+      "tag_side": "left"
+    },
+    {
+      "id": "4",
+      "ref": "R?",
+      "label": "not this one (pin 36's trace)",
+      "part": "0402, black (a resistor)",
+      "bbox": [
+        430,
+        831,
+        562,
+        1073
+      ],
+      "category": "info",
+      "confidence": "guess",
+      "note": "Pin 36's (DIO_23) trace runs down to its top pad (mosaic).",
+      "tag_side": "right"
+    }
+  ]
+}

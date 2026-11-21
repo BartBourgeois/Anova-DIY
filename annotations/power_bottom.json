@@ -1,0 +1,186 @@
+{
+  "image": "power_bottom.png",
+  "title": "Power board ANOVA_PRO_POWER_REV01 - bottom side",
+  "source": "FCC ID 2APBOAN600, internal-photos exhibit 3999178 (2018 sample), page 3, bottom photo (991x371); flipped top-to-bottom vs. power_top",
+  "scale": 2,
+  "callouts": [
+    {
+      "id": 1,
+      "ref": "J8",
+      "label": "30-pin FPC connector to main board",
+      "part": "30-pin 0.5 mm FPC",
+      "bbox": [
+        849,
+        45,
+        905,
+        165
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Ribbon to main board J8. The interface pinout between the boards is a key Phase 1 task."
+    },
+    {
+      "id": 2,
+      "ref": "TP1-TP3, TP29-TP33, TP39",
+      "label": "Test points beside the FPC",
+      "part": "",
+      "bbox": [
+        910,
+        48,
+        958,
+        140
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Convenient probing of rails and signals entering from the main board."
+    },
+    {
+      "id": 3,
+      "ref": "L1",
+      "label": "DC/DC buck inductor 6.8 uH",
+      "part": "shielded SMD inductor",
+      "marking": "6R8 / 1822",
+      "bbox": [
+        729,
+        58,
+        775,
+        105
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Part of a switching regulator with output caps C17/C31. Probably makes the supply for J8, which the main board expects at about 5 V (its 3.3 V LDO U17 takes at most 6 V; J-076), or a rail for this board itself (guess)."
+    },
+    {
+      "id": 4,
+      "ref": "U2",
+      "label": "IC, unidentified (pins on two sides)",
+      "part": "TSSOP/QFN class",
+      "marking": "illegible",
+      "bbox": [
+        652,
+        90,
+        703,
+        133
+      ],
+      "category": "unknown",
+      "confidence": "guess",
+      "note": "Biggest IC on the power board. Candidates: buck controller, power-board MCU, or sensor AFE. If it is an MCU, it has firmware too, which matters for the update-failure analysis."
+    },
+    {
+      "id": 5,
+      "ref": "U3?",
+      "label": "IC, unidentified",
+      "part": "TSSOP/QFN class",
+      "marking": "illegible",
+      "bbox": [
+        584,
+        127,
+        621,
+        171
+      ],
+      "category": "unknown",
+      "confidence": "guess"
+    },
+    {
+      "id": 6,
+      "ref": "",
+      "label": "small QFN IC, unidentified",
+      "part": "QFN ~3x3 mm",
+      "bbox": [
+        679,
+        139,
+        708,
+        166
+      ],
+      "category": "unknown",
+      "confidence": "guess"
+    },
+    {
+      "id": 7,
+      "ref": "U11",
+      "label": "small IC (SOT/DFN)",
+      "part": "",
+      "bbox": [
+        737,
+        134,
+        760,
+        156
+      ],
+      "category": "unknown",
+      "confidence": "guess"
+    },
+    {
+      "id": 8,
+      "ref": "",
+      "label": "6-lead SOP IC + power resistors (20 R, 51 R)",
+      "part": "SOP-8 body with 6 leads; resistors marked '200' and '510'",
+      "bbox": [
+        [
+          404,
+          130,
+          455,
+          200
+        ],
+        [
+          392,
+          213,
+          420,
+          255
+        ],
+        [
+          420,
+          248,
+          450,
+          290
+        ]
+      ],
+      "category": "power",
+      "confidence": "guess",
+      "note": "Under the AC/DC module area. Missing pins suggest a high-voltage part: offline regulator, triac/MOSFET driver or opto. MAINS POTENTIAL."
+    },
+    {
+      "id": 9,
+      "ref": "TP9",
+      "label": "Test point at the root of the sensor finger",
+      "part": "",
+      "bbox": [
+        288,
+        82,
+        304,
+        98
+      ],
+      "category": "debug",
+      "confidence": "likely"
+    },
+    {
+      "id": 10,
+      "ref": "R57",
+      "label": "Sensor-finger tip: component footprint",
+      "part": "2 pads at the tip (silkscreen 'R57')",
+      "bbox": [
+        0,
+        55,
+        40,
+        88
+      ],
+      "category": "sensor",
+      "confidence": "guess",
+      "note": "Likely the water-temperature sensor (NTC/thermistor) position. Measure resistance vs. temperature on the real board."
+    },
+    {
+      "id": 11,
+      "ref": "",
+      "label": "Through-hole joints of relay, fuse and mains terminals",
+      "part": "",
+      "bbox": [
+        770,
+        175,
+        960,
+        340
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "MAINS POTENTIAL. Never probe with the unit plugged in."
+    }
+  ]
+}

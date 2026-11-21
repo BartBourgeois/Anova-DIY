@@ -1,0 +1,32 @@
+{
+  "image": "micro_step_bench.jpg",
+  "title": "Flash backup 7.1 - the cooker's main board wired for the clip read",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~46 px/mm in this crop)",
+  "caption": "Supply through break-out A on J8. The reset hold from TP33 to GND at JP5 pin 2, on before power. The clip on U15 (pin 1 at the dots), five leads to the reader, no VCC lead. J14 position 3 as the optional SOP2 strap. The close-up is picture 7.2.",
+  "scale": 1,
+  "tag_px": 34,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "terminals": [
+    {"id": "sup_p", "label": "Bench supply + (5.0 V, OVP 6 V, limit 100 mA): break-out A header pins 1-6", "group": "supply", "y": 1700},
+    {"id": "sup_n", "label": "Bench supply -: break-out A header pin 30", "group": "supply", "y": 1900},
+    {"id": "rdr", "label": "Reader (Pi, Pico or FT232H): CS, CLK, MOSI, MISO, GND; drawings fb-reader-*", "color": "#2f9bff", "y": 1250}
+  ],
+  "links": [
+    {"from": "J8", "to": "sup_p", "style": "solid"},
+    {"from": "J8", "to": "sup_n", "style": "solid"},
+    {"from": "U15", "to": "rdr", "style": "solid", "via": [[240, 1450], [1700, 1450], [1700, 1250]]},
+    {"from": "TP33", "to": "JP5.2", "label": "hold lead", "style": "solid", "color": "#ff5cc8", "via": [[1090, 2450], [2420, 2450]], "label_at": [1750, 2450]},
+    {"from": "S3", "to": "S6", "label": "optional strap", "style": "dashed", "color": "#ffe600", "via": [[250, 2380], [534, 2380]], "label_at": [392, 2420]}
+  ],
+  "callouts": [
+    {"id": "U15", "ref": "U15", "label": "U15: the clip, pin-1 lead on pin 1 (the dots)", "part": "XM25QH64A, SOP-8 208 mil", "bbox": [112, 1556, 359, 1970], "category": "memory", "confidence": "confirmed", "note": "Leads on pins 1, 2, 4, 5, 6; none on 3, 7, 8. Pin map: picture 7.2.", "tag_side": "left"},
+    {"id": "TP33", "ref": "TP33", "label": "TP33 = U1's nRESET: the hold probe", "part": "", "bbox": [1072, 2282, 1107, 2319], "category": "debug", "confidence": "confirmed", "note": "To GND before power and for the whole read (J-203, J-204).", "tag_side": "left"},
+    {"id": "R321", "ref": "R321", "label": "R321: its right pad is 3.3 V, never the probe", "part": "", "bbox": [1032, 2218, 1099, 2245], "category": "power", "confidence": "confirmed", "note": "Left pad = nRESET, right pad = 3V3 (J-204, J-205, J-208)."},
+    {"id": "JP5.2", "ref": "JP5.2", "label": "JP5 pin 2, GND: the hold lead's ground", "part": "", "bbox": [2384, 2067, 2455, 2139], "category": "power", "confidence": "confirmed", "note": "The round pad; GND (J-080). JP5 pin 1 below it stays free: the supply comes through J8.", "tag_side": "left"},
+    {"id": "J8", "ref": "J8", "label": "J8: break-out A, the supply only", "part": "30-pin 0.5 mm FPC", "bbox": [2786, 1540, 2942, 2406], "category": "connector", "confidence": "confirmed", "note": "Header pins 1-6 = VIN (U17's input), 30 = GND (J-077, J-078, J-089, J-201); every other header pin open. The cooker's own cable stays out.", "tag_side": "left"},
+    {"id": "S3", "ref": "J14.3", "label": "J14 pad 3 (common, 270 Ohm to 3.3 V)", "part": "", "bbox": [224, 2294, 279, 2329], "category": "debug", "confidence": "confirmed", "note": "Optional SOP2 strap with pad 6 (J-200): if the hold slips, the ROM only waits. Two probes joined by a lead, if they fit beside the clip.", "tag_side": "below"},
+    {"id": "S6", "ref": "J14.6", "label": "J14 pad 6 = SOP2 (X6)", "part": "", "bbox": [504, 2294, 564, 2329], "category": "debug", "confidence": "likely", "note": "Pad 6 to X6: from the mosaic (J-098); beep it once (J-200).", "tag_side": "below"}
+  ]
+}

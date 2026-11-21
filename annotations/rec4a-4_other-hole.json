@@ -1,0 +1,187 @@
+{
+  "image": "micro_step_bench.jpg",
+  "title": "Recovery 4a.4 - nothing at either baud: try the other hole",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 34,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "caption": "Supply off. Move the RXD probe (with its 4.7 kΩ) from the first hole to the other signal hole, then repeat at 115200 and 921600.",
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "JP5.1",
+      "label": "JP5 pin 1 (square), 5 V in",
+      "part": "",
+      "bbox": [
+        2381,
+        2184,
+        2453,
+        2256
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The square pad, '1' printed left of it; VIN = J8 pins 1-6 = U17's input (J-077, J-080). Bench supply + at 5.0 V, OVP 6 V, current limit 100 mA. Never above 6 V.",
+      "tag_side": "below"
+    },
+    {
+      "id": "2",
+      "ref": "JP5.2",
+      "label": "JP5 pin 2, GND",
+      "part": "",
+      "bbox": [
+        2384,
+        2067,
+        2455,
+        2139
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The round pad above pin 1, '2' printed left of it; GND, the same net as U15 pin 4 (J-080)."
+    },
+    {
+      "id": "3",
+      "ref": "J29.1",
+      "label": "J29 hole 1: first try",
+      "part": "",
+      "bbox": [
+        724,
+        1186,
+        796,
+        1257
+      ],
+      "category": "debug",
+      "confidence": "guess",
+      "note": "The bottom hole, by the printed dot (J-112): where the RXD probe sat in 4a (the assumed chip TX).",
+      "tag_side": "left"
+    },
+    {
+      "id": "4",
+      "ref": "J29.2",
+      "label": "J29 hole 2: second try",
+      "part": "",
+      "bbox": [
+        724,
+        1070,
+        796,
+        1143
+      ],
+      "category": "debug",
+      "confidence": "guess",
+      "note": "The middle hole (J-112): the RXD probe, with its 4.7 kΩ, moves here with the supply off.",
+      "tag_side": "left"
+    },
+    {
+      "id": "5",
+      "ref": "J29.3",
+      "label": "J29 hole 3, GND",
+      "part": "",
+      "bbox": [
+        725,
+        953,
+        797,
+        1026
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The top hole, '3' printed above it: GND (J-112). The adapter's GND stays here.",
+      "tag_side": "left"
+    }
+  ],
+  "terminals": [
+    {
+      "id": "rxd",
+      "label": "Adapter RXD",
+      "group": "ftdi",
+      "y": 1163
+    },
+    {
+      "id": "gnd",
+      "label": "Adapter GND",
+      "group": "ftdi",
+      "y": 990
+    },
+    {
+      "id": "sup_p",
+      "label": "Bench supply + (5.0 V, OVP 6 V, limit 100 mA)",
+      "group": "supply",
+      "y": 2530
+    },
+    {
+      "id": "sup_n",
+      "label": "Bench supply −",
+      "group": "supply",
+      "y": 2600
+    }
+  ],
+  "links": [
+    {
+      "from": "3",
+      "to": "rxd",
+      "label": "4.7 kΩ, first try",
+      "style": "dotted",
+      "via": [
+        [
+          2990,
+          1221
+        ]
+      ]
+    },
+    {
+      "from": "4",
+      "to": "rxd",
+      "label": "4.7 kΩ, second try",
+      "style": "dashed",
+      "via": [
+        [
+          2990,
+          1106
+        ]
+      ]
+    },
+    {
+      "from": "5",
+      "to": "gnd",
+      "style": "solid"
+    },
+    {
+      "from": "1",
+      "to": "sup_p",
+      "style": "solid",
+      "via": [
+        [
+          2336,
+          2228
+        ],
+        [
+          2336,
+          2578
+        ],
+        [
+          2990,
+          2578
+        ]
+      ]
+    },
+    {
+      "from": "2",
+      "to": "sup_n",
+      "style": "solid",
+      "via": [
+        [
+          2306,
+          2103
+        ],
+        [
+          2306,
+          2612
+        ],
+        [
+          2990,
+          2612
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "image": "launchpad_U8_own.jpg",
+  "title": "Recovery 2.3 - the clip on U8: reading the LaunchPad's flash",
+  "source": "Own photo, raptox's LaunchPad, 2026-11-05",
+  "caption": "RESET held for the whole read. The clip on U8 with its pin-1 lead at the dot. CS, SO, SI, SCLK and GND to the 3.3 V reader; the clip's VCC lead stays off (the LaunchPad's own USB powers the flash).",
+  "scale": 2,
+  "tag_px": 24,
+  "line_px": 5,
+  "box_px": 4,
+  "format": "jpg",
+  "callouts": [
+    {
+      "id": "U8",
+      "ref": "U8",
+      "label": "Serial flash (MX25R3235F), SOIC-8",
+      "part": "",
+      "bbox": [
+        284,
+        221,
+        437,
+        418
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "'U8' printed right of it. The marking runs sideways and is only partly legible ('MXIC', '25R3235F'; the lot line is not readable), so the part is by the LaunchPad's design. Standard SPI NOR pinout, pins 1-4 down the left side, 5-8 up the right."
+    },
+    {
+      "id": "dot",
+      "ref": "U8",
+      "label": "Pin-1 dot",
+      "part": "",
+      "bbox": [
+        317,
+        242,
+        337,
+        261
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "A round laser dot in the body's top-left corner, beside the top-left leg; read on a 4x zoom of the photo. No bevel is visible on this side, so the dot alone marks pin 1."
+    },
+    {
+      "id": "1",
+      "ref": "U8",
+      "label": "pin 1, CS#",
+      "part": "",
+      "bbox": [
+        234,
+        236,
+        286,
+        266
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "The leg at the dot. The clip's pin-1 lead (its marked wire) goes here. To the reader's CS."
+    },
+    {
+      "id": "2",
+      "ref": "U8",
+      "label": "pin 2, SO",
+      "part": "",
+      "bbox": [
+        234,
+        285,
+        286,
+        314
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "Flash data out: to the reader's MISO."
+    },
+    {
+      "id": "3",
+      "ref": "U8",
+      "label": "pin 3, WP#",
+      "part": "",
+      "bbox": [
+        234,
+        334,
+        286,
+        363
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "Not wired to the reader; the clip's lead stays loose. How the LaunchPad ties it: its schematic not checked (unverified)."
+    },
+    {
+      "id": "4",
+      "ref": "U8",
+      "label": "pin 4, GND",
+      "part": "",
+      "bbox": [
+        234,
+        382,
+        286,
+        411
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "To the reader's GND (the common ground with the LaunchPad)."
+    },
+    {
+      "id": "5",
+      "ref": "U8",
+      "label": "pin 5, SI",
+      "part": "",
+      "bbox": [
+        436,
+        382,
+        505,
+        411
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "Flash data in: from the reader's MOSI. Across from pin 4."
+    },
+    {
+      "id": "6",
+      "ref": "U8",
+      "label": "pin 6, SCLK",
+      "part": "",
+      "bbox": [
+        436,
+        334,
+        505,
+        363
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "From the reader's SCK."
+    },
+    {
+      "id": "7",
+      "ref": "U8",
+      "label": "pin 7, HOLD#",
+      "part": "",
+      "bbox": [
+        436,
+        285,
+        505,
+        314
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "Not wired to the reader; the clip's lead stays loose. How the LaunchPad ties it: its schematic not checked (unverified)."
+    },
+    {
+      "id": "8",
+      "ref": "U8",
+      "label": "pin 8, VCC",
+      "part": "",
+      "bbox": [
+        436,
+        236,
+        505,
+        266
+      ],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "Across from pin 1. The clip's VCC lead stays OFF: the LaunchPad's USB powers the flash, a second supply would back-feed the board."
+    }
+  ],
+  "terminals": [
+    {
+      "id": "r_cs",
+      "label": "Reader CS",
+      "group": "other",
+      "y": 190
+    },
+    {
+      "id": "r_miso",
+      "label": "Reader MISO",
+      "group": "other",
+      "y": 150
+    },
+    {
+      "id": "vcc",
+      "label": "Clip VCC lead: OFF",
+      "group": "other"
+    },
+    {
+      "id": "r_sck",
+      "label": "Reader SCK",
+      "group": "other"
+    },
+    {
+      "id": "r_mosi",
+      "label": "Reader MOSI",
+      "group": "other"
+    },
+    {
+      "id": "r_gnd",
+      "label": "Reader GND",
+      "group": "other",
+      "y": 520
+    }
+  ],
+  "links": [
+    {
+      "from": "1",
+      "to": "r_cs",
+      "style": "solid",
+      "via": [
+        [
+          260,
+          190
+        ]
+      ]
+    },
+    {
+      "from": "2",
+      "to": "r_miso",
+      "style": "solid",
+      "via": [
+        [
+          215,
+          299
+        ],
+        [
+          215,
+          150
+        ]
+      ]
+    },
+    {
+      "from": "5",
+      "to": "r_mosi",
+      "style": "solid"
+    },
+    {
+      "from": "6",
+      "to": "r_sck",
+      "style": "solid"
+    },
+    {
+      "from": "4",
+      "to": "r_gnd",
+      "style": "solid",
+      "via": [
+        [
+          250,
+          520
+        ]
+      ]
+    },
+    {
+      "from": "8",
+      "to": "vcc",
+      "style": "dotted"
+    }
+  ]
+}

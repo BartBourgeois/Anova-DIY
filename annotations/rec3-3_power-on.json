@@ -1,0 +1,237 @@
+{
+  "image": "micro_step_bench.jpg",
+  "title": "Recovery 3.3 - power on: the current and the 3.3 V rail",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 34,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "caption": "Supply on with the limit at 100 mA. Read the supply's current, then 3.3 V at U15 pin 8 against GND. If the rail reads 0 V, measure U17's input (C577 side) and output (C579 side).",
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "JP5.1",
+      "label": "JP5 pin 1 (square), 5 V in",
+      "part": "",
+      "bbox": [
+        2381,
+        2184,
+        2453,
+        2256
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The square pad, '1' printed left of it; VIN = J8 pins 1-6 = U17's input (J-077, J-080). Bench supply + at 5.0 V, OVP 6 V, current limit 100 mA. Never above 6 V.",
+      "tag_side": "below"
+    },
+    {
+      "id": "2",
+      "ref": "JP5.2",
+      "label": "JP5 pin 2, GND",
+      "part": "",
+      "bbox": [
+        2384,
+        2067,
+        2455,
+        2139
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The round pad above pin 1, '2' printed left of it; GND, the same net as U15 pin 4 (J-080)."
+    },
+    {
+      "id": "3",
+      "ref": "U15.8",
+      "label": "U15 pin 8: expect 3.3 V",
+      "part": "",
+      "bbox": [
+        135,
+        1552,
+        165,
+        1642
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "VCC = the 3.3 V rail, on U17's output (J-110). The leg across from pin 1 (top-left of U15 in this view). The red lead.",
+      "tag_side": "below"
+    },
+    {
+      "id": "4",
+      "ref": "U15.4",
+      "label": "U15 pin 4, GND",
+      "part": "",
+      "bbox": [
+        306,
+        1883,
+        336,
+        1973
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "GND (J-080, J-108): the black lead. The last leg of pin 1's row (bottom-right of U15 in this view)."
+    },
+    {
+      "id": "5",
+      "ref": "U17",
+      "label": "U17, the 3.3 V regulator",
+      "part": "NCP59800, DFN-8",
+      "bbox": [
+        230,
+        748,
+        377,
+        898
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "onsemi NCP59800 adjustable LDO, marking '59800' (J-076). Pin-1 dot at the bottom-left: pins 7-8 (IN) at the top-left, pins 1-2 (OUT) at the bottom-left (docs/hardware/nets.md)."
+    },
+    {
+      "id": "6",
+      "ref": "C577",
+      "label": "C577, U17 input (5 V)",
+      "part": "",
+      "bbox": [
+        148,
+        670,
+        212,
+        788
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "The upper of the two caps left of U17 (its silkscreen label is the upper one, further left). Its top end sits on U17's input pour with the three vias, fed from JP5 pin 1 (J-080). The other end is probably GND (guess): read both ends against GND, the higher reading is the input, about 5 V."
+    },
+    {
+      "id": "7",
+      "ref": "C579",
+      "label": "C579, U17 output (3.3 V)",
+      "part": "",
+      "bbox": [
+        146,
+        808,
+        211,
+        930
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "The lower of the two caps left of U17, on U17's output side (docs/hardware/nets.md). The other end is probably GND (guess): read both ends against GND, the higher reading is the output, 3.3 V.",
+      "tag_side": "left"
+    }
+  ],
+  "terminals": [
+    {
+      "id": "sup_p",
+      "label": "Bench supply +: read the current (tens of mA = boot loader)",
+      "group": "supply",
+      "y": 2520
+    },
+    {
+      "id": "sup_n",
+      "label": "Bench supply −",
+      "group": "supply",
+      "y": 2600
+    },
+    {
+      "id": "red",
+      "label": "Meter red lead (DC V): U15 pin 8",
+      "group": "lead_red",
+      "y": 1385
+    },
+    {
+      "id": "black",
+      "label": "Meter black lead: U15 pin 4",
+      "group": "lead_black",
+      "y": 1505
+    }
+  ],
+  "links": [
+    {
+      "from": "1",
+      "to": "sup_p",
+      "style": "solid",
+      "via": [
+        [
+          2336,
+          2228
+        ],
+        [
+          2336,
+          2578
+        ],
+        [
+          2990,
+          2578
+        ]
+      ]
+    },
+    {
+      "from": "2",
+      "to": "sup_n",
+      "style": "solid",
+      "via": [
+        [
+          2306,
+          2103
+        ],
+        [
+          2306,
+          2612
+        ],
+        [
+          2990,
+          2612
+        ]
+      ]
+    },
+    {
+      "from": "3",
+      "to": "red",
+      "style": "solid",
+      "via": [
+        [
+          146,
+          1480
+        ],
+        [
+          262,
+          1385
+        ],
+        [
+          2990,
+          1385
+        ]
+      ]
+    },
+    {
+      "from": "4",
+      "to": "black",
+      "style": "solid",
+      "via": [
+        [
+          372,
+          1928
+        ],
+        [
+          372,
+          1530
+        ],
+        [
+          2300,
+          1462
+        ],
+        [
+          2470,
+          1462
+        ],
+        [
+          2700,
+          1505
+        ],
+        [
+          2990,
+          1505
+        ]
+      ]
+    }
+  ]
+}
