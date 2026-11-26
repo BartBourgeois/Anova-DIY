@@ -1,0 +1,199 @@
+{
+  "image": "micro_step_bench.jpg",
+  "title": "Recovery 6 - first boot on the bench: speaker, listener, supply",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "caption": "Speaker into J9. The adapter listening on J29's TX hole (assumed hole 1), its TXD unconnected. Strap off. Supply on JP5 with the limit at 1 A (500 mA reset the first start, 6 Nov). Listen for the beep, look at the LED side, read the log.",
+  "scale": 1,
+  "tag_px": 34,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "JP5.1",
+      "label": "Pin 1 (square), VIN: supply +",
+      "part": "",
+      "bbox": [
+        2380,
+        2182,
+        2456,
+        2256
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Bench supply +5.0 V, current limit 500 mA, never above 6 V. The square pad, '1' printed beside it (J-077, J-080). Same copper as J8 pins 1-6, which is why J8's cable stays out."
+    },
+    {
+      "id": "2",
+      "ref": "JP5.2",
+      "label": "Pin 2, GND: supply −",
+      "part": "",
+      "bbox": [
+        2382,
+        2066,
+        2456,
+        2140
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Bench supply minus. The round pad, '2' printed beside it (J-080)."
+    },
+    {
+      "id": "3",
+      "ref": "J29.1",
+      "label": "Hole 1: assumed chip TX",
+      "part": "",
+      "bbox": [
+        722,
+        1184,
+        798,
+        1260
+      ],
+      "category": "debug",
+      "confidence": "guess",
+      "note": "The dot end of J29, the only hole with top-layer copper (J-094). Which of holes 1 and 2 is the CC3220's TX is not yet known: this is the assumption for the first listen. To the adapter's RXD through 4.7 kOhm; the adapter's TXD stays unconnected."
+    },
+    {
+      "id": "5",
+      "ref": "J29.3",
+      "label": "Hole 3: GND",
+      "part": "",
+      "bbox": [
+        722,
+        952,
+        798,
+        1028
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Rings to JP5 pin 2 (J-112). '3' printed beside it. To the adapter's GND."
+    },
+    {
+      "id": "6",
+      "ref": "X4-X6",
+      "label": "Strap pads: nothing connected",
+      "part": "",
+      "bbox": [
+        622,
+        2340,
+        668,
+        2522
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "The three round pads at the end of J14's strap traces (J-098), measured: X4 (top) = SOP0, X5 = SOP1, X6 (bottom) = SOP2. For this boot no strap: nothing touches them."
+    },
+    {
+      "id": "9",
+      "ref": "J9",
+      "label": "The speaker's plug",
+      "part": "",
+      "bbox": [
+        678,
+        500,
+        1062,
+        752
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "'J9' printed above it; the 2-pin speaker connector. The speaker on its own twisted pair plugs in here so the beep can be heard."
+    },
+    {
+      "id": "8",
+      "ref": "J8",
+      "label": "Cable out until reassembly",
+      "part": "",
+      "bbox": [
+        2615,
+        1525,
+        2942,
+        2422
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "The 30-way FFC connector to the power board. Its cable stays out on the bench: JP5 feeds the board, and nothing on J8 is used (J-077). The supply lines run round its bottom end, not to it."
+    }
+  ],
+  "terminals": [
+    {
+      "id": "spk",
+      "label": "Speaker (its own twisted pair)",
+      "group": "other"
+    },
+    {
+      "id": "gnd",
+      "label": "Adapter GND",
+      "group": "ftdi"
+    },
+    {
+      "id": "rxd",
+      "label": "Adapter RXD",
+      "group": "ftdi"
+    },
+    {
+      "id": "sup_n",
+      "label": "Bench supply −",
+      "group": "supply",
+      "y": 2446
+    },
+    {
+      "id": "sup_p",
+      "label": "Bench supply + (limit 500 mA)",
+      "group": "supply",
+      "y": 2535
+    }
+  ],
+  "links": [
+    {
+      "from": "9",
+      "to": "spk",
+      "style": "solid"
+    },
+    {
+      "from": "3",
+      "to": "rxd",
+      "label": "4.7 kΩ",
+      "style": "dashed"
+    },
+    {
+      "from": "5",
+      "to": "gnd",
+      "style": "solid"
+    },
+    {
+      "from": "2",
+      "to": "sup_n",
+      "style": "solid",
+      "via": [
+        [
+          2488,
+          2103
+        ],
+        [
+          2488,
+          2446
+        ],
+        [
+          2995,
+          2446
+        ]
+      ]
+    },
+    {
+      "from": "1",
+      "to": "sup_p",
+      "style": "solid",
+      "via": [
+        [
+          2418,
+          2535
+        ],
+        [
+          2995,
+          2535
+        ]
+      ]
+    }
+  ]
+}

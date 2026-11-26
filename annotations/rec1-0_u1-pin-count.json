@@ -1,0 +1,489 @@
+{
+  "image": "micro_step_U1-SOP-corner.jpg",
+  "format": "jpg",
+  "title": "Recovery 1 - counting U1's pins (bottom and right edges)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 28,
+  "box_px": 4,
+  "caption": "U1 is counted from its pin-1 dot (top-left, outside this picture) counter-clockwise: 17-32 left to right along the bottom edge, 33 upward on the right edge. The four highlighted toes are the ones chapter 1 touches.",
+  "callouts": [
+    {
+      "id": "17",
+      "ref": "U1.17",
+      "label": "U1 pin 17",
+      "part": "",
+      "bbox": [
+        343,
+        842,
+        391,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "18",
+      "ref": "U1.18",
+      "label": "U1 pin 18",
+      "part": "",
+      "bbox": [
+        411,
+        842,
+        459,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "19",
+      "ref": "U1.19",
+      "label": "U1 pin 19",
+      "part": "",
+      "bbox": [
+        477,
+        842,
+        525,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "20",
+      "ref": "U1.20",
+      "label": "U1 pin 20",
+      "part": "",
+      "bbox": [
+        543,
+        842,
+        591,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "21",
+      "ref": "U1.21",
+      "label": "U1 pin 21, SOP2",
+      "part": "",
+      "bbox": [
+        610,
+        842,
+        658,
+        906
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Boot-mode strap SOP2 (SWAS035C table 7-1). Fifth toe from the left on the bottom edge."
+    },
+    {
+      "id": "22",
+      "ref": "U1.22",
+      "label": "U1 pin 22",
+      "part": "",
+      "bbox": [
+        678,
+        842,
+        726,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "23",
+      "ref": "U1.23",
+      "label": "U1 pin 23",
+      "part": "",
+      "bbox": [
+        742,
+        842,
+        790,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "24",
+      "ref": "U1.24",
+      "label": "U1 pin 24",
+      "part": "",
+      "bbox": [
+        809,
+        842,
+        857,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "25",
+      "ref": "U1.25",
+      "label": "U1 pin 25",
+      "part": "",
+      "bbox": [
+        876,
+        842,
+        924,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "26",
+      "ref": "U1.26",
+      "label": "U1 pin 26",
+      "part": "",
+      "bbox": [
+        938,
+        842,
+        986,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "27",
+      "ref": "U1.27",
+      "label": "U1 pin 27",
+      "part": "",
+      "bbox": [
+        1004,
+        842,
+        1052,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "28",
+      "ref": "U1.28",
+      "label": "U1 pin 28",
+      "part": "",
+      "bbox": [
+        1070,
+        842,
+        1118,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "29",
+      "ref": "U1.29",
+      "label": "U1 pin 29",
+      "part": "",
+      "bbox": [
+        1137,
+        842,
+        1185,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "30",
+      "ref": "U1.30",
+      "label": "U1 pin 30",
+      "part": "",
+      "bbox": [
+        1204,
+        842,
+        1252,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "31",
+      "ref": "U1.31",
+      "label": "U1 pin 31",
+      "part": "",
+      "bbox": [
+        1274,
+        842,
+        1322,
+        906
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Bottom edge, counted left to right from pin 17."
+    },
+    {
+      "id": "32",
+      "ref": "U1.32",
+      "label": "U1 pin 32, nRESET",
+      "part": "",
+      "bbox": [
+        1340,
+        842,
+        1388,
+        906
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Reset, active low (SWAS035C). Rightmost toe of the bottom edge."
+    },
+    {
+      "id": "33",
+      "ref": "U1.33",
+      "label": "U1 pin 33",
+      "part": "",
+      "bbox": [
+        1454,
+        753,
+        1516,
+        785
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "34",
+      "ref": "U1.34",
+      "label": "U1 pin 34, SOP1",
+      "part": "",
+      "bbox": [
+        1454,
+        682,
+        1516,
+        714
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Boot-mode strap SOP1 (SWAS035C). Second toe up on the right edge.",
+      "tag_side": "right"
+    },
+    {
+      "id": "35",
+      "ref": "U1.35",
+      "label": "U1 pin 35, SOP0",
+      "part": "",
+      "bbox": [
+        1454,
+        617,
+        1516,
+        649
+      ],
+      "category": "mcu",
+      "confidence": "likely",
+      "note": "Boot-mode strap SOP0 (SWAS035C). Third toe up on the right edge.",
+      "tag_side": "right"
+    },
+    {
+      "id": "36",
+      "ref": "U1.36",
+      "label": "U1 pin 36",
+      "part": "",
+      "bbox": [
+        1454,
+        552,
+        1516,
+        584
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "37",
+      "ref": "U1.37",
+      "label": "U1 pin 37",
+      "part": "",
+      "bbox": [
+        1454,
+        484,
+        1516,
+        516
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "38",
+      "ref": "U1.38",
+      "label": "U1 pin 38",
+      "part": "",
+      "bbox": [
+        1454,
+        418,
+        1516,
+        450
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "39",
+      "ref": "U1.39",
+      "label": "U1 pin 39",
+      "part": "",
+      "bbox": [
+        1454,
+        352,
+        1516,
+        384
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "40",
+      "ref": "U1.40",
+      "label": "U1 pin 40",
+      "part": "",
+      "bbox": [
+        1454,
+        286,
+        1516,
+        318
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "41",
+      "ref": "U1.41",
+      "label": "U1 pin 41",
+      "part": "",
+      "bbox": [
+        1454,
+        219,
+        1516,
+        251
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "42",
+      "ref": "U1.42",
+      "label": "U1 pin 42",
+      "part": "",
+      "bbox": [
+        1454,
+        153,
+        1516,
+        185
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "43",
+      "ref": "U1.43",
+      "label": "U1 pin 43",
+      "part": "",
+      "bbox": [
+        1454,
+        88,
+        1516,
+        120
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "44",
+      "ref": "U1.44",
+      "label": "U1 pin 44",
+      "part": "",
+      "bbox": [
+        1454,
+        20,
+        1516,
+        52
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Right edge, counted upward from pin 33.",
+      "tag_side": "right"
+    },
+    {
+      "id": "X4",
+      "ref": "X4",
+      "label": "strap pad X4, SOP0 (J14 pin 8)",
+      "part": "",
+      "bbox": [
+        373,
+        1791,
+        485,
+        1903
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The top one of the three round pads below C231. Measured: beeps to U1 pin 35 (SOP0), raptox's beeper, unpowered, 2026-11-05. To J14 pin 8 by the top-layer trace (J-098): likely."
+    },
+    {
+      "id": "X5",
+      "ref": "X5",
+      "label": "strap pad X5, SOP1 (J14 pin 7)",
+      "part": "",
+      "bbox": [
+        371,
+        1990,
+        483,
+        2102
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The middle one of the three round pads below C231. Measured: beeps to U1 pin 34 (SOP1), raptox's beeper, unpowered, 2026-11-05. To J14 pin 7 by the top-layer trace (J-098): likely."
+    },
+    {
+      "id": "X6",
+      "ref": "X6",
+      "label": "strap pad X6, SOP2 (J14 pin 6)",
+      "part": "",
+      "bbox": [
+        369,
+        2190,
+        481,
+        2302
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The bottom one of the three round pads below C231. Measured: beeps to U1 pin 21 (SOP2), raptox's beeper, unpowered, 2026-11-05. To J14 pin 6 by the top-layer trace (J-098): likely."
+    }
+  ]
+}

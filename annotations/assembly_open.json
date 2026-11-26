@@ -1,0 +1,182 @@
+{
+  "image": "assembly_open.png",
+  "title": "Head opened - how the boards sit in the housing",
+  "source": "FCC ID 2APBOAN600, internal-photos exhibit 3999178 (2018 sample), page 1, top photo (808x666)",
+  "scale": 2,
+  "callouts": [
+    {
+      "id": 1,
+      "ref": "",
+      "label": "Main board (component side up) on the front bezel",
+      "part": "ANOVA_PRO_MAIN_V2.0, rotated vs. main_component-side",
+      "bbox": [
+        345,
+        315,
+        800,
+        655
+      ],
+      "category": "info",
+      "confidence": "confirmed",
+      "note": "Board is heat-staked to the white bezel (community report). The component side with all debug points faces into the housing, so it is accessible without de-staking."
+    },
+    {
+      "id": 2,
+      "ref": "J8-J8",
+      "label": "30-way FFC ribbon: main board to power board",
+      "part": "",
+      "bbox": [
+        318,
+        85,
+        610,
+        390
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Release by lifting the grey latch of the FPC socket. Never pull the ribbon."
+    },
+    {
+      "id": 3,
+      "ref": "",
+      "label": "Power board (inside housing, mounted vertically)",
+      "part": "ANOVA_PRO_POWER_REV01",
+      "bbox": [
+        268,
+        75,
+        392,
+        292
+      ],
+      "category": "power",
+      "confidence": "likely"
+    },
+    {
+      "id": 4,
+      "ref": "J9",
+      "label": "Yellow/black speaker wires from main J9 into the housing",
+      "part": "",
+      "bbox": [
+        372,
+        185,
+        530,
+        560
+      ],
+      "category": "connector",
+      "confidence": "likely",
+      "note": "Speaker per a community repair report. Unplug before removing the bezel assembly completely."
+    },
+    {
+      "id": 5,
+      "ref": "",
+      "label": "Protective earth wiring (green/yellow) + blue crimp splice",
+      "part": "",
+      "bbox": [
+        185,
+        95,
+        420,
+        335
+      ],
+      "category": "power",
+      "confidence": "likely"
+    },
+    {
+      "id": 6,
+      "ref": "",
+      "label": "White high-temperature wires (heater/mains?)",
+      "part": "",
+      "bbox": [
+        355,
+        60,
+        525,
+        240
+      ],
+      "category": "power",
+      "confidence": "guess"
+    },
+    {
+      "id": 7,
+      "ref": "J14",
+      "label": "DIP switch (orange), reachable once the head is open",
+      "part": "",
+      "bbox": [
+        680,
+        478,
+        728,
+        522
+      ],
+      "category": "debug",
+      "confidence": "confirmed"
+    },
+    {
+      "id": 8,
+      "ref": "",
+      "label": "Adhesive residue on housing rim (front glass was glued here)",
+      "part": "black adhesive/sealant bead, all around the opening",
+      "bbox": [
+        [
+          132,
+          45,
+          165,
+          380
+        ],
+        [
+          200,
+          40,
+          550,
+          72
+        ],
+        [
+          552,
+          45,
+          590,
+          320
+        ]
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "The black glass front is bonded to this rim. Cut the bead with a thin blade, then lift the glass."
+    },
+    {
+      "id": 9,
+      "ref": "",
+      "label": "Screw bosses holding the bezel + main board (3 of 4 visible)",
+      "part": "",
+      "bbox": [
+        [
+          178,
+          85,
+          210,
+          116
+        ],
+        [
+          203,
+          310,
+          235,
+          342
+        ],
+        [
+          496,
+          62,
+          528,
+          94
+        ]
+      ],
+      "category": "info",
+      "confidence": "likely",
+      "note": "Four plastic screws (community report). The 4th boss is hidden behind the ribbon. Matching holes in the white bezel corners."
+    },
+    {
+      "id": 10,
+      "ref": "",
+      "label": "Black round part where the yellow/black pair ends",
+      "part": "",
+      "bbox": [
+        492,
+        140,
+        545,
+        240
+      ],
+      "category": "unknown",
+      "confidence": "guess",
+      "note": "Probably the speaker (fits the community report), or a grommet."
+    }
+  ]
+}

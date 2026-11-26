@@ -1,0 +1,68 @@
+{
+  "image": "launchpad_top_own.jpg",
+  "title": "CC3220S LaunchPad (CC3220S-LAUNCHXL rev A) - top (raptox's board, 2026-11-05)",
+  "source": "Own photo, raptox's LaunchPad, 2026-11-05",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "J13",
+      "label": "SOP jumpers (SOP2/SOP1/SOP0)",
+      "part": "",
+      "bbox": [1152, 939, 1317, 1113],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "'J13', 'SOP' and the row numbers 2/1/0 are printed beside the 2x3 header; a jumper sits on one row (which one: check on the board, the photo is too soft to say)."
+    },
+    {
+      "id": "2",
+      "ref": "U7",
+      "label": "CC3220S",
+      "part": "",
+      "bbox": [663, 561, 849, 771],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "Marking legible: 'CC3220S / M2 / TI 65I / A809 G4'. The LaunchPad's own CC3220S, same part family as U1 on the cooker's main board."
+    },
+    {
+      "id": "3",
+      "ref": "U8",
+      "label": "Serial flash (MX25R3235F, 4 MiB)",
+      "part": "",
+      "bbox": [651, 339, 792, 462],
+      "category": "memory",
+      "confidence": "likely",
+      "note": "SOIC-8 above U7, 'U8' printed beside it. The marking reads 'MXIC 25R3235F' only partly in the photo, so the part is by the LaunchPad's design, not the marking."
+    },
+    {
+      "id": "4",
+      "ref": "XDS110 USB",
+      "label": "Micro-USB to the XDS110 debug probe",
+      "part": "",
+      "bbox": [2247, 153, 2397, 327],
+      "category": "connector",
+      "confidence": "likely",
+      "note": "The board's only USB port, at the right edge beside L2/U2 and the XDS110's TM4C129 MCU. Its reference designator is not legible in the photo."
+    },
+    {
+      "id": "5",
+      "ref": "RESET",
+      "label": "Reset button SW1",
+      "part": "",
+      "bbox": [2190, 471, 2379, 657],
+      "category": "ui",
+      "confidence": "confirmed",
+      "note": "'RESET' and 'SW1' are printed beside it; side-actuated tactile switch at the right board edge."
+    },
+    {
+      "id": "6",
+      "ref": "J1/J2/J3/J4",
+      "label": "BoosterPack headers (2 x 20 pins)",
+      "part": "",
+      "bbox": [[378, 72, 1044, 258], [378, 1116, 1044, 1362]],
+      "category": "connector",
+      "confidence": "likely",
+      "note": "The two 2x10 header rows at the top and bottom edges, pin names printed beside them (P02, P01, P62 ...). The J1-J4 designators themselves are not legible in the photo."
+    }
+  ]
+}

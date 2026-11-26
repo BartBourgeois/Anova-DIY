@@ -1,0 +1,88 @@
+{
+  "image": "micro_J8_area.jpg",
+  "title": "Main board - JP5 power header and the J8 end: bench hookup (raptox's unit, mosaic 2026-11-03)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "JP5.1",
+      "label": "JP5 pin 1 (square), VIN",
+      "part": "",
+      "bbox": [283, 1963, 407, 2083],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Bench supply +5.0 V (OVP 6 V, current limit 100 mA, then 500 mA). Recorder: 20k/10k divider to ESP32 GPIO39. Never above 6 V. The square pad, '1' printed left of it (J-077, J-080)."
+    },
+    {
+      "id": "2",
+      "ref": "JP5.2",
+      "label": "JP5 pin 2, GND",
+      "part": "",
+      "bbox": [288, 1768, 412, 1888],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Bench supply minus; FTDI GND / ESP32 GND. The round pad, '2' printed left of it (J-080)."
+    },
+    {
+      "id": "3",
+      "ref": "TP1",
+      "label": "Test point, VIN",
+      "part": "",
+      "bbox": [188, 1512, 252, 1578],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "VIN check point: rings to JP5 pin 1 (J-097). Left of JP5, below C19."
+    },
+    {
+      "id": "4",
+      "ref": "TP2",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [305, 677, 369, 741],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Rings to JP5 pin 2 (J-097). Below its label, between U6 and R578."
+    },
+    {
+      "id": "5",
+      "ref": "TP9",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [626, 2531, 690, 2595],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Rings to JP5 pin 2 (J-101). Below J8's pin-1 end; its label is printed upside down."
+    },
+    {
+      "id": "6",
+      "ref": "J8 pin 1",
+      "label": "J8 pin-1 end (circle)",
+      "part": "",
+      "bbox": [645, 2150, 760, 2275],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "The FFC stays OUT of J8 in every bench session. The printed circle marks pin 1, the lowest contact tail; pins 1-6 are the VIN group (J-077)."
+    },
+    {
+      "id": "7",
+      "ref": "J8",
+      "label": "J8 actuator",
+      "part": "",
+      "bbox": [962, 900, 1235, 2325],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "Cable out; no J8 signal is used by the bench procedures. The white flip actuator on the right of the 30-way FFC connector."
+    },
+    {
+      "id": "8",
+      "ref": "TP3",
+      "label": "Test point, GND",
+      "part": "",
+      "bbox": [906, 721, 974, 789],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Rings to JP5 pin 2 (J-097). Above J8's pin-30 end."
+    }
+  ]
+}

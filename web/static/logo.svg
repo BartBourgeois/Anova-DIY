@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 28" role="img" aria-label="Any percent, seven-segment display">
+  <!-- Seven-segment "Any%" in display amber: whatever number the display froze on, and the speedrun category (finish, by
+       whatever route works). Off segments stay faintly visible, like a real LED display. Each character sits in a 14-wide
+       cell: a = top, b = top right, c = bottom right, d = bottom, e = bottom left, f = top left, g = middle. -->
+  <g fill="#ffb000">
+    <!-- A: a b c e f g on, d off -->
+    <g>
+      <g opacity="0.16">
+        <rect x="2" y="25" width="10" height="3" rx="1"/>
+      </g>
+      <rect x="2" y="0" width="10" height="3" rx="1"/>
+      <rect x="11" y="2" width="3" height="11" rx="1"/>
+      <rect x="11" y="15" width="3" height="11" rx="1"/>
+      <rect x="0" y="15" width="3" height="11" rx="1"/>
+      <rect x="0" y="2" width="3" height="11" rx="1"/>
+      <rect x="2" y="12.5" width="10" height="3" rx="1"/>
+    </g>
+    <!-- n: c e g on; a b d f off -->
+    <g transform="translate(19,0)">
+      <g opacity="0.16">
+        <rect x="2" y="0" width="10" height="3" rx="1"/>
+        <rect x="11" y="2" width="3" height="11" rx="1"/>
+        <rect x="2" y="25" width="10" height="3" rx="1"/>
+        <rect x="0" y="2" width="3" height="11" rx="1"/>
+      </g>
+      <rect x="11" y="15" width="3" height="11" rx="1"/>
+      <rect x="0" y="15" width="3" height="11" rx="1"/>
+      <rect x="2" y="12.5" width="10" height="3" rx="1"/>
+    </g>
+    <!-- y: b c d f g on; a e off -->
+    <g transform="translate(38,0)">
+      <g opacity="0.16">
+        <rect x="2" y="0" width="10" height="3" rx="1"/>
+        <rect x="0" y="15" width="3" height="11" rx="1"/>
+      </g>
+      <rect x="11" y="2" width="3" height="11" rx="1"/>
+      <rect x="11" y="15" width="3" height="11" rx="1"/>
+      <rect x="2" y="25" width="10" height="3" rx="1"/>
+      <rect x="0" y="2" width="3" height="11" rx="1"/>
+      <rect x="2" y="12.5" width="10" height="3" rx="1"/>
+    </g>
+    <!-- percent -->
+    <circle cx="60.5" cy="5" r="3"/>
+    <circle cx="73.5" cy="23" r="3"/>
+    <rect x="65.4" y="-1" width="3" height="30" rx="1.5" transform="rotate(30 66.9 14)"/>
+  </g>
+</svg>

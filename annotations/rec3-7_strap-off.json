@@ -1,0 +1,179 @@
+{
+  "image": "micro_step_bench.jpg",
+  "title": "Recovery 3.7 - supply off, then the strap off",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "tag_px": 34,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "caption": "Supply off first. Then lift the strap probe (dashed); the other probes may stay. From here the backup exists.",
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "JP5.1",
+      "label": "JP5 pin 1 (square), 5 V in",
+      "part": "",
+      "bbox": [
+        2381,
+        2184,
+        2453,
+        2256
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The square pad, '1' printed left of it; VIN = J8 pins 1-6 = U17's input (J-077, J-080). Bench supply + at 5.0 V, OVP 6 V, current limit 100 mA. Never above 6 V.",
+      "tag_side": "below"
+    },
+    {
+      "id": "2",
+      "ref": "JP5.2",
+      "label": "JP5 pin 2, GND",
+      "part": "",
+      "bbox": [
+        2384,
+        2067,
+        2455,
+        2139
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "The round pad above pin 1, '2' printed left of it; GND, the same net as U15 pin 4 (J-080)."
+    },
+    {
+      "id": "6",
+      "ref": "X6",
+      "label": "X6, the SOP2 pad: strap OFF",
+      "part": "",
+      "bbox": [
+        626,
+        2481,
+        664,
+        2519
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "The bottom pad of the three right of J14 (J-098). X4 = SOP0, X5 = SOP1, X6 = SOP2 (measured with the beeper, 2026-11-05). Lift the strap from it once the supply is off; then nothing touches the strap pads.",
+      "tag_side": "below"
+    },
+    {
+      "id": "7",
+      "ref": "U15.8",
+      "label": "U15 pin 8",
+      "part": "",
+      "bbox": [
+        135,
+        1552,
+        165,
+        1642
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "VCC = the 3.3 V rail, on U17's output (J-110). The leg across from pin 1 (top-left of U15 in this view). The strap's source: lift that end too.",
+      "tag_side": "below"
+    }
+  ],
+  "terminals": [
+    {
+      "id": "sup_p",
+      "label": "Bench supply +: OFF first",
+      "group": "supply",
+      "y": 2530
+    },
+    {
+      "id": "sup_n",
+      "label": "Bench supply −",
+      "group": "supply",
+      "y": 2600
+    }
+  ],
+  "links": [
+    {
+      "from": "1",
+      "to": "sup_p",
+      "style": "solid",
+      "via": [
+        [
+          2336,
+          2228
+        ],
+        [
+          2336,
+          2578
+        ],
+        [
+          2990,
+          2578
+        ]
+      ]
+    },
+    {
+      "from": "2",
+      "to": "sup_n",
+      "style": "solid",
+      "via": [
+        [
+          2306,
+          2103
+        ],
+        [
+          2306,
+          2612
+        ],
+        [
+          2990,
+          2612
+        ]
+      ]
+    },
+    {
+      "from": "7",
+      "to": "6",
+      "label": "lift this strap",
+      "style": "dashed",
+      "color": "#ff4040",
+      "via": [
+        [
+          146,
+          1489
+        ],
+        [
+          254,
+          1489
+        ],
+        [
+          273,
+          1508
+        ],
+        [
+          378,
+          1508
+        ],
+        [
+          378,
+          1992
+        ],
+        [
+          454,
+          1996
+        ],
+        [
+          502,
+          2000
+        ],
+        [
+          595,
+          2084
+        ],
+        [
+          595,
+          2500
+        ]
+      ],
+      "label_at": [
+        378,
+        1760
+      ]
+    }
+  ]
+}

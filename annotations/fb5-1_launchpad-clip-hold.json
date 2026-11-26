@@ -1,0 +1,34 @@
+{
+  "image": "launchpad_top_stitched_own.jpg",
+  "title": "Flash backup 3/5 - the LaunchPad wired for the clip read, reset held the cooker's way",
+  "source": "Own photos, raptox's LaunchPad, stitched from photos 04-08 of 2026-11-05 (jumpers as delivered in the photo)",
+  "caption": "The clip on U8 (no VCC lead), the reader's GND at J22. J9 on, the RST cap off, a hold lead from R321's chip-side pad to GND, J13 on SOP2. The USB goes in last: it powers the board.",
+  "scale": 1,
+  "tag_px": 30,
+  "line_px": 6,
+  "box_px": 5,
+  "format": "jpg",
+  "terminals": [
+    {"id": "rdr", "label": "Reader (Pi, Pico or FT232H): CS, CLK, MOSI, MISO, GND; drawings fb-reader-*", "color": "#2f9bff", "y": 1300},
+    {"id": "pc", "label": "PC USB: plugged in after the hold is on, out before it comes off", "group": "other", "y": 1650}
+  ],
+  "links": [
+    {"from": "U8", "to": "rdr", "style": "solid"},
+    {"from": "USB", "to": "pc", "style": "solid", "via": [[290, 1830], [3195, 1830], [3195, 1650]]},
+    {"from": "R", "to": "GND", "label": "hold lead", "style": "solid", "color": "#ff5cc8", "via": [[2360, 640], [2713, 640]], "label_at": [2540, 610]}
+  ],
+  "callouts": [
+    {"id": "U8", "ref": "U8", "label": "U8: the clip, pin-1 lead on pin 1", "part": "MX25R3235F, 4 MiB", "bbox": [2102, 1243, 2294, 1393], "category": "memory", "confidence": "confirmed", "note": "flashrom 1.8.0 knows the part (checked 2026-11-06). Leads on pins 1, 2, 4, 5, 6; none on 3, 7, 8.", "tag_side": "left"},
+    {"id": "1", "ref": "U8.1", "label": "U8 pin 1 (CS#), bottom leg on the right", "part": "", "bbox": [2258, 1357, 2296, 1385], "category": "debug", "confidence": "likely", "note": "From the marking's orientation (read like the CC3220's, rotated): pin 1 is the bottom leg of the right side. Check: pin 4, the top leg of the same side, must beep to GND.", "tag_side": "right"},
+    {"id": "4", "ref": "U8.4", "label": "U8 pin 4 (GND): must beep to J22 GND", "part": "", "bbox": [2258, 1246, 2296, 1272], "category": "power", "confidence": "likely", "note": "The orientation check, unpowered.", "tag_side": "right"},
+    {"id": "8", "ref": "U8.8", "label": "U8 pin 8 (VCC): no lead; 3.3 V when powered", "part": "", "bbox": [2100, 1358, 2150, 1386], "category": "power", "confidence": "likely", "note": "The board feeds it from USB.", "tag_side": "below"},
+    {"id": "R", "ref": "R321, C322", "label": "R321 and C322 (raptox found them; not legible here)", "part": "", "bbox": [2266, 764, 2452, 846], "category": "debug", "confidence": "guess", "note": "Near U7's pin-32 corner. Hold point = R321's pad that does NOT beep to J9 (the chip side, shared with C322). Find it with the beeper, not from this picture."},
+    {"id": "U7", "ref": "U7", "label": "U7, the CC3220S: pin 32 (nRESET) at this corner", "part": "CC3220S M2", "bbox": [2014, 870, 2278, 1139], "category": "mcu", "confidence": "likely", "note": "Pin-1 dot at the photo's bottom-left, so pin 32 sits at the top-right corner.", "tag_side": "left"},
+    {"id": "J9", "ref": "J9", "label": "J9 (RST PU): jumper ON", "part": "", "bbox": [2590, 345, 2775, 475], "category": "debug", "confidence": "likely", "note": "Connects R321 to 3.3 V (raptox, J-206; TI SWRU463C 2.5.5): the cooker's pull-up.", "tag_side": "right"},
+    {"id": "GND", "ref": "J22 GND", "label": "J22 GND: the hold lead and the reader's GND", "part": "", "bbox": [2680, 190, 2746, 320], "category": "power", "confidence": "likely", "note": "Printed GND. Nothing on J22's 3V3 pin."},
+    {"id": "RST", "ref": "J3 RST", "label": "RST cap: OFF (row 6 from the BRD-SENSE end)", "part": "", "bbox": [1180, 1165, 1400, 1228], "category": "debug", "confidence": "likely", "note": "Takes the XDS110 off nRESET, so nothing fights the hold. Back on afterwards. Row position from the photo.", "tag_side": "left"},
+    {"id": "J13", "ref": "J13", "label": "J13: SOP2 only, for every clip read", "part": "", "bbox": [1405, 420, 1645, 705], "category": "debug", "confidence": "likely", "note": "If the hold slips, the ROM waits in its boot loader instead of starting the image. Never SOP1 and SOP0 together.", "tag_side": "right"},
+    {"id": "USB", "ref": "J1 (USB)", "label": "USB: in last, out first", "part": "micro-USB", "bbox": [195, 1500, 380, 1750], "category": "connector", "confidence": "confirmed", "note": "It powers the board (and U8) for the read.", "tag_side": "right"},
+    {"id": "SW4", "ref": "SW4", "label": "SW4 FRST: never pressed", "part": "", "bbox": [1210, 100, 1390, 350], "category": "ui", "confidence": "confirmed", "note": "Factory restore at reset: a write (SWRU463C table 8).", "tag_side": "left"}
+  ]
+}

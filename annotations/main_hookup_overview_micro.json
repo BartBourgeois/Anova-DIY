@@ -1,0 +1,128 @@
+{
+  "image": "main_component-side_micro.jpg",
+  "title": "Main board - every access point the recovery chapters use (raptox's unit, mosaic 2026-11-03)",
+  "source": "Own photos, raptox's unit: stitched microscope mosaic of 2026-11-03 (~229 px/mm)",
+  "scale": 1,
+  "callouts": [
+    {
+      "id": "1",
+      "ref": "J29",
+      "label": "UART0 header, 3 holes",
+      "part": "",
+      "bbox": [
+        349,
+        486,
+        420,
+        668
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "UART0 header, 3 holes: chapters 1, 3, 4, 5. Pin 1 at the dot end (bottom), pin 3 GND at the top (J-112)."
+    },
+    {
+      "id": "2",
+      "ref": "J14",
+      "label": "Empty DIP footprint, common row + 3 straps",
+      "part": "",
+      "bbox": [
+        125,
+        1078,
+        293,
+        1184
+      ],
+      "category": "debug",
+      "confidence": "likely",
+      "note": "Empty DIP footprint, common row + 3 straps: chapter 1 (J-098)."
+    },
+    {
+      "id": "3",
+      "ref": "X4-X6",
+      "label": "SOP strap pads: X4 SOP0, X5 SOP1, X6 SOP2",
+      "part": "",
+      "bbox": [
+        317,
+        1158,
+        339,
+        1244
+      ],
+      "category": "debug",
+      "confidence": "confirmed",
+      "note": "SOP strap pads: chapters 1, 3, 5. Three tinned pads right of J14, X4 at the top (J-098); roles by beeper to U1 pins 35/34/21, raptox 2026-11-05 (J-137)."
+    },
+    {
+      "id": "4",
+      "ref": "JP5",
+      "label": "Bench power in, 5 V",
+      "part": "",
+      "bbox": [
+        1140,
+        1023,
+        1188,
+        1125
+      ],
+      "category": "power",
+      "confidence": "confirmed",
+      "note": "Bench power in, 5 V: every powered chapter. Pin 1 (square, bottom) VIN, pin 2 GND (J-080)."
+    },
+    {
+      "id": "5",
+      "ref": "U15",
+      "label": "SPI flash",
+      "part": "",
+      "bbox": [
+        75,
+        785,
+        196,
+        987
+      ],
+      "category": "memory",
+      "confidence": "confirmed",
+      "note": "SPI flash: pin 8 = 3V3 meter point and strap source, pin 1 = CS (J-108, J-110)."
+    },
+    {
+      "id": "6",
+      "ref": "U1",
+      "label": "CC3220S",
+      "part": "",
+      "bbox": [
+        297,
+        805,
+        508,
+        1014
+      ],
+      "category": "mcu",
+      "confidence": "confirmed",
+      "note": "CC3220S: SOP pins 21/34/35 for the beeper, chapter 1."
+    },
+    {
+      "id": "7",
+      "ref": "J8",
+      "label": "30-way FFC to the power board",
+      "part": "",
+      "bbox": [
+        1258,
+        774,
+        1408,
+        1186
+      ],
+      "category": "connector",
+      "confidence": "confirmed",
+      "note": "FFC out in every bench session; power only (pins 1-6 VIN, J-077)."
+    },
+    {
+      "id": "8",
+      "ref": "U17",
+      "label": "3.3 V regulator",
+      "part": "",
+      "bbox": [
+        132,
+        406,
+        204,
+        480
+      ],
+      "category": "power",
+      "confidence": "likely",
+      "note": "3.3 V regulator: measure IN/OUT if the rail is missing, chapter 3 (NCP59800, J-076)."
+    }
+  ]
+}
